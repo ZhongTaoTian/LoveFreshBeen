@@ -12,6 +12,7 @@ class MineHeadView: UIImageView {
     
     let setUpBtn: UIButton = UIButton(type: .Custom)
     let iconView: IconView = IconView()
+    var buttonClick:(() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,6 +21,12 @@ class MineHeadView: UIImageView {
         setUpBtn.addTarget(self, action: "setUpButtonClick", forControlEvents: .TouchUpInside)
         addSubview(setUpBtn)
         addSubview(iconView)
+        self.userInteractionEnabled = true
+    }
+        
+    convenience init(frame: CGRect, settingButtonClick:(() -> Void)) {
+        self.init(frame: frame)
+        buttonClick = settingButtonClick
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -36,7 +43,7 @@ class MineHeadView: UIImageView {
     }
     
     func setUpButtonClick() {
-    
+            buttonClick?()
     }
 }
 
@@ -50,7 +57,7 @@ class IconView: UIView {
         super.init(frame: frame)
         iconImageView = UIImageView(image: UIImage(named: "v2_my_avatar"))
         addSubview(iconImageView)
-        
+
         phoneNum = UILabel()
         phoneNum.text = "18612348765"
         phoneNum.font = UIFont.boldSystemFontOfSize(18)

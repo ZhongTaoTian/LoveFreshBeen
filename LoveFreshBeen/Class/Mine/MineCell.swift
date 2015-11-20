@@ -9,7 +9,14 @@
 import UIKit
 
 class MineCell: UITableViewCell {
-
+    
+    var mineModel: MineCellModel? {
+        didSet {
+            titleLabel.text = mineModel!.title
+            iconImageView.image = UIImage(named: mineModel!.iconName!)
+        }
+    }
+    
     static private let identifier = "CellID"
     
     class func cellFor(tableView: UITableView) -> MineCell {
@@ -19,10 +26,10 @@ class MineCell: UITableViewCell {
         if cell == nil {
             cell = MineCell(style: .Default, reuseIdentifier: identifier)
         }
-
+        
         return cell!
     }
-
+    
     let bottomLine = UIView()
     private lazy var iconImageView = UIImageView()
     private lazy var titleLabel = UILabel()
@@ -35,7 +42,6 @@ class MineCell: UITableViewCell {
         titleLabel.textColor = UIColor.blackColor()
         titleLabel.font = UIFont.systemFontOfSize(16)
         titleLabel.alpha = 0.8
-        titleLabel.text = "我的炖豆腐爱的疯狂"
         contentView.addSubview(titleLabel)
         
         bottomLine.backgroundColor = UIColor.grayColor()
@@ -44,10 +50,10 @@ class MineCell: UITableViewCell {
         
         arrowView.image = UIImage(named: "icon_go")
         contentView.addSubview(arrowView)
-
+        
         selectionStyle = UITableViewCellSelectionStyle.None
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -56,11 +62,50 @@ class MineCell: UITableViewCell {
         super.layoutSubviews()
         
         arrowView.frame = CGRectMake(width - 20, (height - (arrowView.image?.size.height)!) * 0.5, (arrowView.image?.size.width)!, (arrowView.image?.size.height)!)
-        iconImageView.frame = CGRectMake(10, 0, height, height)
-        titleLabel.frame = CGRectMake(CGRectGetMaxX(iconImageView.frame), 0, 200, height)
+        
+        let rightMargin: CGFloat = 10
+        let iconWH: CGFloat = 20
+        iconImageView.frame = CGRectMake(rightMargin, (height - iconWH) * 0.5, iconWH, iconWH)
+        titleLabel.frame = CGRectMake(CGRectGetMaxX(iconImageView.frame) + rightMargin, 0, 200, height)
         
         let leftMarge: CGFloat = 20
         bottomLine.frame = CGRectMake(leftMarge, height - 0.5, width - leftMarge, 0.5)
     }
     
 }
+
+
+class MineCellModel: NSObject {
+    
+    var title: String?
+    var iconName: String?
+    
+    class func loadMineCellModels() -> [MineCellModel] {
+        
+        var mines = [MineCellModel]()
+        let path = NSBundle.mainBundle().pathForResource("MinePlist", ofType: "plist")
+        let arr = NSArray(contentsOfFile: path!)
+
+        for dic in arr! {
+            mines.append(MineCellModel.mineModel(dic as! NSDictionary))
+        }
+        
+        return mines
+    }
+    
+    class func mineModel(dic: NSDictionary) -> MineCellModel {
+    
+        let model = MineCellModel()
+        model.title = dic["title"] as? String
+        model.iconName = dic["iconName"] as? String
+        
+        return model
+    }
+    
+}
+
+
+
+
+
+
