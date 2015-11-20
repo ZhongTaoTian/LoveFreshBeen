@@ -12,7 +12,6 @@
 		B312527E1BFC79EB0098B995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B312527D1BFC79EB0098B995 /* Assets.xcassets */; };
 		B312528C1BFC79EB0098B995 /* LoveFreshBeenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312528B1BFC79EB0098B995 /* LoveFreshBeenTests.swift */; };
 		B31252971BFC79EB0098B995 /* LoveFreshBeenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252961BFC79EB0098B995 /* LoveFreshBeenUITests.swift */; };
-		B31252AE1BFC7B310098B995 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252AD1BFC7B310098B995 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B31252B01BFC7B3E0098B995 /* SupermarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252AF1BFC7B3E0098B995 /* SupermarketViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B31252B21BFC7B490098B995 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252B11BFC7B490098B995 /* ScheduleViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B31252B41BFC7B550098B995 /* ShopCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252B31BFC7B550098B995 /* ShopCartViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -36,6 +35,9 @@
 		B35C1DB51BFDB423006260D0 /* MineTabeHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DB41BFDB423006260D0 /* MineTabeHeadView.swift */; settings = {ASSET_TAGS = (); }; };
 		B35C1DB71BFDCD8A006260D0 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DB61BFDCD8A006260D0 /* MineCell.swift */; settings = {ASSET_TAGS = (); }; };
 		B3B134B71BFEBB4D004C60AE /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3B134B61BFEBB4D004C60AE /* MinePlist.plist */; settings = {ASSET_TAGS = (); }; };
+		B3B134C01BFEF11B004C60AE /* HomeTableHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B134BF1BFEF11B004C60AE /* HomeTableHeadView.swift */; settings = {ASSET_TAGS = (); }; };
+		B3B134C21BFEF195004C60AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B134C11BFEF195004C60AE /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B3B134C41BFEF282004C60AE /* PageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B134C31BFEF282004C60AE /* PageScrollView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +69,6 @@
 		B31252921BFC79EB0098B995 /* LoveFreshBeenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoveFreshBeenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31252961BFC79EB0098B995 /* LoveFreshBeenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveFreshBeenUITests.swift; sourceTree = "<group>"; };
 		B31252981BFC79EB0098B995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B31252AD1BFC7B310098B995 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B31252AF1BFC7B3E0098B995 /* SupermarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupermarketViewController.swift; sourceTree = "<group>"; };
 		B31252B11BFC7B490098B995 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		B31252B31BFC7B550098B995 /* ShopCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopCartViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +93,9 @@
 		B35C1DB61BFDCD8A006260D0 /* MineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
 		B3B134B61BFEBB4D004C60AE /* MinePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MinePlist.plist; sourceTree = "<group>"; };
 		B3B134B81BFEEBDC004C60AE /* LoveFreshBeen-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoveFreshBeen-Bridging-Header.h"; sourceTree = "<group>"; };
+		B3B134BF1BFEF11B004C60AE /* HomeTableHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableHeadView.swift; sourceTree = "<group>"; };
+		B3B134C11BFEF195004C60AE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B3B134C31BFEF282004C60AE /* PageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageScrollView.swift; sourceTree = "<group>"; };
 		E372C8047ED1AE2C27FB8CCD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F4EB10C6FBD193A56A882E0F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,7 +214,8 @@
 		B31252A61BFC7AC60098B995 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B31252AD1BFC7B310098B995 /* HomeViewController.swift */,
+				B3B134C11BFEF195004C60AE /* HomeViewController.swift */,
+				B3B134BF1BFEF11B004C60AE /* HomeTableHeadView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				B31252B81BFC7B790098B995 /* MainViewController.swift */,
 				B31252D21BFC7F940098B995 /* BaseNavigationController.swift */,
 				B35C1DA81BFD89E7006260D0 /* UpImageDownTextButton.swift */,
+				B3B134C31BFEF282004C60AE /* PageScrollView.swift */,
 			);
 			path = LFBBase;
 			sourceTree = "<group>";
@@ -539,16 +545,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B134C41BFEF282004C60AE /* PageScrollView.swift in Sources */,
+				B3B134C21BFEF195004C60AE /* HomeViewController.swift in Sources */,
 				B31252CC1BFC7BB00098B995 /* RAMFrameItemAnimation.swift in Sources */,
 				B35C1D9F1BFD676D006260D0 /* Color+Extension.swift in Sources */,
 				B35C1DB71BFDCD8A006260D0 /* MineCell.swift in Sources */,
+				B3B134C01BFEF11B004C60AE /* HomeTableHeadView.swift in Sources */,
 				B31252D01BFC7BB00098B995 /* RAMAnimatedTabBarController.swift in Sources */,
 				B31252BC1BFC7B820098B995 /* Theme.swift in Sources */,
 				B31252B01BFC7B3E0098B995 /* SupermarketViewController.swift in Sources */,
 				B31252771BFC79EB0098B995 /* AppDelegate.swift in Sources */,
 				B31252B41BFC7B550098B995 /* ShopCartViewController.swift in Sources */,
 				B35C1DAB1BFD9BF0006260D0 /* MineHeadView.swift in Sources */,
-				B31252AE1BFC7B310098B995 /* HomeViewController.swift in Sources */,
 				B31252B21BFC7B490098B995 /* ScheduleViewController.swift in Sources */,
 				B31252B91BFC7B790098B995 /* BaseViewController.swift in Sources */,
 				B31252CB1BFC7BB00098B995 /* RAMBounceAnimation.swift in Sources */,
