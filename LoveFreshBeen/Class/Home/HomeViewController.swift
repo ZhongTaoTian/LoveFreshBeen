@@ -18,8 +18,9 @@ class HomeViewController: BaseViewController {
         buildNavigationItem()
         
         buildTableHeadView()
-
+        
     }
+    
 // MARK:- Creat UI
     func buildNavigationItem() {
         navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
@@ -34,6 +35,7 @@ class HomeViewController: BaseViewController {
     
     func buildTableHeadView() {
         headView = HomeTableHeadView(frame: CGRectMake(0, 0, ScreenWidth, 150))
+        headView?.delegate = self
         view.addSubview(headView!)
     }
     
@@ -52,5 +54,12 @@ class HomeViewController: BaseViewController {
     }
     
     // MARK: TableHeadViewAction
+}
+
+// MARK:- HomeHeadViewDelegate
+extension HomeViewController: HomeTableHeadViewDelegate {
+    func tableHeadView(headView: HomeTableHeadView, focusImageViewClick index: Int) {
+        print(index)
+    }
 }
 

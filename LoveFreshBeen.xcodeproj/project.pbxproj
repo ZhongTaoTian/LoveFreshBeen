@@ -12,32 +12,39 @@
 		B312527E1BFC79EB0098B995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B312527D1BFC79EB0098B995 /* Assets.xcassets */; };
 		B312528C1BFC79EB0098B995 /* LoveFreshBeenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312528B1BFC79EB0098B995 /* LoveFreshBeenTests.swift */; };
 		B31252971BFC79EB0098B995 /* LoveFreshBeenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252961BFC79EB0098B995 /* LoveFreshBeenUITests.swift */; };
-		B31252B01BFC7B3E0098B995 /* SupermarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252AF1BFC7B3E0098B995 /* SupermarketViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		B31252B21BFC7B490098B995 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252B11BFC7B490098B995 /* ScheduleViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		B31252B41BFC7B550098B995 /* ShopCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252B31BFC7B550098B995 /* ShopCartViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		B31252B61BFC7B610098B995 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252B51BFC7B610098B995 /* MineViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		B31252B91BFC7B790098B995 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252B71BFC7B790098B995 /* BaseViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		B31252BA1BFC7B790098B995 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252B81BFC7B790098B995 /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		B31252BC1BFC7B820098B995 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252BB1BFC7B820098B995 /* Theme.swift */; settings = {ASSET_TAGS = (); }; };
-		B31252CB1BFC7BB00098B995 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252C01BFC7BB00098B995 /* RAMBounceAnimation.swift */; settings = {ASSET_TAGS = (); }; };
-		B31252CC1BFC7BB00098B995 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252C21BFC7BB00098B995 /* RAMFrameItemAnimation.swift */; settings = {ASSET_TAGS = (); }; };
-		B31252CD1BFC7BB00098B995 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252C41BFC7BB00098B995 /* RAMFumeAnimation.swift */; settings = {ASSET_TAGS = (); }; };
-		B31252CE1BFC7BB00098B995 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252C61BFC7BB00098B995 /* RAMRotationAnimation.swift */; settings = {ASSET_TAGS = (); }; };
-		B31252CF1BFC7BB00098B995 /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252C81BFC7BB00098B995 /* RAMTransitionItemAnimation.swift */; settings = {ASSET_TAGS = (); }; };
-		B31252D01BFC7BB00098B995 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252C91BFC7BB00098B995 /* RAMAnimatedTabBarController.swift */; settings = {ASSET_TAGS = (); }; };
-		B31252D11BFC7BB00098B995 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252CA1BFC7BB00098B995 /* RAMItemAnimationProtocol.swift */; settings = {ASSET_TAGS = (); }; };
-		B31252D31BFC7F940098B995 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252D21BFC7F940098B995 /* BaseNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
-		B35C1D9F1BFD676D006260D0 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1D9E1BFD676D006260D0 /* Color+Extension.swift */; settings = {ASSET_TAGS = (); }; };
-		B35C1DA11BFD6B06006260D0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DA01BFD6B06006260D0 /* UIView+Extension.swift */; settings = {ASSET_TAGS = (); }; };
-		B35C1DA51BFD8853006260D0 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DA41BFD8853006260D0 /* UIBarButtonItem+Extension.swift */; settings = {ASSET_TAGS = (); }; };
-		B35C1DA91BFD89E7006260D0 /* UpImageDownTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DA81BFD89E7006260D0 /* UpImageDownTextButton.swift */; settings = {ASSET_TAGS = (); }; };
-		B35C1DAB1BFD9BF0006260D0 /* MineHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DAA1BFD9BF0006260D0 /* MineHeadView.swift */; settings = {ASSET_TAGS = (); }; };
-		B35C1DB51BFDB423006260D0 /* MineTabeHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DB41BFDB423006260D0 /* MineTabeHeadView.swift */; settings = {ASSET_TAGS = (); }; };
-		B35C1DB71BFDCD8A006260D0 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DB61BFDCD8A006260D0 /* MineCell.swift */; settings = {ASSET_TAGS = (); }; };
-		B3B134B71BFEBB4D004C60AE /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3B134B61BFEBB4D004C60AE /* MinePlist.plist */; settings = {ASSET_TAGS = (); }; };
-		B3B134C01BFEF11B004C60AE /* HomeTableHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B134BF1BFEF11B004C60AE /* HomeTableHeadView.swift */; settings = {ASSET_TAGS = (); }; };
-		B3B134C21BFEF195004C60AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B134C11BFEF195004C60AE /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		B3B134C41BFEF282004C60AE /* PageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B134C31BFEF282004C60AE /* PageScrollView.swift */; settings = {ASSET_TAGS = (); }; };
+		B31252B01BFC7B3E0098B995 /* SupermarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252AF1BFC7B3E0098B995 /* SupermarketViewController.swift */; };
+		B31252B21BFC7B490098B995 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252B11BFC7B490098B995 /* ScheduleViewController.swift */; };
+		B31252B41BFC7B550098B995 /* ShopCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252B31BFC7B550098B995 /* ShopCartViewController.swift */; };
+		B31252B61BFC7B610098B995 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252B51BFC7B610098B995 /* MineViewController.swift */; };
+		B31252B91BFC7B790098B995 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252B71BFC7B790098B995 /* BaseViewController.swift */; };
+		B31252BA1BFC7B790098B995 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252B81BFC7B790098B995 /* MainViewController.swift */; };
+		B31252BC1BFC7B820098B995 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252BB1BFC7B820098B995 /* Theme.swift */; };
+		B31252CB1BFC7BB00098B995 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252C01BFC7BB00098B995 /* RAMBounceAnimation.swift */; };
+		B31252CC1BFC7BB00098B995 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252C21BFC7BB00098B995 /* RAMFrameItemAnimation.swift */; };
+		B31252CD1BFC7BB00098B995 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252C41BFC7BB00098B995 /* RAMFumeAnimation.swift */; };
+		B31252CE1BFC7BB00098B995 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252C61BFC7BB00098B995 /* RAMRotationAnimation.swift */; };
+		B31252CF1BFC7BB00098B995 /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252C81BFC7BB00098B995 /* RAMTransitionItemAnimation.swift */; };
+		B31252D01BFC7BB00098B995 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252C91BFC7BB00098B995 /* RAMAnimatedTabBarController.swift */; };
+		B31252D11BFC7BB00098B995 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252CA1BFC7BB00098B995 /* RAMItemAnimationProtocol.swift */; };
+		B31252D31BFC7F940098B995 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31252D21BFC7F940098B995 /* BaseNavigationController.swift */; };
+		B35C1D9F1BFD676D006260D0 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1D9E1BFD676D006260D0 /* Color+Extension.swift */; };
+		B35C1DA11BFD6B06006260D0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DA01BFD6B06006260D0 /* UIView+Extension.swift */; };
+		B35C1DA51BFD8853006260D0 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DA41BFD8853006260D0 /* UIBarButtonItem+Extension.swift */; };
+		B35C1DA91BFD89E7006260D0 /* UpImageDownTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DA81BFD89E7006260D0 /* UpImageDownTextButton.swift */; };
+		B35C1DAB1BFD9BF0006260D0 /* MineHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DAA1BFD9BF0006260D0 /* MineHeadView.swift */; };
+		B35C1DB51BFDB423006260D0 /* MineTabeHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DB41BFDB423006260D0 /* MineTabeHeadView.swift */; };
+		B35C1DB71BFDCD8A006260D0 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DB61BFDCD8A006260D0 /* MineCell.swift */; };
+		B3B134B71BFEBB4D004C60AE /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3B134B61BFEBB4D004C60AE /* MinePlist.plist */; };
+		B3B134C01BFEF11B004C60AE /* HomeTableHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B134BF1BFEF11B004C60AE /* HomeTableHeadView.swift */; };
+		B3B134C21BFEF195004C60AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B134C11BFEF195004C60AE /* HomeViewController.swift */; };
+		B3B134C41BFEF282004C60AE /* PageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B134C31BFEF282004C60AE /* PageScrollView.swift */; };
+		FAF9AECE1C008BE000EDFC75 /* HotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9AECD1C008BE000EDFC75 /* HotView.swift */; };
+		FAF9AED31C00934400EDFC75 /* HeadResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9AED21C00934400EDFC75 /* HeadResources.swift */; };
+		FAF9AED61C0096B500EDFC75 /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9AED51C0096B500EDFC75 /* SwiftDictModel.swift */; };
+		FAF9AED81C0098D400EDFC75 /* 首页焦点按钮 in Resources */ = {isa = PBXBuildFile; fileRef = FAF9AED71C0098D400EDFC75 /* 首页焦点按钮 */; };
+		FAF9AEDA1C02A66A00EDFC75 /* AD in Resources */ = {isa = PBXBuildFile; fileRef = FAF9AED91C02A66A00EDFC75 /* AD */; };
+		FAF9AEDC1C02A66F00EDFC75 /* 促销 in Resources */ = {isa = PBXBuildFile; fileRef = FAF9AEDB1C02A66F00EDFC75 /* 促销 */; };
+		FAF9AEDE1C02A6A900EDFC75 /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = FAF9AEDD1C02A6A900EDFC75 /* 首页新鲜热卖 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +105,13 @@
 		B3B134C31BFEF282004C60AE /* PageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageScrollView.swift; sourceTree = "<group>"; };
 		E372C8047ED1AE2C27FB8CCD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F4EB10C6FBD193A56A882E0F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FAF9AECD1C008BE000EDFC75 /* HotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotView.swift; sourceTree = "<group>"; };
+		FAF9AED21C00934400EDFC75 /* HeadResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadResources.swift; sourceTree = "<group>"; };
+		FAF9AED51C0096B500EDFC75 /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDictModel.swift; sourceTree = "<group>"; };
+		FAF9AED71C0098D400EDFC75 /* 首页焦点按钮 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页焦点按钮"; sourceTree = "<group>"; };
+		FAF9AED91C02A66A00EDFC75 /* AD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AD; sourceTree = "<group>"; };
+		FAF9AEDB1C02A66F00EDFC75 /* 促销 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "促销"; sourceTree = "<group>"; };
+		FAF9AEDD1C02A6A900EDFC75 /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页新鲜热卖"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +203,7 @@
 		B31252A41BFC7AC60098B995 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				FAF9AED41C0096A800EDFC75 /* Tools */,
 				B31252A61BFC7AC60098B995 /* Home */,
 				B31252AB1BFC7AC60098B995 /* SuperMarket */,
 				B31252A51BFC7AC60098B995 /* FreshReserve */,
@@ -216,6 +231,8 @@
 			children = (
 				B3B134C11BFEF195004C60AE /* HomeViewController.swift */,
 				B3B134BF1BFEF11B004C60AE /* HomeTableHeadView.swift */,
+				FAF9AECD1C008BE000EDFC75 /* HotView.swift */,
+				FAF9AECF1C0092A500EDFC75 /* Model */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -351,6 +368,10 @@
 			isa = PBXGroup;
 			children = (
 				B3B134B61BFEBB4D004C60AE /* MinePlist.plist */,
+				FAF9AED71C0098D400EDFC75 /* 首页焦点按钮 */,
+				FAF9AED91C02A66A00EDFC75 /* AD */,
+				FAF9AEDB1C02A66F00EDFC75 /* 促销 */,
+				FAF9AEDD1C02A6A900EDFC75 /* 首页新鲜热卖 */,
 			);
 			path = Resouce;
 			sourceTree = "<group>";
@@ -362,6 +383,22 @@
 				E372C8047ED1AE2C27FB8CCD /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FAF9AECF1C0092A500EDFC75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAF9AED21C00934400EDFC75 /* HeadResources.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FAF9AED41C0096A800EDFC75 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				FAF9AED51C0096B500EDFC75 /* SwiftDictModel.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,8 +508,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF9AEDC1C02A66F00EDFC75 /* 促销 in Resources */,
+				FAF9AED81C0098D400EDFC75 /* 首页焦点按钮 in Resources */,
 				B3B134B71BFEBB4D004C60AE /* MinePlist.plist in Resources */,
 				B312527E1BFC79EB0098B995 /* Assets.xcassets in Resources */,
+				FAF9AEDE1C02A6A900EDFC75 /* 首页新鲜热卖 in Resources */,
+				FAF9AEDA1C02A66A00EDFC75 /* AD in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +597,7 @@
 				B31252B01BFC7B3E0098B995 /* SupermarketViewController.swift in Sources */,
 				B31252771BFC79EB0098B995 /* AppDelegate.swift in Sources */,
 				B31252B41BFC7B550098B995 /* ShopCartViewController.swift in Sources */,
+				FAF9AED31C00934400EDFC75 /* HeadResources.swift in Sources */,
 				B35C1DAB1BFD9BF0006260D0 /* MineHeadView.swift in Sources */,
 				B31252B21BFC7B490098B995 /* ScheduleViewController.swift in Sources */,
 				B31252B91BFC7B790098B995 /* BaseViewController.swift in Sources */,
@@ -565,10 +607,12 @@
 				B35C1DA11BFD6B06006260D0 /* UIView+Extension.swift in Sources */,
 				B31252B61BFC7B610098B995 /* MineViewController.swift in Sources */,
 				B35C1DA91BFD89E7006260D0 /* UpImageDownTextButton.swift in Sources */,
+				FAF9AECE1C008BE000EDFC75 /* HotView.swift in Sources */,
 				B31252CF1BFC7BB00098B995 /* RAMTransitionItemAnimation.swift in Sources */,
 				B31252CD1BFC7BB00098B995 /* RAMFumeAnimation.swift in Sources */,
 				B31252D31BFC7F940098B995 /* BaseNavigationController.swift in Sources */,
 				B31252CE1BFC7BB00098B995 /* RAMRotationAnimation.swift in Sources */,
+				FAF9AED61C0096B500EDFC75 /* SwiftDictModel.swift in Sources */,
 				B31252BA1BFC7B790098B995 /* MainViewController.swift in Sources */,
 				B35C1DB51BFDB423006260D0 /* MineTabeHeadView.swift in Sources */,
 			);
