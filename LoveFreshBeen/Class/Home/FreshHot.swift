@@ -1,0 +1,62 @@
+//
+//  FreshHot.swift
+//  LoveFreshBeen
+//
+//  Created by sfbest on 15/11/23.
+//  Copyright © 2015年 tianzhongtao. All rights reserved.
+//
+
+import UIKit
+
+class FreshHot: NSObject, DictModelProtocol {
+
+    var page: Int = -1
+    var code: Int = -1
+    var msg: String?
+    var data: [Goods]?
+    
+    class func loadFreshHotData(completion:(data: FreshHot?, error: NSError?) -> Void) {
+        let path = NSBundle.mainBundle().pathForResource("首页新鲜热卖", ofType: nil)
+        let data = NSData(contentsOfFile: path!)
+        if data != nil {
+            let dict: NSDictionary = (try! NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)) as! NSDictionary
+            let modelTool = DictModelManager.sharedManager
+            let data = modelTool.objectWithDictionary(dict, cls: FreshHot.self) as? FreshHot
+            completion(data: data, error: nil)
+        }
+    }
+    
+    static func customClassMapping() -> [String : String]? {
+        return ["data" : "\(Goods.self)"]
+    }
+}
+
+class Goods: NSObject {
+    /// 商品ID
+    var id: String?
+    /// 商品姓名
+    var name: String?
+    var brand_id: String?
+    /// 超市价格
+    var market_price: String?
+    var cid: String?
+    var category_id: String?
+    /// 当前价格
+    var partner_price: String?
+    var brand_name: String?
+    var pre_img: String?
+    
+    var pre_imgs: String?
+    /// 参数
+    var specifics: String?
+    var product_id: String?
+    var dealer_id: String?
+    /// 当前价格
+    var price: String?
+    /// 库存
+    var number: Int = -1
+    /// 买一赠一
+    var pm_desc: String?
+    /// urlStr
+    var img: String?
+}

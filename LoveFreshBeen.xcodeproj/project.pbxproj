@@ -38,6 +38,9 @@
 		B3B134C01BFEF11B004C60AE /* HomeTableHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B134BF1BFEF11B004C60AE /* HomeTableHeadView.swift */; };
 		B3B134C21BFEF195004C60AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B134C11BFEF195004C60AE /* HomeViewController.swift */; };
 		B3B134C41BFEF282004C60AE /* PageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B134C31BFEF282004C60AE /* PageScrollView.swift */; };
+		B3C4E31F1C02B4D60025074D /* IconImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4E31E1C02B4D60025074D /* IconImageTextView.swift */; settings = {ASSET_TAGS = (); }; };
+		B3C4E39A1C0312340025074D /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4E3991C0312340025074D /* HomeCell.swift */; settings = {ASSET_TAGS = (); }; };
+		B3C4E39C1C0315BA0025074D /* FreshHot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4E39B1C0315BA0025074D /* FreshHot.swift */; settings = {ASSET_TAGS = (); }; };
 		FAF9AECE1C008BE000EDFC75 /* HotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9AECD1C008BE000EDFC75 /* HotView.swift */; };
 		FAF9AED31C00934400EDFC75 /* HeadResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9AED21C00934400EDFC75 /* HeadResources.swift */; };
 		FAF9AED61C0096B500EDFC75 /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9AED51C0096B500EDFC75 /* SwiftDictModel.swift */; };
@@ -103,6 +106,9 @@
 		B3B134BF1BFEF11B004C60AE /* HomeTableHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableHeadView.swift; sourceTree = "<group>"; };
 		B3B134C11BFEF195004C60AE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B3B134C31BFEF282004C60AE /* PageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageScrollView.swift; sourceTree = "<group>"; };
+		B3C4E31E1C02B4D60025074D /* IconImageTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconImageTextView.swift; sourceTree = "<group>"; };
+		B3C4E3991C0312340025074D /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		B3C4E39B1C0315BA0025074D /* FreshHot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreshHot.swift; sourceTree = "<group>"; };
 		E372C8047ED1AE2C27FB8CCD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F4EB10C6FBD193A56A882E0F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FAF9AECD1C008BE000EDFC75 /* HotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotView.swift; sourceTree = "<group>"; };
@@ -232,6 +238,8 @@
 				B3B134C11BFEF195004C60AE /* HomeViewController.swift */,
 				B3B134BF1BFEF11B004C60AE /* HomeTableHeadView.swift */,
 				FAF9AECD1C008BE000EDFC75 /* HotView.swift */,
+				B3C4E31E1C02B4D60025074D /* IconImageTextView.swift */,
+				B3C4E3991C0312340025074D /* HomeCell.swift */,
 				FAF9AECF1C0092A500EDFC75 /* Model */,
 			);
 			path = Home;
@@ -389,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF9AED21C00934400EDFC75 /* HeadResources.swift */,
+				B3C4E39B1C0315BA0025074D /* FreshHot.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -598,14 +607,17 @@
 				B31252771BFC79EB0098B995 /* AppDelegate.swift in Sources */,
 				B31252B41BFC7B550098B995 /* ShopCartViewController.swift in Sources */,
 				FAF9AED31C00934400EDFC75 /* HeadResources.swift in Sources */,
+				B3C4E39C1C0315BA0025074D /* FreshHot.swift in Sources */,
 				B35C1DAB1BFD9BF0006260D0 /* MineHeadView.swift in Sources */,
 				B31252B21BFC7B490098B995 /* ScheduleViewController.swift in Sources */,
 				B31252B91BFC7B790098B995 /* BaseViewController.swift in Sources */,
 				B31252CB1BFC7BB00098B995 /* RAMBounceAnimation.swift in Sources */,
+				B3C4E39A1C0312340025074D /* HomeCell.swift in Sources */,
 				B31252D11BFC7BB00098B995 /* RAMItemAnimationProtocol.swift in Sources */,
 				B35C1DA51BFD8853006260D0 /* UIBarButtonItem+Extension.swift in Sources */,
 				B35C1DA11BFD6B06006260D0 /* UIView+Extension.swift in Sources */,
 				B31252B61BFC7B610098B995 /* MineViewController.swift in Sources */,
+				B3C4E31F1C02B4D60025074D /* IconImageTextView.swift in Sources */,
 				B35C1DA91BFD89E7006260D0 /* UpImageDownTextButton.swift in Sources */,
 				FAF9AECE1C008BE000EDFC75 /* HotView.swift in Sources */,
 				B31252CF1BFC7BB00098B995 /* RAMTransitionItemAnimation.swift in Sources */,

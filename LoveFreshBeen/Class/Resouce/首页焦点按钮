@@ -175,7 +175,8 @@
 			"show_reload": "1",
 			"hide_cart": "0",
 			"trackid": "icon1|20333"
-		}, {
+		},
+{
 			"id": "1",
 			"name": "促销",
 			"img": "http:\/\/img01.bqstatic.com\/upload\/activity\/activity_v4_20002_1446309072_icon.jpg",

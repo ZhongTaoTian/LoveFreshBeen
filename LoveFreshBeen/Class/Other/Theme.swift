@@ -14,4 +14,6 @@ public let ScreenHeight: CGFloat = UIScreen.mainScreen().bounds.size.height
 public let ScreenBounds: CGRect = UIScreen.mainScreen().bounds
 public let LFBGlobalBackgroundColor = UIColor.colorWithCustom(239, g: 239, b: 239)
 public let LFBNavigationYellowColor = UIColor.colorWithCustom(253, g: 212, b: 49)
-
+public let HotViewMargin: CGFloat = 10
+public let HomeTableHeadViewHeightDidChange = "HomeTableHeadViewHeightDidChange"
+public let HomeCollectionViewCellMargin: CGFloat = 10

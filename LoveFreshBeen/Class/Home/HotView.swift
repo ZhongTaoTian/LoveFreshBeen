@@ -10,18 +10,19 @@ import UIKit
 
 class HotView: UIView {
 
-    private let iconH = (ScreenWidth - 20) * 0.25
-    private let iconW: CGFloat = 80
+
+    private let iconW = (ScreenWidth - 2 * HotViewMargin) * 0.25
+    private let iconH: CGFloat = 80
     
-    var hotButtonClick:((index: Int) -> Void)?
+    var iconClick:((index: Int) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    convenience init(frame: CGRect, hotButtonClick: ((index: Int) -> Void)) {
+    convenience init(frame: CGRect, iconClick: ((index: Int) -> Void)) {
         self.init(frame:frame)
-        self.hotButtonClick = hotButtonClick
+        self.iconClick = iconClick
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -32,11 +33,40 @@ class HotView: UIView {
     var headData: HeadData? {
         didSet {
             if headData?.icons?.count > 0 {
-                for i in 0..<headData!.icons!.count {
                 
+                if headData!.icons!.count % 4 != 0 {
+                    self.rows = headData!.icons!.count / 4 + 1
+                } else {
+                    self.rows = headData!.icons!.count / 4
+                }
+                var iconX: CGFloat = 0
+                var iconY: CGFloat = 0
+
+                for i in 0..<headData!.icons!.count {
+                    iconX = CGFloat(i % 4) * iconW + HotViewMargin
+                    iconY = iconH * CGFloat(i / 4)
+                    let icon = IconImageTextView(frame: CGRectMake(iconX, iconY, iconW, iconH), placeholderImage: UIImage(named: "icon_icons_holder")!)
+                    icon.tag = i
+                    icon.activitie = headData!.icons![i]
+                    let tap = UITapGestureRecognizer(target: self, action: "iconClick:")
+                    icon.addGestureRecognizer(tap)
+                    addSubview(icon)
                 }
             }
         }
     }
+// MARK: rows数量
+    private var rows: Int = 0 {
+        willSet {
+            bounds = CGRectMake(0, 0, ScreenWidth, iconH * CGFloat(newValue))
+        }
+    }
 
+// MARK:- Action
+    func iconClick(tap: UITapGestureRecognizer) {
+        if iconClick != nil {
+            iconClick!(index: tap.view!.tag)
+        }
+    }
 }
+
