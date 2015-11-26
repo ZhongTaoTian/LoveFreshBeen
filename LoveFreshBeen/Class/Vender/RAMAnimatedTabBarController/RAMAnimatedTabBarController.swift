@@ -31,6 +31,7 @@ class RAMAnimatedTabBarController: UITabBarController {
     
     var iconsView: [(icon: UIImageView, textLabel: UILabel)] = []
     var iconsImageName:[String] = ["v2_home", "v2_order", "freshReservation", "shopCart", "v2_my"]
+    var iconsSelectedImageName:[String] = ["v2_home_r", "v2_order_r", "freshReservation_r", "shopCart_r", "v2_my_r"]
 // MARK: create methods
 
     func createCustomIcons(containers : [String: UIView]) {
@@ -224,8 +225,14 @@ class RAMAnimatedTabBarController: UITabBarController {
     func setSelectIndex(from from: Int,to: Int) {
         selectedIndex = to
         let items = tabBar.items as! [RAMAnimatedTabBarItem]
-        items[from].deselectAnimation(iconsView[from].icon, textLabel: iconsView[from].textLabel)
-        items[to].playAnimation(iconsView[to].icon, textLabel: iconsView[to].textLabel)
+        
+        let fromIV = iconsView[from].icon
+        fromIV.image = UIImage(named: iconsImageName[from])
+        items[from].deselectAnimation(fromIV, textLabel: iconsView[from].textLabel)
+        
+        let toIV = iconsView[to].icon
+        toIV.image = UIImage(named: iconsSelectedImageName[to])
+        items[to].playAnimation(toIV, textLabel: iconsView[to].textLabel)
     }
 }
 

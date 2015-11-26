@@ -7,7 +7,7 @@ import UIKit
 
 
 class RAMBounceAnimation : RAMItemAnimation {
-
+    
     override func playAnimation(icon : UIImageView, textLabel : UILabel) {
         playBounceAnimation(icon)
         textLabel.textColor = textSelectedColor

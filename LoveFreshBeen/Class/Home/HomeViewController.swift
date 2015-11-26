@@ -9,10 +9,13 @@
 import UIKit
 
 class HomeViewController: BaseViewController {
-    var flag: Int = -1
-    var headView: HomeTableHeadView?
-    var collectionView: UICollectionView!
-    var lastContentOffsetY: CGFloat = 0
+    private var flag: Int = -1
+    private var headView: HomeTableHeadView?
+    private var collectionView: UICollectionView!
+    private var lastContentOffsetY: CGFloat = 0
+    private var isAnimation: Bool = false
+    private var headData: HeadResources?
+    private var freshHot: FreshHot?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,8 @@ class HomeViewController: BaseViewController {
         buildCollectionView()
         
         buildTableHeadView()
+        
+        buildProessHud()
     }
     
     deinit {
@@ -33,10 +38,11 @@ class HomeViewController: BaseViewController {
     // MARK:- addNotifiation
     func addHomeNotification() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "homeTableHeadViewHeightDidChange:", name: HomeTableHeadViewHeightDidChange, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "goodsInventoryProblem:", name: GoodsInventoryProblem, object: nil)
     }
     
     // MARK:- Creat UI
-    func buildNavigationItem() {
+    private func buildNavigationItem() {
         navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
         
         navigationItem.leftBarButtonItem = UIBarButtonItem.barButton("扫一扫", titleColor: UIColor.blackColor(),
@@ -47,7 +53,7 @@ class HomeViewController: BaseViewController {
             target: self, action: "rightItemClick", type: ItemButtonType.Right)
     }
     
-    func buildTableHeadView() {
+    private func buildTableHeadView() {
         headView = HomeTableHeadView()
         
         headView?.delegate = self
@@ -55,13 +61,20 @@ class HomeViewController: BaseViewController {
         HeadResources.loadHomeHeadData { (data, error) -> Void in
             if error == nil {
                 tmpSelf?.headView?.headData = data
+                tmpSelf?.headData = data
+                tmpSelf?.collectionView.reloadData()
             }
         }
         
         collectionView.addSubview(headView!)
+        
+        FreshHot.loadFreshHotData { (data, error) -> Void in
+            tmpSelf?.freshHot = data
+            tmpSelf?.collectionView.reloadData()
+        }
     }
     
-    func buildCollectionView() {
+    private func buildCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 5
         layout.minimumLineSpacing = 8
@@ -71,8 +84,16 @@ class HomeViewController: BaseViewController {
         collectionView = UICollectionView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight - NavigationH), collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.backgroundColor = LFBGlobalBackgroundColor
         collectionView.registerClass(HomeCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.registerClass(HomeCollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView")
+        collectionView.registerClass(HomeCollectionFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerView")
         view.addSubview(collectionView)
+    }
+    
+    private func buildProessHud() {
+        ProgressHUDManager.setBackgroundColor(UIColor.colorWithCustom(240, g: 240, b: 240))
+        ProgressHUDManager.setFont(UIFont.systemFontOfSize(16))
     }
     
     // MARK:- Action
@@ -90,6 +111,12 @@ class HomeViewController: BaseViewController {
         collectionView!.contentInset = UIEdgeInsetsMake(noti.object as! CGFloat, 0, NavigationH, 0)
         collectionView!.setContentOffset(CGPoint(x: 0, y: -(collectionView!.contentInset.top)), animated: false)
         lastContentOffsetY = collectionView.contentOffset.y
+    }
+    
+    func goodsInventoryProblem(noti: NSNotification) {
+        if let goodsName = noti.object as? String {
+            SVProgressHUD.showImage(UIImage(named: "v2_orderSuccess"), status: goodsName + "  库存不足了\n先买这么多, 过段时间再来看看吧~")
+        }
     }
 }
 
@@ -109,18 +136,23 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
-            return 6
+            return headData?.data?.activities?.count ?? 0
         } else if section == 1 {
-            return 20
+            return freshHot?.data?.count ?? 0
         }
         
         return 0
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! HomeCell
         
-        cell.contentView.backgroundColor = UIColor.randomColor()
+        if indexPath.section == 0 {
+            cell.activities = headData!.data!.activities![indexPath.row]
+        } else if indexPath.section == 1 {
+            cell.goods = freshHot!.data![indexPath.row]
+        }
+        
         return cell
     }
     
@@ -153,7 +185,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if section == 0 {
             return CGSizeMake(ScreenWidth, HomeCollectionViewCellMargin)
         } else if section == 1 {
-            return CGSizeMake(ScreenWidth, HomeCollectionViewCellMargin * 8)
+            return CGSizeMake(ScreenWidth, HomeCollectionViewCellMargin * 5)
         }
         
         return CGSizeZero
@@ -161,11 +193,60 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
-        if lastContentOffsetY <= collectionView.contentOffset.y {
-
+        if isAnimation {
             //Animation
+            startAnimation(cell, offsetY: 60)
+        }
+    }
+    
+    func collectionView(collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, atIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 1 && headData != nil && freshHot != nil && isAnimation {
+            startAnimation(view, offsetY: 40)
+        }
+    }
+    
+    private func startAnimation(view: UIView, offsetY: CGFloat) {
+        view.transform = CGAffineTransformMakeTranslation(0, offsetY)
+        UIView.animateWithDuration(0.8, animations: { () -> Void in
+            view.transform = CGAffineTransformIdentity
+        })
+    }
+    
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        if indexPath.section == 1 && kind == UICollectionElementKindSectionHeader {
+            let headView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView", forIndexPath: indexPath) as! HomeCollectionHeaderView
             
-            lastContentOffsetY = collectionView.contentOffset.y
+            return headView
+        }
+        
+        let footerView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionFooter, withReuseIdentifier: "footerView", forIndexPath: indexPath) as! HomeCollectionFooterView
+        
+        if indexPath.section == 1 && kind == UICollectionElementKindSectionFooter {
+            footerView.showLabel()
+            footerView.tag = 100
+        } else {
+            footerView.hideLabel()
+            footerView.tag = 1
+        }
+        let tap = UITapGestureRecognizer(target: self, action: "moreGoodsClick:")
+        footerView.addGestureRecognizer(tap)
+        
+        return footerView
+    }
+    
+    // MARK: 查看更多商品被点击
+    func moreGoodsClickik(tap: UITapGestureRecognizer) {
+        if tap.view?.tag == 100 {
+            let tabBarController = UIApplication.sharedApplication().keyWindow?.rootViewController as! MainTabBarController
+            tabBarController.setSelectIndex(from: 0, to: 1)
+        }
+    }
+    
+    // MARK: - ScrollViewDelegate
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset.y <= scrollView.contentSize.height {
+            isAnimation = lastContentOffsetY < scrollView.contentOffset.y
+            lastContentOffsetY = scrollView.contentOffset.y
         }
     }
 }

@@ -32,6 +32,7 @@ class FreshHot: NSObject, DictModelProtocol {
 }
 
 class Goods: NSObject {
+    //*************************商品模型默认属性**********************************
     /// 商品ID
     var id: String?
     /// 商品姓名
@@ -59,4 +60,8 @@ class Goods: NSObject {
     var pm_desc: String?
     /// urlStr
     var img: String?
+    
+    //*************************商品模型辅助属性**********************************
+    // 记录用户对商品添加次数
+    var userBuyNumber: Int = 0
 }
