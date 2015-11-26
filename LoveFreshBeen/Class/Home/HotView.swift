@@ -10,7 +10,6 @@ import UIKit
 
 class HotView: UIView {
 
-
     private let iconW = (ScreenWidth - 2 * HotViewMargin) * 0.25
     private let iconH: CGFloat = 80
     
@@ -46,6 +45,7 @@ class HotView: UIView {
                     iconX = CGFloat(i % 4) * iconW + HotViewMargin
                     iconY = iconH * CGFloat(i / 4)
                     let icon = IconImageTextView(frame: CGRectMake(iconX, iconY, iconW, iconH), placeholderImage: UIImage(named: "icon_icons_holder")!)
+                    
                     icon.tag = i
                     icon.activitie = headData!.icons![i]
                     let tap = UITapGestureRecognizer(target: self, action: "iconClick:")

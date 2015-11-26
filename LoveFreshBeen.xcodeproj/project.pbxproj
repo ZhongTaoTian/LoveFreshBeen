@@ -51,6 +51,9 @@
 		B3A20CDB1C06C5E500E1EAF4 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A20CC91C06C5E500E1EAF4 /* UIImageView+HighlightedWebCache.m */; settings = {ASSET_TAGS = (); }; };
 		B3A20CDC1C06C5E500E1EAF4 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A20CCB1C06C5E500E1EAF4 /* UIImageView+WebCache.m */; settings = {ASSET_TAGS = (); }; };
 		B3A20CDD1C06C5E500E1EAF4 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A20CCD1C06C5E500E1EAF4 /* UIView+WebCacheOperation.m */; settings = {ASSET_TAGS = (); }; };
+		B3A20CDF1C06D99600E1EAF4 /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = B3A20CDE1C06D99600E1EAF4 /* supermarket */; settings = {ASSET_TAGS = (); }; };
+		B3A20CE11C06DB8300E1EAF4 /* Supermarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A20CE01C06DB8300E1EAF4 /* Supermarket.swift */; settings = {ASSET_TAGS = (); }; };
+		B3A20CE41C06F2C300E1EAF4 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A20CE31C06F2C300E1EAF4 /* CategoryCell.swift */; settings = {ASSET_TAGS = (); }; };
 		B3ACB7FA1C05520D00C1678E /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACB7F91C05520D00C1678E /* BuyView.swift */; settings = {ASSET_TAGS = (); }; };
 		B3ACB7FD1C056AF600C1678E /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACB7FC1C056AF600C1678E /* String + Extension.swift */; settings = {ASSET_TAGS = (); }; };
 		B3B134B71BFEBB4D004C60AE /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3B134B61BFEBB4D004C60AE /* MinePlist.plist */; };
@@ -156,6 +159,9 @@
 		B3A20CCB1C06C5E500E1EAF4 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		B3A20CCC1C06C5E500E1EAF4 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		B3A20CCD1C06C5E500E1EAF4 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		B3A20CDE1C06D99600E1EAF4 /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = supermarket; sourceTree = "<group>"; };
+		B3A20CE01C06DB8300E1EAF4 /* Supermarket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supermarket.swift; sourceTree = "<group>"; };
+		B3A20CE31C06F2C300E1EAF4 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		B3ACB7F91C05520D00C1678E /* BuyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
 		B3ACB7FC1C056AF600C1678E /* String + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String + Extension.swift"; path = "LoveFreshBeen/Class/String + Extension.swift"; sourceTree = SOURCE_ROOT; };
 		B3B134B61BFEBB4D004C60AE /* MinePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MinePlist.plist; sourceTree = "<group>"; };
@@ -350,6 +356,8 @@
 			isa = PBXGroup;
 			children = (
 				B31252AF1BFC7B3E0098B995 /* SupermarketViewController.swift */,
+				B3A20CE31C06F2C300E1EAF4 /* CategoryCell.swift */,
+				B3A20CE21C06DB8800E1EAF4 /* Model */,
 			);
 			path = SuperMarket;
 			sourceTree = "<group>";
@@ -476,11 +484,20 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		B3A20CE21C06DB8800E1EAF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B3A20CE01C06DB8300E1EAF4 /* Supermarket.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		B3B134B51BFEBB1C004C60AE /* Resouce */ = {
 			isa = PBXGroup;
 			children = (
 				B3B134B61BFEBB4D004C60AE /* MinePlist.plist */,
 				FAF9AED71C0098D400EDFC75 /* 首页焦点按钮 */,
+				B3A20CDE1C06D99600E1EAF4 /* supermarket */,
 				FAF9AED91C02A66A00EDFC75 /* AD */,
 				FAF9AEDB1C02A66F00EDFC75 /* 促销 */,
 				FAF9AEDD1C02A6A900EDFC75 /* 首页新鲜热卖 */,
@@ -623,6 +640,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF9AEDC1C02A66F00EDFC75 /* 促销 in Resources */,
+				B3A20CDF1C06D99600E1EAF4 /* supermarket in Resources */,
 				FAF9AED81C0098D400EDFC75 /* 首页焦点按钮 in Resources */,
 				B3B134B71BFEBB4D004C60AE /* MinePlist.plist in Resources */,
 				B312527E1BFC79EB0098B995 /* Assets.xcassets in Resources */,
@@ -716,6 +734,7 @@
 				B3A20CD51C06C5E500E1EAF4 /* SDWebImageManager.m in Sources */,
 				B3A20CDC1C06C5E500E1EAF4 /* UIImageView+WebCache.m in Sources */,
 				B31252771BFC79EB0098B995 /* AppDelegate.swift in Sources */,
+				B3A20CE11C06DB8300E1EAF4 /* Supermarket.swift in Sources */,
 				B31252B41BFC7B550098B995 /* ShopCartViewController.swift in Sources */,
 				FAF9AED31C00934400EDFC75 /* HeadResources.swift in Sources */,
 				B3A20CCE1C06C5E500E1EAF4 /* MKAnnotationView+WebCache.m in Sources */,
@@ -753,6 +772,7 @@
 				B35C1DB51BFDB423006260D0 /* MineTabeHeadView.swift in Sources */,
 				B3A20CD11C06C5E500E1EAF4 /* SDWebImageCompat.m in Sources */,
 				B3A20CD01C06C5E500E1EAF4 /* SDImageCache.m in Sources */,
+				B3A20CE41C06F2C300E1EAF4 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

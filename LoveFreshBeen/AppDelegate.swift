@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setAppSubject() {
         let tabBarAppearance = UITabBar.appearance()
         tabBarAppearance.backgroundColor = UIColor.whiteColor()
+        tabBarAppearance.translucent = true
 
         let navBarnAppearance = UINavigationBar.appearance()
         navBarnAppearance.translucent = false

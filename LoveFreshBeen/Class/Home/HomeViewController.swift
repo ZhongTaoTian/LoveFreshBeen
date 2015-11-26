@@ -38,7 +38,7 @@ class HomeViewController: BaseViewController {
     // MARK:- addNotifiation
     func addHomeNotification() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "homeTableHeadViewHeightDidChange:", name: HomeTableHeadViewHeightDidChange, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "goodsInventoryProblem:", name: GoodsInventoryProblem, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "goodsInventoryProblem:", name: HomeGoodsInventoryProblem, object: nil)
     }
     
     // MARK:- Creat UI
@@ -58,6 +58,7 @@ class HomeViewController: BaseViewController {
         
         headView?.delegate = self
         weak var tmpSelf = self
+
         HeadResources.loadHomeHeadData { (data, error) -> Void in
             if error == nil {
                 tmpSelf?.headView?.headData = data
@@ -81,7 +82,7 @@ class HomeViewController: BaseViewController {
         layout.sectionInset = UIEdgeInsets(top: 0, left: HomeCollectionViewCellMargin, bottom: 0, right: HomeCollectionViewCellMargin)
         layout.headerReferenceSize = CGSizeMake(0, HomeCollectionViewCellMargin)
         
-        collectionView = UICollectionView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight - NavigationH), collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight), collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = LFBGlobalBackgroundColor
@@ -235,7 +236,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     // MARK: 查看更多商品被点击
-    func moreGoodsClickik(tap: UITapGestureRecognizer) {
+    func moreGoodsClick(tap: UITapGestureRecognizer) {
         if tap.view?.tag == 100 {
             let tabBarController = UIApplication.sharedApplication().keyWindow?.rootViewController as! MainTabBarController
             tabBarController.setSelectIndex(from: 0, to: 1)

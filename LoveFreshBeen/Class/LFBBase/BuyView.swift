@@ -124,7 +124,7 @@ class BuyView: UIView {
     func addGoodsButtonClick() {
         
         if buyNumber >= goods?.number {
-            NSNotificationCenter.defaultCenter().postNotificationName(GoodsInventoryProblem, object: goods?.name)
+            NSNotificationCenter.defaultCenter().postNotificationName(HomeGoodsInventoryProblem, object: goods?.name)
             return
         }
         

@@ -90,16 +90,14 @@ class HomeCell: UICollectionViewCell {
     var activities: Activities? {
         didSet {
             self.type = .Horizontal
-            
-            backImageView.image = UIImage(named: "v2_placeholder_full_size")
+            backImageView.sd_setImageWithURL(NSURL(string: activities!.img!), placeholderImage: UIImage(named: "v2_placeholder_full_size"))
         }
     }
     
     var goods: Goods? {
         didSet {
             self.type = .Vertical
-            
-            goodsImageView.image = UIImage(named: "v2_placeholder_square")
+            goodsImageView.sd_setImageWithURL(NSURL(string: goods!.img!), placeholderImage: UIImage(named: "v2_placeholder_square"))
             nameLabel.text = goods?.name
             if goods!.pm_desc == "买一赠一" {
                 giveImageView.hidden = false
