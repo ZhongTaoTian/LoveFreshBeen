@@ -22,6 +22,7 @@ class HomeCell: UICollectionViewCell {
     
     private lazy var goodsImageView: UIImageView = {
         let goodsImageView = UIImageView()
+        goodsImageView.contentMode = UIViewContentMode.Center
         return goodsImageView
         }()
     
@@ -60,6 +61,7 @@ class HomeCell: UICollectionViewCell {
         return buyView
         }()
     
+    
     private var type: HomeCellTyep? {
         didSet {
             backImageView.hidden = !(type == HomeCellTyep.Horizontal)
@@ -73,6 +75,8 @@ class HomeCell: UICollectionViewCell {
         }
     }
     
+    var addButtonClick:((imageView: UIImageView) -> ())?
+    
     // MARK: - 便利构造方法
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -84,6 +88,13 @@ class HomeCell: UICollectionViewCell {
         addSubview(giveImageView)
         addSubview(specificsLabel)
         addSubview(buyView)
+        
+        weak var tmpSelf = self
+        buyView.clickAddShopCar = {()
+            if tmpSelf?.addButtonClick != nil {         
+                tmpSelf!.addButtonClick!(imageView:tmpSelf!.goodsImageView)
+            }
+        }
     }
     
     // MARK: - 模型set方法
@@ -102,6 +113,7 @@ class HomeCell: UICollectionViewCell {
             if goods!.pm_desc == "买一赠一" {
                 giveImageView.hidden = false
             } else {
+                
                 giveImageView.hidden = true
             }
             if discountPriceView != nil {
@@ -132,4 +144,5 @@ class HomeCell: UICollectionViewCell {
         discountPriceView?.frame = CGRectMake(nameLabel.x, CGRectGetMaxY(specificsLabel.frame), 60, height - CGRectGetMaxY(specificsLabel.frame))
         buyView.frame = CGRectMake(width - 85, height - 30, 80, 25)
     }
+    
 }

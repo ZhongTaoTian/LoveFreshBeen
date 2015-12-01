@@ -10,10 +10,11 @@ import UIKit
 
 class SupermarketViewController: BaseViewController {
     
-    var supermarketData: Supermarket?
+    private var supermarketData: Supermarket?
+    private var categoryTableView: LFBTableView!
+    private var productsVC: ProductsViewController!
     
     //MARK: Lazy Property
-    private var categoryTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +22,17 @@ class SupermarketViewController: BaseViewController {
         buildNavigationItem()
         
         bulidCategoryTableView()
+        
+        bulidProductsViewController()
                 
         loadSupermarketData()
     }
-    
+        
     
     // MARK:- Creat UI
     private func buildNavigationItem() {
         navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
-        
+
         navigationItem.leftBarButtonItem = UIBarButtonItem.barButton("扫一扫", titleColor: UIColor.blackColor(),
             image: UIImage(named: "icon_black_scancode")!, hightLightImage: nil,
             target: self, action: "leftItemClick", type: ItemButtonType.Left)
@@ -39,15 +42,21 @@ class SupermarketViewController: BaseViewController {
     }
     
     private func bulidCategoryTableView() {
-        categoryTableView = UITableView(frame: CGRectMake(0, 0, ScreenWidth * 0.25, ScreenHeight), style: .Plain)
+        categoryTableView = LFBTableView(frame: CGRectMake(0, 0, ScreenWidth * 0.25, ScreenHeight), style: .Plain)
         categoryTableView.backgroundColor = LFBGlobalBackgroundColor
         categoryTableView.delegate = self
         categoryTableView.dataSource = self
-        categoryTableView.separatorStyle = UITableViewCellSeparatorStyle.None
         categoryTableView.showsHorizontalScrollIndicator = false
         categoryTableView.showsVerticalScrollIndicator = false
         categoryTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: NavigationH, right: 0)
         view.addSubview(categoryTableView)
+    }
+    
+    private func bulidProductsViewController() {
+        productsVC = ProductsViewController()
+        productsVC.delegate = self
+        addChildViewController(productsVC)
+        view.addSubview(productsVC.view)
     }
     
     private func loadSupermarketData() {
@@ -56,6 +65,8 @@ class SupermarketViewController: BaseViewController {
             if error == nil {
                 tmpSelf!.supermarketData = data
                 tmpSelf!.categoryTableView.reloadData()
+                tmpSelf!.categoryTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .Bottom)
+                tmpSelf!.productsVC.supermarketData = data
             }
         }
     }
@@ -89,5 +100,24 @@ extension SupermarketViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 
         return 45
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if productsVC != nil {
+            productsVC.categortsSelectedIndexPath = indexPath
+        }
+    }
+    
+}
+
+// MARK: - SupermarketViewController
+extension SupermarketViewController: ProductsViewControllerDelegate {
+    
+    func didEndDisplayingHeaderView(section: Int) {
+        categoryTableView.selectRowAtIndexPath(NSIndexPath(forRow: section + 1, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Middle)
+    }
+    
+    func willDisplayHeaderView(section: Int) {
+        categoryTableView.selectRowAtIndexPath(NSIndexPath(forRow: section, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Middle)
     }
 }

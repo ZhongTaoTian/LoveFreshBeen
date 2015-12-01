@@ -31,7 +31,8 @@ class RAMAnimatedTabBarController: UITabBarController {
     
     var iconsView: [(icon: UIImageView, textLabel: UILabel)] = []
     var iconsImageName:[String] = ["v2_home", "v2_order", "freshReservation", "shopCart", "v2_my"]
-    var iconsSelectedImageName:[String] = ["v2_home_r", "v2_order_r", "freshReservation_r", "shopCart_r", "v2_my_r"]
+    var iconsSelectedImageName:[String] = ["v2_home_r", "v2_order_r", "freshReservation_r", "shopCart", "v2_my_r"]
+    
 // MARK: create methods
 
     func createCustomIcons(containers : [String: UIView]) {
@@ -60,7 +61,13 @@ class RAMAnimatedTabBarController: UITabBarController {
                 icon.image = item.image
 //                icon.translatesAutoresizingMaskIntoConstraints = false
                 icon.tintColor = UIColor.clearColor()
-
+                
+                if 3 == index {
+                    let redDotView = ShopCarRedDotView.sharedRedDotView
+                    redDotView.frame = CGRectMake(imageH + 2, 1, 15, 15)
+                    icon.addSubview(redDotView)
+                }
+                
                 // text
                 let textLabel = UILabel()
                 textLabel.text = item.title
@@ -204,6 +211,17 @@ class RAMAnimatedTabBarController: UITabBarController {
         let items = tabBar.items as! [RAMAnimatedTabBarItem]
 
         let currentIndex = gesture.view!.tag
+        
+        // 点击的购物车按钮
+        if currentIndex == 3 {
+            let vc = childViewControllers[selectedIndex] 
+            let shopCar = ShopCartViewController()
+            let nav = BaseNavigationController(rootViewController: shopCar)
+            vc.presentViewController(nav, animated: true, completion: nil)
+            
+            return
+        }
+        
         if selectedIndex != currentIndex {
             let animationItem : RAMAnimatedTabBarItem = items[currentIndex]
             let icon = iconsView[currentIndex].icon
@@ -223,6 +241,7 @@ class RAMAnimatedTabBarController: UITabBarController {
     }
     
     func setSelectIndex(from from: Int,to: Int) {
+        
         selectedIndex = to
         let items = tabBar.items as! [RAMAnimatedTabBarItem]
         

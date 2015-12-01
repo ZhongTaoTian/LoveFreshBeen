@@ -60,6 +60,8 @@ class Goods: NSObject {
     var pm_desc: String?
     /// urlStr
     var img: String?
+    /// 是不是精选 0 : 不是, 1 : 是
+    var is_xf: Int = 0
     
     //*************************商品模型辅助属性**********************************
     // 记录用户对商品添加次数

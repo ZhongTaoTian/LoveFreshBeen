@@ -11,7 +11,7 @@ import UIKit
 class MineViewController: BaseViewController {
     
     private var headView: MineHeadView!
-    private var tableView: UITableView!
+    private var tableView: LFBTableView!
     private var headViewHeight: CGFloat = 150
     private var tableHeadView: MineTabeHeadView!
     private lazy var mines: [MineCellModel] = {
@@ -38,11 +38,10 @@ class MineViewController: BaseViewController {
     }
     
     private func buildTableView() {
-        tableView = UITableView(frame: CGRectMake(0, headViewHeight, ScreenWidth, ScreenHeight - headViewHeight), style: .Grouped)
+        tableView = LFBTableView(frame: CGRectMake(0, headViewHeight, ScreenWidth, ScreenHeight - headViewHeight), style: .Grouped)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 46
-        tableView.separatorStyle = .None
         view.addSubview(tableView)
         
         tableHeadView = MineTabeHeadView(frame: CGRectMake(0, 0, ScreenWidth, 70))

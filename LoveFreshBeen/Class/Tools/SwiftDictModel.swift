@@ -198,7 +198,7 @@ public class DictModelManager {
         
         // 写入缓冲池
         modelCache["\(cls)"] = infoDict
-        
+
         return infoDict
     }
     

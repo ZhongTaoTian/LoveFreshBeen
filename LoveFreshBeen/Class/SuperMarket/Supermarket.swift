@@ -26,6 +26,17 @@ class Supermarket: NSObject, DictModelProtocol {
         }
     }
     
+    class func searchCategoryMatchProducts(supermarketResouce: SupermarketResouce) -> [[Goods]]? {
+        var arr = [[Goods]]()
+        
+        let products = supermarketResouce.products
+        for cate in supermarketResouce.categories! {
+           let goodsArr = products!.valueForKey(cate.id!) as! [Goods]
+            arr.append(goodsArr)
+        }
+        return arr
+    }
+    
     static func customClassMapping() -> [String : String]? {
         return ["data" : "\(SupermarketResouce.self)"]
     }
@@ -47,7 +58,24 @@ class Categorie: NSObject {
     var sort: String?
 }
 
-class Products: NSObject {
-
+class Products: NSObject, DictModelProtocol {
+    var a82: [Goods]?
+    var a96: [Goods]?
+    var a99: [Goods]?
+    var a106: [Goods]?
+    var a134: [Goods]?
+    var a135: [Goods]?
+    var a136: [Goods]?
+    var a137: [Goods]?
+    var a141: [Goods]?
+    var a143: [Goods]?
+    var a147: [Goods]?
+    var a151: [Goods]?
+    var a152: [Goods]?
+    var a158: [Goods]?
+    
+    static func customClassMapping() -> [String : String]? {
+        return ["a82" : "\(Goods.self)", "a96" : "\(Goods.self)", "a99" : "\(Goods.self)", "a106" : "\(Goods.self)", "a134" : "\(Goods.self)", "a135" : "\(Goods.self)", "a136" : "\(Goods.self)", "a141" : "\(Goods.self)", "a143" : "\(Goods.self)", "a147" : "\(Goods.self)", "a151" : "\(Goods.self)", "a152" : "\(Goods.self)", "a158" : "\(Goods.self)", "a137" : "\(Goods.self)"]
+    }
 }
 

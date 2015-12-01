@@ -13,6 +13,17 @@ class ShopCartViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        bulidNavigationItem()
+    }
+    
+    private func bulidNavigationItem() {
+        navigationItem.title = "购物车"
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem.barButton(UIImage(named: "v2_goback")!, target: self, action: "leftNavigitonItemClick")
+    }
+    
+// MARK:-  Action
+    func leftNavigitonItemClick() {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
