@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class HomeViewController: AnimationViewController {
     private var flag: Int = -1
     private var headView: HomeTableHeadView?
     private var collectionView: LFBCollectionView!
@@ -16,7 +16,6 @@ class HomeViewController: BaseViewController {
     private var isAnimation: Bool = false
     private var headData: HeadResources?
     private var freshHot: FreshHot?
-    private var animationLayers: [CALayer]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +25,9 @@ class HomeViewController: BaseViewController {
         buildNavigationItem()
         
         buildCollectionView()
-        
+
         buildTableHeadView()
-        
+
         buildProessHud()
     }
     
@@ -69,7 +68,6 @@ class HomeViewController: BaseViewController {
         }
         
         collectionView.addSubview(headView!)
-        
         FreshHot.loadFreshHotData { (data, error) -> Void in
             tmpSelf?.freshHot = data
             tmpSelf?.collectionView.reloadData()
@@ -92,6 +90,35 @@ class HomeViewController: BaseViewController {
         collectionView.registerClass(HomeCollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView")
         collectionView.registerClass(HomeCollectionFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerView")
         view.addSubview(collectionView)
+
+        let refreshHeadView = LFBRefreshHeader(refreshingTarget: self, refreshingAction: "headRefresh")
+        refreshHeadView.gifView?.frame = CGRectMake(0, 30, 100, 100)
+        collectionView.mj_header = refreshHeadView
+    }
+    
+    // MARK: 刷新
+    func headRefresh() {
+        headView?.headData = nil
+        headData = nil
+        freshHot = nil
+        
+        weak var tmpSelf = self
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.8 * Double(NSEC_PER_SEC)))
+        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+            HeadResources.loadHomeHeadData { (data, error) -> Void in
+                if error == nil {
+                    tmpSelf?.headView?.headData = data
+                    tmpSelf?.headData = data
+                    tmpSelf?.collectionView.reloadData()
+                }
+            }
+            
+            FreshHot.loadFreshHotData { (data, error) -> Void in
+                tmpSelf?.freshHot = data
+                tmpSelf?.collectionView.reloadData()
+                tmpSelf?.collectionView.mj_header.endRefreshing()
+            }
+        }
     }
     
     private func buildProessHud() {
@@ -119,68 +146,6 @@ class HomeViewController: BaseViewController {
     func goodsInventoryProblem(noti: NSNotification) {
         if let goodsName = noti.object as? String {
             ProgressHUDManager.showImage(UIImage(named: "v2_orderSuccess")!, status: goodsName + "  库存不足了\n先买这么多, 过段时间再来看看吧~")
-        }
-    }
-    
-    // MARK: 商品添加到购物车动画
-    private func addProductsAnimation(imageView: UIImageView) {
-        if animationLayers == nil {
-            animationLayers = [CALayer]()
-        }
-        
-        let frame = imageView.convertRect(imageView.bounds, toView: view)
-        let transitionLayer = CALayer()
-        transitionLayer.frame = frame
-        transitionLayer.contents = imageView.layer.contents
-        transitionLayer.fillMode = kCAFillModeRemoved
-        
-        let p1 = transitionLayer.position
-        let p3X = ScreenWidth - ScreenWidth / 5 - 10
-        let p3 = CGPointMake(p3X, view.layer.bounds.size.height - 20)
-        
-        let positionAnimation = CAKeyframeAnimation(keyPath: "position")
-        let path = CGPathCreateMutable()
-        CGPathMoveToPoint(path, nil, p1.x, p1.y)
-        CGPathAddLineToPoint(path, nil, p3.x, p3.y)
-        positionAnimation.removedOnCompletion = true
-        positionAnimation.path = path
-        positionAnimation.fillMode = kCAFillModeForwards
-        
-        let transformAnimation =  CABasicAnimation(keyPath: "transform")
-        transformAnimation.fromValue = NSValue(CATransform3D: CATransform3DIdentity)
-        transformAnimation.toValue = NSValue(CATransform3D: CATransform3DScale(CATransform3DIdentity, 0.1, 0.1, 1))
-        transformAnimation.fillMode = kCAFillModeForwards
-        transformAnimation.removedOnCompletion = true
-        
-        let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-        opacityAnimation.fromValue = 0.8
-        opacityAnimation.toValue = 0.1
-        opacityAnimation.fillMode = kCAFillModeForwards
-        opacityAnimation.removedOnCompletion = true
-        
-        let groupAnimation = CAAnimationGroup()
-        groupAnimation.animations = [positionAnimation, transformAnimation, opacityAnimation];
-        groupAnimation.duration = 0.5
-        groupAnimation.delegate = self
-        
-        transitionLayer.addAnimation(groupAnimation, forKey: "cartParabola")
-        
-        view.layer.addSublayer(transitionLayer)
-        animationLayers!.append(transitionLayer)
-        
-        let time = dispatch_time(DISPATCH_TIME_NOW,Int64(0.4 * Double(NSEC_PER_SEC)))
-        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
-            transitionLayer.hidden = true
-        }
-    }
-    
-    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        if animationLayers!.count > 0 {
-            let transitionLayer = animationLayers![0]
-            transitionLayer.hidden = true
-            transitionLayer.removeFromSuperlayer()
-            animationLayers?.removeFirst()
-            view.layer.removeAnimationForKey("cartParabola")
         }
     }
 }
@@ -262,8 +227,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 0 && (indexPath.row == 0 || indexPath.row == 1) {
+            return
+        }
+        
         if isAnimation {
-            //Animation
             startAnimation(cell, offsetY: 80, duration: 1.0)
         }
     }

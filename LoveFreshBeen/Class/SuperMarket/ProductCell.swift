@@ -59,7 +59,8 @@ class ProductCell: UITableViewCell {
         }()
     
     private var discountPriceView: DiscountPriceView?
-    
+
+    var addProductClick:((imageView: UIImageView) -> ())?
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -74,6 +75,13 @@ class ProductCell: UITableViewCell {
         addSubview(giveImageView)
         addSubview(specificsLabel)
         addSubview(buyView)
+        
+        weak var tmpSelf = self
+        buyView.clickAddShopCar = {
+            if tmpSelf!.addProductClick != nil {
+                tmpSelf!.addProductClick!(imageView: tmpSelf!.goodsImageView)
+            }
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

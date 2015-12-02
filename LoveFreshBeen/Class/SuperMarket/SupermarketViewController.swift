@@ -24,15 +24,15 @@ class SupermarketViewController: BaseViewController {
         bulidCategoryTableView()
         
         bulidProductsViewController()
-                
+        
         loadSupermarketData()
     }
-        
+    
     
     // MARK:- Creat UI
     private func buildNavigationItem() {
         navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
-
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem.barButton("扫一扫", titleColor: UIColor.blackColor(),
             image: UIImage(named: "icon_black_scancode")!, hightLightImage: nil,
             target: self, action: "leftItemClick", type: ItemButtonType.Left)
@@ -57,9 +57,26 @@ class SupermarketViewController: BaseViewController {
         productsVC.delegate = self
         addChildViewController(productsVC)
         view.addSubview(productsVC.view)
+        
+        weak var tmpSelf = self
+        productsVC.refreshUpPull = {
+            Supermarket.loadSupermarketData { (data, error) -> Void in
+                if error == nil {
+                    let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
+                    dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
+                        tmpSelf!.supermarketData = data
+                        tmpSelf!.productsVC.supermarketData = data
+                        tmpSelf?.productsVC.productsTableView?.mj_header.endRefreshing()
+                        tmpSelf!.categoryTableView.reloadData()
+                        tmpSelf!.categoryTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .Top)
+                    })
+                }
+            }
+        }
     }
     
     private func loadSupermarketData() {
+        ProgressHUDManager.show()
         weak var tmpSelf = self
         Supermarket.loadSupermarketData { (data, error) -> Void in
             if error == nil {
@@ -68,6 +85,11 @@ class SupermarketViewController: BaseViewController {
                 tmpSelf!.categoryTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .Bottom)
                 tmpSelf!.productsVC.supermarketData = data
             }
+            
+            let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
+            dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
+                ProgressHUDManager.dismiss()
+            })
         }
     }
     
@@ -93,12 +115,12 @@ extension SupermarketViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = CategoryCell.cellWithTableView(tableView)
         cell.categorie = supermarketData!.data!.categories![indexPath.row]
-
+        
         return cell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-
+        
         return 45
     }
     
