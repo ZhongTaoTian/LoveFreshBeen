@@ -43,4 +43,15 @@ class ProgressHUDManager {
         SVProgressHUD.dismiss()
     }
     
+    class func showWithStatus(status: String) {
+        SVProgressHUD.showWithStatus(status)
+    }
+    
+    class func isVisible() -> Bool {
+       return SVProgressHUD.isVisible()
+    }
+    
+    class func showSuccessWithStatus(string: String) {
+        SVProgressHUD.showSuccessWithStatus(string)
+    }
 }

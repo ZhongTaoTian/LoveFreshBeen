@@ -41,4 +41,17 @@ extension UIBarButtonItem {
         btn.frame = CGRectMake(0, 0, 44, 44)
         return UIBarButtonItem(customView: btn)
     }
+    
+    class func barButton(title: String, titleColor: UIColor, target: AnyObject?, action: Selector) -> UIBarButtonItem {
+        let btn = UIButton(frame: CGRectMake(0, 0, 60, 44))
+        btn.setTitle(title, forState: .Normal)
+        btn.setTitleColor(titleColor, forState: .Normal)
+        btn.addTarget(target, action: action, forControlEvents: UIControlEvents.TouchUpInside)
+        btn.titleLabel?.font = UIFont.systemFontOfSize(14)
+        if title.characters.count == 2 {
+            btn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -25)
+        }
+        return UIBarButtonItem(customView: btn)
+    }
+
 }

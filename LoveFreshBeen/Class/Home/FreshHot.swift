@@ -24,7 +24,7 @@ class FreshHot: NSObject, DictModelProtocol {
             let data = modelTool.objectWithDictionary(dict, cls: FreshHot.self) as? FreshHot
             completion(data: data, error: nil)
         }
-    }
+    }   
     
     static func customClassMapping() -> [String : String]? {
         return ["data" : "\(Goods.self)"]
@@ -58,6 +58,7 @@ class Goods: NSObject {
     var number: Int = -1
     /// 买一赠一
     var pm_desc: String?
+    var had_pm: Int = -1
     /// urlStr
     var img: String?
     /// 是不是精选 0 : 不是, 1 : 是

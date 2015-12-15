@@ -19,6 +19,7 @@ class CategoryCell: UITableViewCell {
         nameLabel.highlightedTextColor = UIColor.blackColor()
         nameLabel.backgroundColor = UIColor.clearColor()
         nameLabel.textAlignment = NSTextAlignment.Center
+        nameLabel.font = UIFont.systemFontOfSize(14)
         return nameLabel
     }()
     

@@ -12,7 +12,7 @@ class MineHeadView: UIImageView {
     
     let setUpBtn: UIButton = UIButton(type: .Custom)
     let iconView: IconView = IconView()
-    var buttonClick:(() -> Void)?
+    var buttonClick:(Void -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,7 +23,7 @@ class MineHeadView: UIImageView {
         addSubview(iconView)
         self.userInteractionEnabled = true
     }
-        
+    
     convenience init(frame: CGRect, settingButtonClick:(() -> Void)) {
         self.init(frame: frame)
         buttonClick = settingButtonClick
@@ -43,7 +43,7 @@ class MineHeadView: UIImageView {
     }
     
     func setUpButtonClick() {
-            buttonClick?()
+        buttonClick?()
     }
 }
 
@@ -57,7 +57,7 @@ class IconView: UIView {
         super.init(frame: frame)
         iconImageView = UIImageView(image: UIImage(named: "v2_my_avatar"))
         addSubview(iconImageView)
-
+        
         phoneNum = UILabel()
         phoneNum.text = "18612348765"
         phoneNum.font = UIFont.boldSystemFontOfSize(18)
@@ -65,7 +65,7 @@ class IconView: UIView {
         phoneNum.textAlignment = .Center
         addSubview(phoneNum)
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

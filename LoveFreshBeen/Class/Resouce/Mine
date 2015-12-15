@@ -1,0 +1,10 @@
+{
+	"code": 0,
+	"msg": "Success",
+	"reqid": "85a3960a774fc699c2650edfe75bceb2",
+	"data": {
+		"has_new": 0,
+		"has_new_user": 0,
+		"availble_coupon_num": 1
+	}
+}

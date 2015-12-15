@@ -16,9 +16,11 @@ enum MineHeadViewButtonType: Int {
 
 class MineTabeHeadView: UIView {
     
+    var mineHeadViewClick:((type: MineHeadViewButtonType) -> ())?
     private let orderView = MineOrderView()
     private let couponView = MineCouponView()
     private let messageView = MineMessageView()
+    private var couponNumber: UIButton?
     private let line1 = UIView()
     private let line2 = UIView()
     
@@ -27,7 +29,7 @@ class MineTabeHeadView: UIView {
         backgroundColor = UIColor.whiteColor()
         buildUI()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -38,12 +40,32 @@ class MineTabeHeadView: UIView {
         orderView.frame = CGRectMake(0, 0, subViewW, height)
         couponView.frame = CGRectMake(subViewW, 0, subViewW, height)
         messageView.frame = CGRectMake(subViewW * 2, 0, subViewW, height)
+        couponNumber?.frame = CGRectMake(subViewW * 1.56, 12, 15, 15)
         line1.frame = CGRectMake(subViewW - 0.5, height * 0.2, 1, height * 0.6)
         line2.frame = CGRectMake(subViewW * 2 - 0.5, height * 0.2, 1, height * 0.6)
     }
     
     func click(tap: UIGestureRecognizer) {
-        print(tap.view!.tag)
+        if mineHeadViewClick != nil {
+            
+            switch tap.view!.tag {
+                
+            case MineHeadViewButtonType.Order.rawValue:
+                mineHeadViewClick!(type: MineHeadViewButtonType.Order)
+                break
+                
+            case MineHeadViewButtonType.Coupon.rawValue:
+                mineHeadViewClick!(type: MineHeadViewButtonType.Coupon)
+                break
+                
+            case MineHeadViewButtonType.Message.rawValue:
+                mineHeadViewClick!(type: MineHeadViewButtonType.Message)
+                break
+                
+            default: break
+            }
+        }
+        
     }
     
     private func buildUI() {
@@ -69,6 +91,26 @@ class MineTabeHeadView: UIView {
         line2.backgroundColor = UIColor.grayColor()
         line2.alpha = 0.3
         addSubview(line2)
+        
+        couponNumber = UIButton(type: .Custom)
+        couponNumber?.setBackgroundImage(UIImage(named: "redCycle"), forState: UIControlState.Normal)
+        couponNumber?.setTitleColor(UIColor.redColor(), forState: .Normal)
+        couponNumber?.userInteractionEnabled = false
+        couponNumber?.titleLabel?.font = UIFont.systemFontOfSize(8)
+        couponNumber?.hidden = true
+        addSubview(couponNumber!)
+    }
+    
+    func setCouponNumer(number: Int) {
+        if number > 0 && number <= 9 {
+            couponNumber?.hidden = false
+            couponNumber?.setTitle("\(number)", forState: .Normal)
+        } else if number > 9 && number < 100 {
+            couponNumber?.setTitle("\(number)", forState: .Normal)
+            couponNumber?.hidden = false
+        } else {
+            couponNumber?.hidden = true
+        }
     }
 }
 
@@ -82,7 +124,7 @@ class MineOrderView: UIView {
         btn = MineUpImageDownText(frame: CGRectZero, title: "我的订单", imageName: "v2_my_order_icon")
         addSubview(btn)
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

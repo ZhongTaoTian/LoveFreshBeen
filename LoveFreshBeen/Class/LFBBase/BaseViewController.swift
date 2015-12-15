@@ -14,6 +14,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = LFBGlobalBackgroundColor
+        navigationItem.hidesBackButton = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,4 +23,7 @@ class BaseViewController: UIViewController {
     }
     
 
+    deinit {
+        print(NSStringFromClass(self.classForCoder) + "--------delloc---------")
+    }
 }

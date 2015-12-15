@@ -1,0 +1,2155 @@
+{
+    "page": 1,
+	"code": 200,
+	"msg": "查询成功",
+	"reqid": "b17264d50442572c8e49231d2ba000a2",
+	"data": [{
+		"id": "11776421",
+		"order_no": "i001z20151121145152986640",
+		"user_id": "4715672",
+		"accept_name": "田中涛",
+		"pay_code": "A-2015112121001004080246373422",
+		"pay_type": "1",
+		"distribution": "0",
+		"status": "5",
+		"pay_status": "1",
+		"distribution_status": "1",
+		"postcode": null,
+		"telphone": "18600694744",
+		"country": null,
+		"province": "1",
+		"city": "2",
+		"area": "0",
+		"address": "保利茉莉公馆 13号楼1801",
+		"longitude": "116.33386030355",
+		"latitude": "39.780903420644",
+		"mobile": "18600694744",
+		"payable_amount": "47.20",
+		"real_amount": "42.20",
+		"payable_freight": "0.00",
+		"real_freight": "0.00",
+		"service_fee": "0.00",
+		"pay_time": "2015-11-21 14:51:35",
+		"send_time": "2015-11-21 16:19:03",
+		"create_time": "2015-11-21 14:51:09",
+		"completion_time": "2015-11-21 16:38:11",
+		"invoice": "0",
+		"postscript": "",
+		"note": null,
+		"if_del": "0",
+		"insured": "0.00",
+		"if_insured": "0",
+		"pay_fee": "0.00",
+		"invoice_title": "",
+		"taxes": "0.00",
+		"promotions": "5.00",
+		"discount": "0.00",
+		"fullcut": "0",
+		"order_amount": "42.20",
+		"if_print": "0",
+		"prop": "53720853",
+		"accept_time": "11月21日 16:00-17:00",
+		"dealer_expect_time": null,
+		"exp": "0",
+		"point": "0",
+		"type": "0",
+		"dealer_first_id": "20",
+		"dealer_second_id": "4846",
+		"dealer_third_id": "7951",
+		"checknum": "0982",
+		"address_id": "4219659",
+		"from_crm": "0",
+		"dataStatus": "1",
+		"lastUpdateTime": "2015-11-21 16:38:11",
+		"promotion_check": "0",
+		"from_shop": "0",
+		"preg_dealer_type": "2",
+		"is_allot": "1",
+		"is_lock": "0",
+		"expecttime": "1448092800",
+		"in_free_map": "0",
+		"user_refund_status": "0",
+		"user_refund_result": "0",
+		"user_refund_time": "0",
+		"user_accepted_goods": "0",
+		"refund_status": "0",
+		"order_type": "0",
+		"order_type_flag": 0,
+		"order_exception": "0",
+		"is_dealer_accept": "1",
+		"dealer_accept_time": "1448089174",
+		"sender_mobile": null,
+		"order_no_index": "52986640",
+		"expect_service_fee": "0.00",
+		"user_pay_amount": "42.20",
+		"open_app_id": "0",
+		"order_delivery_status": "0",
+		"process": [],
+		"order_goods": [
+			[{
+				"goods_id": "11290",
+				"goods_price": "7.50",
+				"real_price": "7.50",
+				"isgift": 0,
+				"goods_nums": "2",
+				"source_goods_id": "",
+				"goods_status": "0",
+				"name": "三全珍鲜灌汤水饺三鲜",
+				"attribute": "",
+				"specifics": "450g \/袋",
+				"photo": {
+					"1": [{
+						"name": "1000011290_27698.jpg",
+						"path": "upload\/goods\/1000011290"
+					}],
+					"2": [{
+						"name": "1000011290_27699.jpg",
+						"path": "upload\/goods\/1000011290"
+					}]
+				},
+				"brand_name": "三全",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000011290_78300.jpg",
+				"pre_imgs": "0000011290_63750.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/1290\/0000011290_78300.jpg@200w_200h_90Q.jpg",
+				"id": "11290",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "14705",
+				"goods_price": "7.50",
+				"real_price": "7.50",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": "",
+				"goods_status": "0",
+				"name": "三全珍鲜灌汤水饺猪肉韭菜",
+				"attribute": "",
+				"specifics": "450g \/袋",
+				"photo": {
+					"1": [{
+						"name": "1000014705_27702.jpg",
+						"path": "upload\/goods\/1000014705"
+					}],
+					"2": [{
+						"name": "1000014705_27703.jpg",
+						"path": "upload\/goods\/1000014705"
+					}]
+				},
+				"brand_name": "三全",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000014705_67580.jpg",
+				"pre_imgs": "0000014705_65890.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/4705\/0000014705_67580.jpg@200w_200h_90Q.jpg",
+				"id": "14705",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "90467",
+				"goods_price": "7.90",
+				"real_price": "7.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": "",
+				"goods_status": "0",
+				"name": "武味周香卤花生",
+				"attribute": "",
+				"specifics": "90g",
+				"photo": {
+					"2": [{
+						"name": "1000090467_33334.jpg",
+						"path": "upload\/goods\/1000090467"
+					}],
+					"1": [{
+						"name": "1000090467_33335.jpg",
+						"path": "upload\/goods\/1000090467"
+					}]
+				},
+				"brand_name": "武味周",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000090467_22760.jpg",
+				"pre_imgs": "0000090467_10110.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/009\/0467\/0000090467_22760.jpg@200w_200h_90Q.jpg",
+				"id": "90467",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "96554",
+				"goods_price": "7.90",
+				"real_price": "7.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": "",
+				"goods_status": "0",
+				"name": "天福号鸡泥肠",
+				"attribute": "",
+				"specifics": "150g",
+				"photo": {
+					"1": [{
+						"name": "1000096554_32073.jpg",
+						"path": "upload\/goods\/1000096554"
+					}]
+				},
+				"brand_name": "天福号",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000096554_02030.jpg",
+				"pre_imgs": "0000096554_71200.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/009\/6554\/0000096554_02030.jpg@200w_200h_90Q.jpg",
+				"id": "96554",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "12047",
+				"goods_price": "8.90",
+				"real_price": "8.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": "",
+				"goods_status": "0",
+				"name": "福成原味酸牛奶",
+				"attribute": "",
+				"specifics": "240g\/瓶",
+				"photo": {
+					"2": [{
+						"name": "1000012047_32949.jpg",
+						"path": "upload\/goods\/1000012047"
+					}],
+					"1": [{
+						"name": "1000012047_32950.jpg",
+						"path": "upload\/goods\/1000012047"
+					}]
+				},
+				"brand_name": "福成",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000012047_20190.jpg",
+				"pre_imgs": "0000012047_94710.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/2047\/0000012047_20190.jpg@200w_200h_90Q.jpg",
+				"id": "12047",
+				"is_gift": 0
+			}, {
+				"goods_id": "12047",
+				"goods_price": "0.00",
+				"real_price": "0.00",
+				"isgift": 1,
+				"goods_nums": "1",
+				"source_goods_id": "12047",
+				"goods_status": "0",
+				"name": "福成原味酸牛奶",
+				"attribute": "",
+				"specifics": "240g\/瓶",
+				"photo": {
+					"2": [{
+						"name": "1000012047_32949.jpg",
+						"path": "upload\/goods\/1000012047"
+					}],
+					"1": [{
+						"name": "1000012047_32950.jpg",
+						"path": "upload\/goods\/1000012047"
+					}]
+				},
+				"brand_name": "福成",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000012047_20190.jpg",
+				"pre_imgs": "0000012047_94710.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/2047\/0000012047_20190.jpg@200w_200h_90Q.jpg",
+				"id": "12047",
+				"is_gift": 1
+			}]
+		],
+		"enableComment": 1,
+		"isCommented": 1,
+		"enableCancel": 0,
+		"newStatus": 0,
+		"pay_platform": "1,2,4,3",
+		"status_timeline": [{
+			"status_title": "已完成",
+			"status_desc": "订单已完成，快来评价吧",
+			"status_time": "16:38"
+		}, {
+			"status_title": "已发货",
+			"status_desc": "%商家电话%:{13161315336}",
+			"status_time": "16:19"
+		}, {
+			"status_title": "待发货",
+			"status_desc": "请耐心等待配送",
+			"status_time": "14:51"
+		}, {
+			"status_title": "支付成功",
+			"status_desc": "",
+			"status_time": "14:51"
+		}, {
+			"status_title": "订单提交成功",
+			"status_desc": "下单成功，订单号：i001z20151121145152986640",
+			"status_time": "14:51"
+		}],
+		"fee_list": [{
+			"text": "配送费",
+			"value": "0.00"
+		}, {
+			"text": "服务费",
+			"value": "0.00"
+		}, {
+			"text": "优惠券",
+			"value": "5.00"
+		}],
+		"share_key": "ZDJkODc5NkNKNUVBdTUvek5Wdi9lOWdPV0Q4cDdHVjZydG14eE9xdEpXVUVDdTdVYkFxSFNEWEU1SUpLSzFsYmM=",
+		"buy_num": 7,
+		"is_complained": 0,
+		"showSendCouponBtn": 1,
+		"enableDelete": 1,
+		"dealer_name": "一阳超市",
+		"dealer_address": "北京市大兴区香海园小区13号楼2单元102",
+		"dealer_lng": "116.323718",
+		"dealer_lat": "39.783308",
+		"dealer_alias": "",
+		"dealer_fav": 0,
+		"enable_fav": 1,
+		"textStatus": "已完成",
+		"buttons": [{
+			"type": 4,
+			"text": "发福利"
+		}],
+		"detail_buttons": [{
+			"type": 9,
+			"text": "删除订单"
+		}],
+		"in_refund": 0
+	}, {
+		"id": "8022589",
+		"order_no": "i004z20150908135717184020",
+		"user_id": "4715672",
+		"accept_name": "田中涛",
+		"pay_code": "T1-1220361601321509088895961193",
+		"pay_type": "1",
+		"distribution": "0",
+		"status": "5",
+		"pay_status": "1",
+		"distribution_status": "1",
+		"postcode": null,
+		"telphone": "18600694744",
+		"country": null,
+		"province": "423",
+		"city": "424",
+		"area": "0",
+		"address": "盛达商务园 d座5楼教室3",
+		"longitude": "113.3820939548951",
+		"latitude": "23.13870087418578",
+		"mobile": "18600694744",
+		"payable_amount": "32.60",
+		"real_amount": "27.60",
+		"payable_freight": "0.00",
+		"real_freight": "0.00",
+		"service_fee": "0.00",
+		"pay_time": "2015-09-08 13:57:46",
+		"send_time": "2015-09-08 13:58:31",
+		"create_time": "2015-09-08 13:57:37",
+		"completion_time": "2015-09-08 14:24:25",
+		"invoice": "0",
+		"postscript": "",
+		"note": null,
+		"if_del": "0",
+		"insured": "0.00",
+		"if_insured": "0",
+		"pay_fee": "0.00",
+		"invoice_title": "",
+		"taxes": "0.00",
+		"promotions": "5.00",
+		"discount": "0.00",
+		"fullcut": "0",
+		"order_amount": "27.60",
+		"if_print": "0",
+		"prop": "30395020",
+		"accept_time": "闪电送达",
+		"dealer_expect_time": null,
+		"exp": "0",
+		"point": "0",
+		"type": "0",
+		"dealer_first_id": "20",
+		"dealer_second_id": "3912",
+		"dealer_third_id": "5588",
+		"checknum": "7550",
+		"address_id": "2515118",
+		"from_crm": "0",
+		"dataStatus": "1",
+		"lastUpdateTime": "2015-09-08 14:24:25",
+		"promotion_check": "0",
+		"from_shop": "0",
+		"preg_dealer_type": "2",
+		"is_allot": "1",
+		"is_lock": "0",
+		"expecttime": "1441691866",
+		"in_free_map": "0",
+		"user_refund_status": "0",
+		"user_refund_result": "0",
+		"user_refund_time": "0",
+		"user_accepted_goods": "0",
+		"refund_status": "0",
+		"order_type": "0",
+		"order_type_flag": 0,
+		"order_exception": "0",
+		"is_dealer_accept": "0",
+		"dealer_accept_time": "0",
+		"sender_mobile": null,
+		"order_no_index": "17184020",
+		"expect_service_fee": "0.00",
+		"user_pay_amount": "27.60",
+		"open_app_id": "0",
+		"order_delivery_status": "0",
+		"process": [],
+		"order_goods": [
+			[{
+				"goods_id": "11753",
+				"goods_price": "5.90",
+				"real_price": "5.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "煌上煌麻辣鸭脖W(广）",
+				"attribute": "",
+				"specifics": "160g",
+				"photo": {
+					"2": [{
+						"name": "1000011753_22322.jpg",
+						"path": "upload\/goods\/1000011753"
+					}],
+					"1": [{
+						"name": "1000011753_28963.jpg",
+						"path": "upload\/goods\/1000011753"
+					}]
+				},
+				"brand_name": "煌上煌",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000011753_78120.jpg",
+				"pre_imgs": "0000011753_71130.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/1753\/0000011753_78120.jpg@200w_200h_90Q.jpg",
+				"id": "11753",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "11757",
+				"goods_price": "4.90",
+				"real_price": "4.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "煌上煌麻辣鸭翅W（广）",
+				"attribute": "",
+				"specifics": "125g",
+				"photo": {
+					"2": [{
+						"name": "1000011757_22313.jpg",
+						"path": "upload\/goods\/1000011757"
+					}],
+					"1": [{
+						"name": "1000011757_26203.png",
+						"path": "upload\/goods\/1000011757"
+					}]
+				},
+				"brand_name": "煌上煌",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000011757_61820.png",
+				"pre_imgs": "0000011757_30230.png,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/1757\/0000011757_61820.png@200w_200h_90Q.png",
+				"id": "11757",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "13531",
+				"goods_price": "9.90",
+				"real_price": "9.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·蜜梨",
+				"attribute": "",
+				"specifics": "2粒装",
+				"photo": {
+					"2": [{
+						"name": "1000013531_24959.jpg",
+						"path": "upload\/goods\/1000013531"
+					}],
+					"1": [{
+						"name": "1000013531_25769.jpg",
+						"path": "upload\/goods\/1000013531"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000013531_50260.jpg",
+				"pre_imgs": "0000013531_56470.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/3531\/0000013531_50260.jpg@200w_200h_90Q.jpg",
+				"id": "13531",
+				"is_gift": 0
+			}, {
+				"goods_id": "13531",
+				"goods_price": "0.00",
+				"real_price": "0.00",
+				"isgift": 1,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·蜜梨",
+				"attribute": "",
+				"specifics": "2粒装",
+				"photo": {
+					"2": [{
+						"name": "1000013531_24959.jpg",
+						"path": "upload\/goods\/1000013531"
+					}],
+					"1": [{
+						"name": "1000013531_25769.jpg",
+						"path": "upload\/goods\/1000013531"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000013531_50260.jpg",
+				"pre_imgs": "0000013531_56470.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/3531\/0000013531_50260.jpg@200w_200h_90Q.jpg",
+				"id": "13531",
+				"is_gift": 1
+			}],
+			[{
+				"goods_id": "15353",
+				"goods_price": "11.90",
+				"real_price": "11.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·冰川红提",
+				"attribute": "",
+				"specifics": "400g\/盒",
+				"photo": {
+					"2": [{
+						"name": "1000015353_24509.jpg",
+						"path": "upload\/goods\/1000015353"
+					}],
+					"1": [{
+						"name": "1000015353_25484.jpg",
+						"path": "upload\/goods\/1000015353"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000015353_56170.jpg",
+				"pre_imgs": "0000015353_19210.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5353\/0000015353_56170.jpg@200w_200h_90Q.jpg",
+				"id": "15353",
+				"is_gift": 0
+			}, {
+				"goods_id": "15353",
+				"goods_price": "0.00",
+				"real_price": "0.00",
+				"isgift": 1,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·冰川红提",
+				"attribute": "",
+				"specifics": "400g\/盒",
+				"photo": {
+					"2": [{
+						"name": "1000015353_24509.jpg",
+						"path": "upload\/goods\/1000015353"
+					}],
+					"1": [{
+						"name": "1000015353_25484.jpg",
+						"path": "upload\/goods\/1000015353"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000015353_56170.jpg",
+				"pre_imgs": "0000015353_19210.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5353\/0000015353_56170.jpg@200w_200h_90Q.jpg",
+				"id": "15353",
+				"is_gift": 1
+			}]
+		],
+		"enableComment": 1,
+		"isCommented": 1,
+		"enableCancel": 0,
+		"newStatus": 0,
+		"pay_platform": "1,2,3,4",
+		"status_timeline": [{
+			"status_title": "已完成",
+			"status_desc": "订单已完成，快来评价吧",
+			"status_time": "14:24"
+		}, {
+			"status_title": "已发货",
+			"status_desc": "%商家电话%:{13642624584}",
+			"status_time": "13:58"
+		}, {
+			"status_title": "待发货",
+			"status_desc": "请耐心等待配送",
+			"status_time": "13:57"
+		}, {
+			"status_title": "支付成功",
+			"status_desc": "",
+			"status_time": "13:57"
+		}, {
+			"status_title": "订单提交成功",
+			"status_desc": "下单成功，订单号：i004z20150908135717184020",
+			"status_time": "13:57"
+		}],
+		"fee_list": [{
+			"text": "配送费",
+			"value": "0.00"
+		}, {
+			"text": "服务费",
+			"value": "0.00"
+		}, {
+			"text": "优惠券",
+			"value": "5.00"
+		}],
+		"share_key": "MTEwZmVlVUhyRkFobEtxRU9KeXdVeGtESzE3UU5HQmhxR28waGtMR2RMM1BKQ0NQYWRlaE5rZzJGMzhBL3h3UQ==",
+		"buy_num": 6,
+		"is_complained": 0,
+		"showSendCouponBtn": 1,
+		"enableDelete": 1,
+		"dealer_name": "小梦便利店",
+		"dealer_address": "广州天河上社车站路23号（平湖小区）",
+		"dealer_lng": "113.375389",
+		"dealer_lat": "23.139897",
+		"dealer_alias": "爱鲜蜂平湖小区（小梦便利店）",
+		"dealer_fav": 0,
+		"enable_fav": 1,
+		"textStatus": "已完成",
+		"buttons": [{
+			"type": 4,
+			"text": "发福利"
+		}],
+		"detail_buttons": [{
+			"type": 9,
+			"text": "删除订单"
+		}],
+		"in_refund": 0
+	}, {
+		"id": "7645897",
+		"order_no": "i004z20150831202114220850",
+		"user_id": "4715672",
+		"accept_name": "田中涛",
+		"pay_code": "T1-1220361601321508318686623088",
+		"pay_type": "1",
+		"distribution": "0",
+		"status": "5",
+		"pay_status": "1",
+		"distribution_status": "1",
+		"postcode": null,
+		"telphone": "18600694744",
+		"country": null,
+		"province": "423",
+		"city": "424",
+		"area": "0",
+		"address": "盛达商务园 d座5楼教室3",
+		"longitude": "113.3820939548951",
+		"latitude": "23.13870087418578",
+		"mobile": "18600694744",
+		"payable_amount": "32.50",
+		"real_amount": "22.50",
+		"payable_freight": "0.00",
+		"real_freight": "0.00",
+		"service_fee": "0.00",
+		"pay_time": "2015-08-31 20:21:57",
+		"send_time": "2015-09-01 09:32:30",
+		"create_time": "2015-08-31 20:21:47",
+		"completion_time": "2015-09-01 10:04:29",
+		"invoice": "0",
+		"postscript": "",
+		"note": null,
+		"if_del": "0",
+		"insured": "0.00",
+		"if_insured": "0",
+		"pay_fee": "0.00",
+		"invoice_title": "",
+		"taxes": "0.00",
+		"promotions": "10.00",
+		"discount": "0.00",
+		"fullcut": "0",
+		"order_amount": "22.50",
+		"if_print": "0",
+		"prop": "28552894",
+		"accept_time": "9月1日 10:00-11:00",
+		"dealer_expect_time": null,
+		"exp": "0",
+		"point": "0",
+		"type": "0",
+		"dealer_first_id": "20",
+		"dealer_second_id": "3912",
+		"dealer_third_id": "3968",
+		"checknum": "6274",
+		"address_id": "2515118",
+		"from_crm": "0",
+		"dataStatus": "1",
+		"lastUpdateTime": "2015-09-01 10:04:29",
+		"promotion_check": "0",
+		"from_shop": "0",
+		"preg_dealer_type": "2",
+		"is_allot": "1",
+		"is_lock": "0",
+		"expecttime": "1441072800",
+		"in_free_map": "0",
+		"user_refund_status": "0",
+		"user_refund_result": "0",
+		"user_refund_time": "0",
+		"user_accepted_goods": "0",
+		"refund_status": "0",
+		"order_type": "0",
+		"order_type_flag": 0,
+		"order_exception": "0",
+		"is_dealer_accept": "0",
+		"dealer_accept_time": "0",
+		"sender_mobile": null,
+		"order_no_index": "14220850",
+		"expect_service_fee": "0.00",
+		"user_pay_amount": "22.50",
+		"open_app_id": "0",
+		"order_delivery_status": "0",
+		"process": [],
+		"order_goods": [
+			[{
+				"goods_id": "10323",
+				"goods_price": "5.80",
+				"real_price": "5.80",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "润之泉冰糖雪梨芦荟汁",
+				"attribute": "",
+				"specifics": "480ml",
+				"photo": {
+					"1": [{
+						"name": "1000010323_18553.jpg",
+						"path": "upload\/goods\/1000010323"
+					}],
+					"2": [{
+						"name": "1000010323_20641.jpg",
+						"path": "upload\/goods\/1000010323"
+					}]
+				},
+				"brand_name": "润之泉",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000010323.jpg",
+				"pre_imgs": "0000010323_18553.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/0323\/0000010323.jpg@200w_200h_90Q.jpg",
+				"id": "10323",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "15353",
+				"goods_price": "11.90",
+				"real_price": "11.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·冰川红提",
+				"attribute": "",
+				"specifics": "400g\/盒",
+				"photo": {
+					"2": [{
+						"name": "1000015353_24509.jpg",
+						"path": "upload\/goods\/1000015353"
+					}],
+					"1": [{
+						"name": "1000015353_25484.jpg",
+						"path": "upload\/goods\/1000015353"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000015353_56170.jpg",
+				"pre_imgs": "0000015353_19210.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5353\/0000015353_56170.jpg@200w_200h_90Q.jpg",
+				"id": "15353",
+				"is_gift": 0
+			}, {
+				"goods_id": "15353",
+				"goods_price": "0.00",
+				"real_price": "0.00",
+				"isgift": 1,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·冰川红提",
+				"attribute": "",
+				"specifics": "400g\/盒",
+				"photo": {
+					"2": [{
+						"name": "1000015353_24509.jpg",
+						"path": "upload\/goods\/1000015353"
+					}],
+					"1": [{
+						"name": "1000015353_25484.jpg",
+						"path": "upload\/goods\/1000015353"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000015353_56170.jpg",
+				"pre_imgs": "0000015353_19210.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5353\/0000015353_56170.jpg@200w_200h_90Q.jpg",
+				"id": "15353",
+				"is_gift": 1
+			}],
+			[{
+				"goods_id": "17045",
+				"goods_price": "14.80",
+				"real_price": "14.80",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂—蜜柚",
+				"attribute": "",
+				"specifics": "1个",
+				"photo": {
+					"1": [{
+						"name": "1000017045_26460.jpg",
+						"path": "upload\/goods\/1000017045"
+					}],
+					"2": [{
+						"name": "1000017045_26461.jpg",
+						"path": "upload\/goods\/1000017045"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000017045_39680.jpg",
+				"pre_imgs": "0000017045_28240.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/7045\/0000017045_39680.jpg@200w_200h_90Q.jpg",
+				"id": "17045",
+				"is_gift": 0
+			}, {
+				"goods_id": "17045",
+				"goods_price": "0.00",
+				"real_price": "0.00",
+				"isgift": 1,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂—蜜柚",
+				"attribute": "",
+				"specifics": "1个",
+				"photo": {
+					"1": [{
+						"name": "1000017045_26460.jpg",
+						"path": "upload\/goods\/1000017045"
+					}],
+					"2": [{
+						"name": "1000017045_26461.jpg",
+						"path": "upload\/goods\/1000017045"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000017045_39680.jpg",
+				"pre_imgs": "0000017045_28240.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/7045\/0000017045_39680.jpg@200w_200h_90Q.jpg",
+				"id": "17045",
+				"is_gift": 1
+			}]
+		],
+		"enableComment": 1,
+		"isCommented": 1,
+		"enableCancel": 0,
+		"newStatus": 0,
+		"pay_platform": "1,2,3,4",
+		"status_timeline": [{
+			"status_title": "已完成",
+			"status_desc": "订单已完成，快来评价吧",
+			"status_time": "10:04"
+		}, {
+			"status_title": "已发货",
+			"status_desc": "%商家电话%:{13302222613}",
+			"status_time": "09:32"
+		}, {
+			"status_title": "待发货",
+			"status_desc": "请耐心等待配送",
+			"status_time": "20:21"
+		}, {
+			"status_title": "支付成功",
+			"status_desc": "",
+			"status_time": "20:21"
+		}, {
+			"status_title": "订单提交成功",
+			"status_desc": "下单成功，订单号：i004z20150831202114220850",
+			"status_time": "20:21"
+		}],
+		"fee_list": [{
+			"text": "配送费",
+			"value": "0.00"
+		}, {
+			"text": "服务费",
+			"value": "0.00"
+		}, {
+			"text": "优惠券",
+			"value": "10.00"
+		}],
+		"share_key": "Y2E2NGZmVzlaSmFLa0tacHROQlArNEZQRGV1ejRyOTA2QU9xeXAwOE9qK3pEODUrajBiZjY2akRiQXNCMHI2QQ==",
+		"buy_num": 5,
+		"is_complained": 0,
+		"showSendCouponBtn": 1,
+		"enableDelete": 1,
+		"dealer_name": "富丽便利店",
+		"dealer_address": "广东省广州市天河区上社口岗新大街36号",
+		"dealer_lng": "113.37415",
+		"dealer_lat": "23.14051",
+		"dealer_alias": "爱鲜蜂口岗新大街店（富丽便利店）",
+		"dealer_fav": 0,
+		"enable_fav": 1,
+		"textStatus": "已完成",
+		"buttons": [{
+			"type": 4,
+			"text": "发福利"
+		}],
+		"detail_buttons": [{
+			"type": 9,
+			"text": "删除订单"
+		}],
+		"in_refund": 0
+	}, {
+		"id": "7166727",
+		"order_no": "i004z20150825135398602820",
+		"user_id": "4715672",
+		"accept_name": "田中涛",
+		"pay_code": "T1-1220361601331508257580733809",
+		"pay_type": "1",
+		"distribution": "0",
+		"status": "5",
+		"pay_status": "1",
+		"distribution_status": "1",
+		"postcode": null,
+		"telphone": "18600694744",
+		"country": null,
+		"province": "423",
+		"city": "424",
+		"area": "0",
+		"address": "广州上社唐顺电梯公寓 207",
+		"longitude": "113.3789923777513",
+		"latitude": "23.13998197926452",
+		"mobile": "18600694744",
+		"payable_amount": "37.40",
+		"real_amount": "23.60",
+		"payable_freight": "0.00",
+		"real_freight": "0.00",
+		"service_fee": "0.00",
+		"pay_time": "2015-08-25 13:54:11",
+		"send_time": "2015-08-25 13:56:14",
+		"create_time": "2015-08-25 13:53:59",
+		"completion_time": "2015-08-25 15:42:11",
+		"invoice": "0",
+		"postscript": "",
+		"note": null,
+		"if_del": "0",
+		"insured": "0.00",
+		"if_insured": "0",
+		"pay_fee": "0.00",
+		"invoice_title": "",
+		"taxes": "0.00",
+		"promotions": "13.80",
+		"discount": "0.00",
+		"fullcut": "0",
+		"order_amount": "23.60",
+		"if_print": "0",
+		"prop": "27782900",
+		"accept_time": "闪电送达",
+		"dealer_expect_time": null,
+		"exp": "0",
+		"point": "0",
+		"type": "0",
+		"dealer_first_id": "20",
+		"dealer_second_id": "3912",
+		"dealer_third_id": "5588",
+		"checknum": "4454",
+		"address_id": "2620416",
+		"from_crm": "0",
+		"dataStatus": "1",
+		"lastUpdateTime": "2015-08-25 15:42:11",
+		"promotion_check": "0",
+		"from_shop": "0",
+		"preg_dealer_type": "2",
+		"is_allot": "1",
+		"is_lock": "0",
+		"expecttime": "1440482051",
+		"in_free_map": "0",
+		"user_refund_status": "0",
+		"user_refund_result": "0",
+		"user_refund_time": "0",
+		"user_accepted_goods": "0",
+		"refund_status": "0",
+		"order_type": "0",
+		"order_type_flag": 0,
+		"order_exception": "0",
+		"is_dealer_accept": "0",
+		"dealer_accept_time": "0",
+		"sender_mobile": null,
+		"order_no_index": "98602820",
+		"expect_service_fee": "0.00",
+		"user_pay_amount": "23.60",
+		"open_app_id": "0",
+		"order_delivery_status": "0",
+		"process": [],
+		"order_goods": [
+			[{
+				"goods_id": "2482",
+				"goods_price": "1.90",
+				"real_price": "1.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "维他奶原味豆奶",
+				"attribute": "",
+				"specifics": "250ml",
+				"photo": {
+					"2": [{
+						"name": "1000002482_31533.jpg",
+						"path": "upload\/goods\/1000002482"
+					}],
+					"1": [{
+						"name": "1000002482_31534.jpg",
+						"path": "upload\/goods\/1000002482"
+					}]
+				},
+				"brand_name": "维他",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000002482_73630.jpg",
+				"pre_imgs": "0000002482_73050.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/000\/2482\/0000002482_73630.jpg@200w_200h_90Q.jpg",
+				"id": "2482",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "2489",
+				"goods_price": "1.90",
+				"real_price": "1.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "维他奶黑豆奶",
+				"attribute": "",
+				"specifics": "250ml",
+				"photo": {
+					"1": [{
+						"name": "1000002489_25040.jpg",
+						"path": "upload\/goods\/1000002489"
+					}],
+					"2": [{
+						"name": "1000002489_25041.jpg",
+						"path": "upload\/goods\/1000002489"
+					}]
+				},
+				"brand_name": "维他",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000002489_30020.jpg",
+				"pre_imgs": "0000002489_83210.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/000\/2489\/0000002489_30020.jpg@200w_200h_90Q.jpg",
+				"id": "2489",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "9490",
+				"goods_price": "1.00",
+				"real_price": "1.00",
+				"isgift": 0,
+				"goods_nums": "2",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "姐妹厨房糖熏卤味鸡脖",
+				"attribute": "",
+				"specifics": "60g",
+				"photo": {
+					"2": [{
+						"name": "1000009490_20933.jpg",
+						"path": "upload\/goods\/1000009490"
+					}],
+					"1": [{
+						"name": "1000009490_28966.jpg",
+						"path": "upload\/goods\/1000009490"
+					}]
+				},
+				"brand_name": "姐妹厨房",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000009490.jpg",
+				"pre_imgs": "0000009490_32120.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/000\/9490\/0000009490.jpg@200w_200h_90Q.jpg",
+				"id": "9490",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "11753",
+				"goods_price": "5.90",
+				"real_price": "5.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "煌上煌麻辣鸭脖W(广）",
+				"attribute": "",
+				"specifics": "160g",
+				"photo": {
+					"2": [{
+						"name": "1000011753_22322.jpg",
+						"path": "upload\/goods\/1000011753"
+					}],
+					"1": [{
+						"name": "1000011753_28963.jpg",
+						"path": "upload\/goods\/1000011753"
+					}]
+				},
+				"brand_name": "煌上煌",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000011753_78120.jpg",
+				"pre_imgs": "0000011753_71130.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/1753\/0000011753_78120.jpg@200w_200h_90Q.jpg",
+				"id": "11753",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "15853",
+				"goods_price": "13.80",
+				"real_price": "13.80",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "【转盘】越南瓦夫饼",
+				"attribute": "",
+				"specifics": "270g",
+				"photo": null,
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000015853_85210.jpg",
+				"pre_imgs": "0000015853_63770.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5853\/0000015853_85210.jpg@200w_200h_90Q.jpg",
+				"id": "15853",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "15353",
+				"goods_price": "11.90",
+				"real_price": "11.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·冰川红提",
+				"attribute": "",
+				"specifics": "400g\/盒",
+				"photo": {
+					"2": [{
+						"name": "1000015353_24509.jpg",
+						"path": "upload\/goods\/1000015353"
+					}],
+					"1": [{
+						"name": "1000015353_25484.jpg",
+						"path": "upload\/goods\/1000015353"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000015353_56170.jpg",
+				"pre_imgs": "0000015353_19210.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5353\/0000015353_56170.jpg@200w_200h_90Q.jpg",
+				"id": "15353",
+				"is_gift": 0
+			}, {
+				"goods_id": "15353",
+				"goods_price": "0.00",
+				"real_price": "0.00",
+				"isgift": 1,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·冰川红提",
+				"attribute": "",
+				"specifics": "400g\/盒",
+				"photo": {
+					"2": [{
+						"name": "1000015353_24509.jpg",
+						"path": "upload\/goods\/1000015353"
+					}],
+					"1": [{
+						"name": "1000015353_25484.jpg",
+						"path": "upload\/goods\/1000015353"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000015353_56170.jpg",
+				"pre_imgs": "0000015353_19210.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5353\/0000015353_56170.jpg@200w_200h_90Q.jpg",
+				"id": "15353",
+				"is_gift": 1
+			}]
+		],
+		"enableComment": 1,
+		"isCommented": 1,
+		"enableCancel": 0,
+		"newStatus": 0,
+		"pay_platform": "1,2,3,4",
+		"status_timeline": [{
+			"status_title": "已完成",
+			"status_desc": "订单已完成，快来评价吧",
+			"status_time": "15:42"
+		}, {
+			"status_title": "已发货",
+			"status_desc": "%商家电话%:{13642624584}",
+			"status_time": "13:56"
+		}, {
+			"status_title": "待发货",
+			"status_desc": "请耐心等待配送",
+			"status_time": "13:54"
+		}, {
+			"status_title": "支付成功",
+			"status_desc": "",
+			"status_time": "13:54"
+		}, {
+			"status_title": "订单提交成功",
+			"status_desc": "下单成功，订单号：i004z20150825135398602820",
+			"status_time": "13:53"
+		}],
+		"fee_list": [{
+			"text": "配送费",
+			"value": "0.00"
+		}, {
+			"text": "服务费",
+			"value": "0.00"
+		}, {
+			"text": "优惠券",
+			"value": "13.80"
+		}],
+		"share_key": "NWI2Mzdkemw1WnVmUm5WR0dtcVlhQUdOQTRxVVhVYjJadTFLWGIwTlhwdUtmV1hOYXNUanJqZzRwRWVWYXFsQQ==",
+		"buy_num": 8,
+		"is_complained": 0,
+		"showSendCouponBtn": 1,
+		"enableDelete": 1,
+		"dealer_name": "小梦便利店",
+		"dealer_address": "广州天河上社车站路23号（平湖小区）",
+		"dealer_lng": "113.375389",
+		"dealer_lat": "23.139897",
+		"dealer_alias": "爱鲜蜂平湖小区（小梦便利店）",
+		"dealer_fav": 0,
+		"enable_fav": 1,
+		"textStatus": "已完成",
+		"buttons": [{
+			"type": 4,
+			"text": "发福利"
+		}],
+		"detail_buttons": [{
+			"type": 9,
+			"text": "删除订单"
+		}],
+		"in_refund": 0
+	}, {
+		"id": "6957474",
+		"order_no": "i004z20150822133849360360",
+		"user_id": "4715672",
+		"accept_name": "田中涛",
+		"pay_code": "T1-1220361601341508227348285972",
+		"pay_type": "1",
+		"distribution": "0",
+		"status": "5",
+		"pay_status": "1",
+		"distribution_status": "1",
+		"postcode": null,
+		"telphone": "18608694744",
+		"country": null,
+		"province": "423",
+		"city": "424",
+		"area": "0",
+		"address": "广州上社唐顺电梯公寓 207",
+		"longitude": "113.3789923777513",
+		"latitude": "23.13998197926452",
+		"mobile": "18608694744",
+		"payable_amount": "31.40",
+		"real_amount": "23.40",
+		"payable_freight": "0.00",
+		"real_freight": "0.00",
+		"service_fee": "0.00",
+		"pay_time": "2015-08-22 13:38:31",
+		"send_time": "2015-08-22 13:41:29",
+		"create_time": "2015-08-22 13:38:15",
+		"completion_time": "2015-08-22 14:04:41",
+		"invoice": "0",
+		"postscript": "",
+		"note": null,
+		"if_del": "0",
+		"insured": "0.00",
+		"if_insured": "0",
+		"pay_fee": "0.00",
+		"invoice_title": "",
+		"taxes": "0.00",
+		"promotions": "8.00",
+		"discount": "0.00",
+		"fullcut": "0",
+		"order_amount": "23.40",
+		"if_print": "0",
+		"prop": "27049078",
+		"accept_time": "闪电送达",
+		"dealer_expect_time": null,
+		"exp": "0",
+		"point": "0",
+		"type": "0",
+		"dealer_first_id": "20",
+		"dealer_second_id": "3912",
+		"dealer_third_id": "5588",
+		"checknum": "2810",
+		"address_id": "2620416",
+		"from_crm": "0",
+		"dataStatus": "1",
+		"lastUpdateTime": "2015-08-22 14:04:41",
+		"promotion_check": "0",
+		"from_shop": "0",
+		"preg_dealer_type": "2",
+		"is_allot": "1",
+		"is_lock": "0",
+		"expecttime": "1440221911",
+		"in_free_map": "0",
+		"user_refund_status": "0",
+		"user_refund_result": "0",
+		"user_refund_time": "0",
+		"user_accepted_goods": "0",
+		"refund_status": "0",
+		"order_type": "0",
+		"order_type_flag": 0,
+		"order_exception": "0",
+		"is_dealer_accept": "0",
+		"dealer_accept_time": "0",
+		"sender_mobile": null,
+		"order_no_index": "49360360",
+		"expect_service_fee": "0.00",
+		"user_pay_amount": "23.40",
+		"open_app_id": "0",
+		"order_delivery_status": "0",
+		"process": [],
+		"order_goods": [
+			[{
+				"goods_id": "11629",
+				"goods_price": "6.50",
+				"real_price": "6.50",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "姐妹厨房糖熏鸡翅尖（微辣）",
+				"attribute": "",
+				"specifics": "50g",
+				"photo": {
+					"1": [{
+						"name": "1000011629_21782.jpg",
+						"path": "upload\/goods\/1000011629"
+					}],
+					"2": [{
+						"name": "1000011629_21783.jpg",
+						"path": "upload\/goods\/1000011629"
+					}]
+				},
+				"brand_name": "姐妹厨房",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000011629_76920.jpg",
+				"pre_imgs": "0000011629_75610.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/1629\/0000011629_76920.jpg@200w_200h_90Q.jpg",
+				"id": "11629",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "11753",
+				"goods_price": "6.50",
+				"real_price": "6.50",
+				"isgift": 0,
+				"goods_nums": "2",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "煌上煌麻辣鸭脖W(广）",
+				"attribute": "",
+				"specifics": "160g",
+				"photo": {
+					"2": [{
+						"name": "1000011753_22322.jpg",
+						"path": "upload\/goods\/1000011753"
+					}],
+					"1": [{
+						"name": "1000011753_28963.jpg",
+						"path": "upload\/goods\/1000011753"
+					}]
+				},
+				"brand_name": "煌上煌",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000011753_78120.jpg",
+				"pre_imgs": "0000011753_71130.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/1753\/0000011753_78120.jpg@200w_200h_90Q.jpg",
+				"id": "11753",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "15353",
+				"goods_price": "11.90",
+				"real_price": "11.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·冰川红提",
+				"attribute": "",
+				"specifics": "400g\/盒",
+				"photo": {
+					"2": [{
+						"name": "1000015353_24509.jpg",
+						"path": "upload\/goods\/1000015353"
+					}],
+					"1": [{
+						"name": "1000015353_25484.jpg",
+						"path": "upload\/goods\/1000015353"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000015353_56170.jpg",
+				"pre_imgs": "0000015353_19210.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5353\/0000015353_56170.jpg@200w_200h_90Q.jpg",
+				"id": "15353",
+				"is_gift": 0
+			}, {
+				"goods_id": "15353",
+				"goods_price": "0.00",
+				"real_price": "0.00",
+				"isgift": 1,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·冰川红提",
+				"attribute": "",
+				"specifics": "400g\/盒",
+				"photo": {
+					"2": [{
+						"name": "1000015353_24509.jpg",
+						"path": "upload\/goods\/1000015353"
+					}],
+					"1": [{
+						"name": "1000015353_25484.jpg",
+						"path": "upload\/goods\/1000015353"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000015353_56170.jpg",
+				"pre_imgs": "0000015353_19210.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5353\/0000015353_56170.jpg@200w_200h_90Q.jpg",
+				"id": "15353",
+				"is_gift": 1
+			}]
+		],
+		"enableComment": 1,
+		"isCommented": 1,
+		"enableCancel": 0,
+		"newStatus": 0,
+		"pay_platform": "1,2,4,3",
+		"status_timeline": [{
+			"status_title": "已完成",
+			"status_desc": "订单已完成，快来评价吧",
+			"status_time": "14:04"
+		}, {
+			"status_title": "已发货",
+			"status_desc": "%商家电话%:{13642624584}",
+			"status_time": "13:41"
+		}, {
+			"status_title": "待发货",
+			"status_desc": "请耐心等待配送",
+			"status_time": "13:38"
+		}, {
+			"status_title": "支付成功",
+			"status_desc": "",
+			"status_time": "13:38"
+		}, {
+			"status_title": "订单提交成功",
+			"status_desc": "下单成功，订单号：i004z20150822133849360360",
+			"status_time": "13:38"
+		}],
+		"fee_list": [{
+			"text": "配送费",
+			"value": "0.00"
+		}, {
+			"text": "服务费",
+			"value": "0.00"
+		}, {
+			"text": "优惠券",
+			"value": "8.00"
+		}],
+		"share_key": "ZjFhZWYwQWwrcFZ3OEZtSVdoSFYxbktIV2VXaTM5L0FmT0pMMXUvRGFrQkJDUmlrZm9vbVFOWjltR2hIUDdJUQ==",
+		"buy_num": 5,
+		"is_complained": 0,
+		"showSendCouponBtn": 1,
+		"enableDelete": 1,
+		"dealer_name": "小梦便利店",
+		"dealer_address": "广州天河上社车站路23号（平湖小区）",
+		"dealer_lng": "113.375389",
+		"dealer_lat": "23.139897",
+		"dealer_alias": "爱鲜蜂平湖小区（小梦便利店）",
+		"dealer_fav": 0,
+		"enable_fav": 1,
+		"textStatus": "已完成",
+		"buttons": [{
+			"type": 4,
+			"text": "发福利"
+		}],
+		"detail_buttons": [{
+			"type": 9,
+			"text": "删除订单"
+		}],
+		"in_refund": 0
+	}, {
+		"id": "6842991",
+		"order_no": "i004z20150820165520208900",
+		"user_id": "4715672",
+		"accept_name": "田中涛",
+		"pay_code": "T1-1220361601341508207428042818",
+		"pay_type": "1",
+		"distribution": "0",
+		"status": "5",
+		"pay_status": "1",
+		"distribution_status": "1",
+		"postcode": null,
+		"telphone": "18600694744",
+		"country": null,
+		"province": "423",
+		"city": "424",
+		"area": "0",
+		"address": "盛达商务园 d座5楼教室3",
+		"longitude": "113.3820939548951",
+		"latitude": "23.13870087418578",
+		"mobile": "18600694744",
+		"payable_amount": "32.20",
+		"real_amount": "18.40",
+		"payable_freight": "0.00",
+		"real_freight": "0.00",
+		"service_fee": "0.00",
+		"pay_time": "2015-08-20 16:56:03",
+		"send_time": "2015-08-20 17:00:13",
+		"create_time": "2015-08-20 16:55:51",
+		"completion_time": "2015-08-20 17:21:46",
+		"invoice": "0",
+		"postscript": "",
+		"note": null,
+		"if_del": "0",
+		"insured": "0.00",
+		"if_insured": "0",
+		"pay_fee": "0.00",
+		"invoice_title": "",
+		"taxes": "0.00",
+		"promotions": "13.80",
+		"discount": "0.00",
+		"fullcut": "0",
+		"order_amount": "18.40",
+		"if_print": "0",
+		"prop": "27578474",
+		"accept_time": "闪电送达",
+		"dealer_expect_time": null,
+		"exp": "0",
+		"point": "0",
+		"type": "0",
+		"dealer_first_id": "20",
+		"dealer_second_id": "3912",
+		"dealer_third_id": "5588",
+		"checknum": "3216",
+		"address_id": "2515118",
+		"from_crm": "0",
+		"dataStatus": "1",
+		"lastUpdateTime": "2015-08-20 17:21:46",
+		"promotion_check": "0",
+		"from_shop": "0",
+		"preg_dealer_type": "2",
+		"is_allot": "1",
+		"is_lock": "0",
+		"expecttime": "1440060963",
+		"in_free_map": "0",
+		"user_refund_status": "0",
+		"user_refund_result": "0",
+		"user_refund_time": "0",
+		"user_accepted_goods": "0",
+		"refund_status": "0",
+		"order_type": "0",
+		"order_type_flag": 0,
+		"order_exception": "0",
+		"is_dealer_accept": "0",
+		"dealer_accept_time": "0",
+		"sender_mobile": null,
+		"order_no_index": "20208900",
+		"expect_service_fee": "0.00",
+		"user_pay_amount": "18.40",
+		"open_app_id": "0",
+		"order_delivery_status": "0",
+		"process": [],
+		"order_goods": [
+			[{
+				"goods_id": "11753",
+				"goods_price": "6.50",
+				"real_price": "6.50",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "煌上煌麻辣鸭脖W(广）",
+				"attribute": "",
+				"specifics": "160g",
+				"photo": {
+					"2": [{
+						"name": "1000011753_22322.jpg",
+						"path": "upload\/goods\/1000011753"
+					}],
+					"1": [{
+						"name": "1000011753_28963.jpg",
+						"path": "upload\/goods\/1000011753"
+					}]
+				},
+				"brand_name": "煌上煌",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000011753_78120.jpg",
+				"pre_imgs": "0000011753_71130.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/1753\/0000011753_78120.jpg@200w_200h_90Q.jpg",
+				"id": "11753",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "14793",
+				"goods_price": "13.80",
+				"real_price": "13.80",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "【转盘】美乐津系列布丁（味道随机）432g*1包",
+				"attribute": "",
+				"specifics": "432g 16粒装",
+				"photo": {
+					"1": [{
+						"name": "1000014793_24128.jpg",
+						"path": "upload\/goods\/1000014793"
+					}],
+					"2": [{
+						"name": "1000014793_24129.jpg",
+						"path": "upload\/goods\/1000014793"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000014793_87160.jpg",
+				"pre_imgs": "0000014793_57110.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/4793\/0000014793_87160.jpg@200w_200h_90Q.jpg",
+				"id": "14793",
+				"is_gift": 0
+			}],
+			[{
+				"goods_id": "15353",
+				"goods_price": "11.90",
+				"real_price": "11.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·冰川红提",
+				"attribute": "",
+				"specifics": "400g\/盒",
+				"photo": {
+					"2": [{
+						"name": "1000015353_24509.jpg",
+						"path": "upload\/goods\/1000015353"
+					}],
+					"1": [{
+						"name": "1000015353_25484.jpg",
+						"path": "upload\/goods\/1000015353"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000015353_56170.jpg",
+				"pre_imgs": "0000015353_19210.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5353\/0000015353_56170.jpg@200w_200h_90Q.jpg",
+				"id": "15353",
+				"is_gift": 0
+			}, {
+				"goods_id": "15353",
+				"goods_price": "0.00",
+				"real_price": "0.00",
+				"isgift": 1,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·冰川红提",
+				"attribute": "",
+				"specifics": "400g\/盒",
+				"photo": {
+					"2": [{
+						"name": "1000015353_24509.jpg",
+						"path": "upload\/goods\/1000015353"
+					}],
+					"1": [{
+						"name": "1000015353_25484.jpg",
+						"path": "upload\/goods\/1000015353"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000015353_56170.jpg",
+				"pre_imgs": "0000015353_19210.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5353\/0000015353_56170.jpg@200w_200h_90Q.jpg",
+				"id": "15353",
+				"is_gift": 1
+			}]
+		],
+		"enableComment": 1,
+		"isCommented": 1,
+		"enableCancel": 0,
+		"newStatus": 0,
+		"pay_platform": "1,2,3,4",
+		"status_timeline": [{
+			"status_title": "已完成",
+			"status_desc": "订单已完成，快来评价吧",
+			"status_time": "17:21"
+		}, {
+			"status_title": "已发货",
+			"status_desc": "%商家电话%:{13642624584}",
+			"status_time": "17:00"
+		}, {
+			"status_title": "待发货",
+			"status_desc": "请耐心等待配送",
+			"status_time": "16:56"
+		}, {
+			"status_title": "支付成功",
+			"status_desc": "",
+			"status_time": "16:56"
+		}, {
+			"status_title": "订单提交成功",
+			"status_desc": "下单成功，订单号：i004z20150820165520208900",
+			"status_time": "16:55"
+		}],
+		"fee_list": [{
+			"text": "配送费",
+			"value": "0.00"
+		}, {
+			"text": "服务费",
+			"value": "0.00"
+		}, {
+			"text": "优惠券",
+			"value": "13.80"
+		}],
+		"share_key": "NDc1ZjlhVXJ5bFZXVlJSYmVXdXBVMlNiZWpJNmJpVW44Z2k2WTlRVHRPRkt5akhhZEt4QzlyVWxYVitaVGZSQQ==",
+		"buy_num": 4,
+		"is_complained": 0,
+		"showSendCouponBtn": 1,
+		"enableDelete": 1,
+		"dealer_name": "小梦便利店",
+		"dealer_address": "广州天河上社车站路23号（平湖小区）",
+		"dealer_lng": "113.375389",
+		"dealer_lat": "23.139897",
+		"dealer_alias": "爱鲜蜂平湖小区（小梦便利店）",
+		"dealer_fav": 0,
+		"enable_fav": 1,
+		"textStatus": "已完成",
+		"buttons": [{
+			"type": 4,
+			"text": "发福利"
+		}],
+		"detail_buttons": [{
+			"type": 9,
+			"text": "删除订单"
+		}],
+		"in_refund": 0
+	}, {
+		"id": "6473454",
+		"order_no": "i004z20150815154754422260",
+		"user_id": "4715672",
+		"accept_name": "田中涛",
+		"pay_code": "T1-1220361601321508157072244065",
+		"pay_type": "1",
+		"distribution": "0",
+		"status": "5",
+		"pay_status": "1",
+		"distribution_status": "1",
+		"postcode": null,
+		"telphone": "18600694744",
+		"country": null,
+		"province": "423",
+		"city": "424",
+		"area": "0",
+		"address": "盛达商务园 d座5楼教室3",
+		"longitude": "113.3820939548951",
+		"latitude": "23.13870087418578",
+		"mobile": "18600694744",
+		"payable_amount": "31.80",
+		"real_amount": "25.80",
+		"payable_freight": "0.00",
+		"real_freight": "0.00",
+		"service_fee": "0.00",
+		"pay_time": "2015-08-15 15:47:53",
+		"send_time": "2015-08-15 15:58:35",
+		"create_time": "2015-08-15 15:47:44",
+		"completion_time": "2015-08-15 16:44:00",
+		"invoice": "0",
+		"postscript": "",
+		"note": null,
+		"if_del": "0",
+		"insured": "0.00",
+		"if_insured": "0",
+		"pay_fee": "0.00",
+		"invoice_title": "",
+		"taxes": "0.00",
+		"promotions": "6.00",
+		"discount": "0.00",
+		"fullcut": "0",
+		"order_amount": "25.80",
+		"if_print": "0",
+		"prop": "26792349",
+		"accept_time": "闪电送达",
+		"dealer_expect_time": null,
+		"exp": "0",
+		"point": "0",
+		"type": "0",
+		"dealer_first_id": "20",
+		"dealer_second_id": "3912",
+		"dealer_third_id": "5588",
+		"checknum": "4262",
+		"address_id": "2515118",
+		"from_crm": "0",
+		"dataStatus": "1",
+		"lastUpdateTime": "2015-08-15 16:44:00",
+		"promotion_check": "0",
+		"from_shop": "0",
+		"preg_dealer_type": "2",
+		"is_allot": "1",
+		"is_lock": "0",
+		"expecttime": "1439624873",
+		"in_free_map": "0",
+		"user_refund_status": "0",
+		"user_refund_result": "0",
+		"user_refund_time": "0",
+		"user_accepted_goods": "0",
+		"refund_status": "0",
+		"order_type": "0",
+		"order_type_flag": 0,
+		"order_exception": "0",
+		"is_dealer_accept": "0",
+		"dealer_accept_time": "0",
+		"sender_mobile": null,
+		"order_no_index": "54422260",
+		"expect_service_fee": "0.00",
+		"user_pay_amount": "25.80",
+		"open_app_id": "0",
+		"order_delivery_status": "0",
+		"process": [],
+		"order_goods": [
+			[{
+				"goods_id": "13531",
+				"goods_price": "9.90",
+				"real_price": "9.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·蜜梨",
+				"attribute": "",
+				"specifics": "2粒装",
+				"photo": {
+					"2": [{
+						"name": "1000013531_24959.jpg",
+						"path": "upload\/goods\/1000013531"
+					}],
+					"1": [{
+						"name": "1000013531_25769.jpg",
+						"path": "upload\/goods\/1000013531"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000013531_50260.jpg",
+				"pre_imgs": "0000013531_56470.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/3531\/0000013531_50260.jpg@200w_200h_90Q.jpg",
+				"id": "13531",
+				"is_gift": 0
+			}, {
+				"goods_id": "13531",
+				"goods_price": "0.00",
+				"real_price": "0.00",
+				"isgift": 1,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·蜜梨",
+				"attribute": "",
+				"specifics": "2粒装",
+				"photo": {
+					"2": [{
+						"name": "1000013531_24959.jpg",
+						"path": "upload\/goods\/1000013531"
+					}],
+					"1": [{
+						"name": "1000013531_25769.jpg",
+						"path": "upload\/goods\/1000013531"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000013531_50260.jpg",
+				"pre_imgs": "0000013531_56470.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/3531\/0000013531_50260.jpg@200w_200h_90Q.jpg",
+				"id": "13531",
+				"is_gift": 1
+			}],
+			[{
+				"goods_id": "15277",
+				"goods_price": "10.00",
+				"real_price": "10.00",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·姬娜果",
+				"attribute": "",
+				"specifics": "300g 2个装",
+				"photo": {
+					"2": [{
+						"name": "1000015277_24248.jpg",
+						"path": "upload\/goods\/1000015277"
+					}],
+					"1": [{
+						"name": "1000015277_25483.jpg",
+						"path": "upload\/goods\/1000015277"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000015277_46780.jpg",
+				"pre_imgs": "0000015277_44570.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5277\/0000015277_46780.jpg@200w_200h_90Q.jpg",
+				"id": "15277",
+				"is_gift": 0
+			}, {
+				"goods_id": "15277",
+				"goods_price": "0.00",
+				"real_price": "0.00",
+				"isgift": 1,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·姬娜果",
+				"attribute": "",
+				"specifics": "300g 2个装",
+				"photo": {
+					"2": [{
+						"name": "1000015277_24248.jpg",
+						"path": "upload\/goods\/1000015277"
+					}],
+					"1": [{
+						"name": "1000015277_25483.jpg",
+						"path": "upload\/goods\/1000015277"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "0",
+				"pre_img": "0000015277_46780.jpg",
+				"pre_imgs": "0000015277_44570.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5277\/0000015277_46780.jpg@200w_200h_90Q.jpg",
+				"id": "15277",
+				"is_gift": 1
+			}],
+			[{
+				"goods_id": "15353",
+				"goods_price": "11.90",
+				"real_price": "11.90",
+				"isgift": 0,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·冰川红提",
+				"attribute": "",
+				"specifics": "400g\/盒",
+				"photo": {
+					"2": [{
+						"name": "1000015353_24509.jpg",
+						"path": "upload\/goods\/1000015353"
+					}],
+					"1": [{
+						"name": "1000015353_25484.jpg",
+						"path": "upload\/goods\/1000015353"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000015353_56170.jpg",
+				"pre_imgs": "0000015353_19210.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5353\/0000015353_56170.jpg@200w_200h_90Q.jpg",
+				"id": "15353",
+				"is_gift": 0
+			}, {
+				"goods_id": "15353",
+				"goods_price": "0.00",
+				"real_price": "0.00",
+				"isgift": 1,
+				"goods_nums": "1",
+				"source_goods_id": null,
+				"goods_status": "0",
+				"name": "爱鲜蜂·冰川红提",
+				"attribute": "",
+				"specifics": "400g\/盒",
+				"photo": {
+					"2": [{
+						"name": "1000015353_24509.jpg",
+						"path": "upload\/goods\/1000015353"
+					}],
+					"1": [{
+						"name": "1000015353_25484.jpg",
+						"path": "upload\/goods\/1000015353"
+					}]
+				},
+				"brand_name": "爱鲜蜂",
+				"store_nums": "50",
+				"ismix": "1",
+				"pre_img": "0000015353_56170.jpg",
+				"pre_imgs": "0000015353_19210.jpg,",
+				"cart_group_id": "0",
+				"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/5353\/0000015353_56170.jpg@200w_200h_90Q.jpg",
+				"id": "15353",
+				"is_gift": 1
+			}]
+		],
+		"enableComment": 1,
+		"isCommented": 1,
+		"enableCancel": 0,
+		"newStatus": 0,
+		"pay_platform": "1,2,4,3",
+		"status_timeline": [{
+			"status_title": "已完成",
+			"status_desc": "订单已完成，快来评价吧",
+			"status_time": "16:44"
+		}, {
+			"status_title": "已发货",
+			"status_desc": "%商家电话%:{13642624584}",
+			"status_time": "15:58"
+		}, {
+			"status_title": "待发货",
+			"status_desc": "请耐心等待配送",
+			"status_time": "15:47"
+		}, {
+			"status_title": "支付成功",
+			"status_desc": "",
+			"status_time": "15:47"
+		}, {
+			"status_title": "订单提交成功",
+			"status_desc": "下单成功，订单号：i004z20150815154754422260",
+			"status_time": "15:47"
+		}],
+		"fee_list": [{
+			"text": "配送费",
+			"value": "0.00"
+		}, {
+			"text": "服务费",
+			"value": "0.00"
+		}, {
+			"text": "优惠券",
+			"value": "6.00"
+		}],
+		"share_key": "MjU1Y2U3YkY3Wkoza2xPNkwwbHNXaE1haGJsS0tjcnJvaGp2UmovNXFvcUY4bnR0ZS9nbVprdFB0d3Z5QjJ2QQ==",
+		"buy_num": 6,
+		"is_complained": 0,
+		"showSendCouponBtn": 1,
+		"enableDelete": 1,
+		"dealer_name": "小梦便利店",
+		"dealer_address": "广州天河上社车站路23号（平湖小区）",
+		"dealer_lng": "113.375389",
+		"dealer_lat": "23.139897",
+		"dealer_alias": "爱鲜蜂平湖小区（小梦便利店）",
+		"dealer_fav": 0,
+		"enable_fav": 1,
+		"textStatus": "已完成",
+		"buttons": [{
+			"type": 4,
+			"text": "发福利"
+		}],
+		"detail_buttons": [{
+			"type": 9,
+			"text": "删除订单"
+		}],
+		"in_refund": 0
+	}]
+}

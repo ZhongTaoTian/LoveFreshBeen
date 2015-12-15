@@ -14,10 +14,15 @@ class SupermarketViewController: BaseViewController {
     private var categoryTableView: LFBTableView!
     private var productsVC: ProductsViewController!
     
-    //MARK: Lazy Property
-    
+    // flag
+    private var categoryTableViewIsLoadFinish = false
+    private var productTableViewIsLoadFinish = false
+  
+    // MARK : Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        showProgressHUD()
         
         buildNavigationItem()
         
@@ -27,7 +32,7 @@ class SupermarketViewController: BaseViewController {
         
         loadSupermarketData()
     }
-    
+        
     
     // MARK:- Creat UI
     private func buildNavigationItem() {
@@ -55,41 +60,47 @@ class SupermarketViewController: BaseViewController {
     private func bulidProductsViewController() {
         productsVC = ProductsViewController()
         productsVC.delegate = self
+        productsVC.view.hidden = true
         addChildViewController(productsVC)
         view.addSubview(productsVC.view)
         
         weak var tmpSelf = self
         productsVC.refreshUpPull = {
-            Supermarket.loadSupermarketData { (data, error) -> Void in
-                if error == nil {
-                    let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
-                    dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
+            let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.2 * Double(NSEC_PER_SEC)))
+            dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
+                Supermarket.loadSupermarketData { (data, error) -> Void in
+                    if error == nil {
                         tmpSelf!.supermarketData = data
                         tmpSelf!.productsVC.supermarketData = data
                         tmpSelf?.productsVC.productsTableView?.mj_header.endRefreshing()
                         tmpSelf!.categoryTableView.reloadData()
                         tmpSelf!.categoryTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .Top)
-                    })
+                    }
                 }
-            }
+            })
         }
     }
     
     private func loadSupermarketData() {
-        ProgressHUDManager.show()
-        weak var tmpSelf = self
-        Supermarket.loadSupermarketData { (data, error) -> Void in
-            if error == nil {
-                tmpSelf!.supermarketData = data
-                tmpSelf!.categoryTableView.reloadData()
-                tmpSelf!.categoryTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .Bottom)
-                tmpSelf!.productsVC.supermarketData = data
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
+        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+            weak var tmpSelf = self
+            Supermarket.loadSupermarketData { (data, error) -> Void in
+                if error == nil {
+                    tmpSelf!.supermarketData = data
+                    tmpSelf!.categoryTableView.reloadData()
+                    tmpSelf!.categoryTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .Bottom)
+                    tmpSelf!.productsVC.supermarketData = data
+                    tmpSelf!.categoryTableViewIsLoadFinish = true
+                    tmpSelf!.productTableViewIsLoadFinish = true
+                    if tmpSelf!.categoryTableViewIsLoadFinish && tmpSelf!.productTableViewIsLoadFinish {
+                        tmpSelf!.categoryTableView.hidden = false
+                        tmpSelf!.productsVC.productsTableView!.hidden = false
+                        tmpSelf!.productsVC.view.hidden = false
+                        ProgressHUDManager.dismiss()
+                    }
+                }
             }
-            
-            let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
-            dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
-                ProgressHUDManager.dismiss()
-            })
         }
     }
     
@@ -103,6 +114,12 @@ class SupermarketViewController: BaseViewController {
         print("右")
     }
     
+    // MARK: - Private Method
+    private func showProgressHUD() {
+        if !ProgressHUDManager.isVisible() {
+            ProgressHUDManager.showWithStatus("正在加载中")
+        }
+    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource

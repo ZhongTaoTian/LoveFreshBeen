@@ -16,7 +16,8 @@ class HomeViewController: AnimationViewController {
     private var isAnimation: Bool = false
     private var headData: HeadResources?
     private var freshHot: FreshHot?
-    
+
+// MARK: - Life circle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,13 +36,13 @@ class HomeViewController: AnimationViewController {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
-    // MARK:- addNotifiation
+// MARK:- addNotifiation
     func addHomeNotification() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "homeTableHeadViewHeightDidChange:", name: HomeTableHeadViewHeightDidChange, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "goodsInventoryProblem:", name: HomeGoodsInventoryProblem, object: nil)
     }
     
-    // MARK:- Creat UI
+// MARK:- Creat UI
     private func buildNavigationItem() {
         navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
         
@@ -238,7 +239,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, atIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 1 && headData != nil && freshHot != nil && isAnimation {
-            startAnimation(view, offsetY: 40, duration: 0.6)
+            startAnimation(view, offsetY: 60, duration: 0.8)
         }
     }
     
@@ -293,5 +294,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+
+    }
 }
 

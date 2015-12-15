@@ -23,7 +23,6 @@ class HeadResources: NSObject, DictModelProtocol {
             let data = modelTool.objectWithDictionary(dict, cls: HeadResources.self) as? HeadResources
             completion(data: data, error: nil)
         }
-        
     }
     
     static func customClassMapping() -> [String : String]? {

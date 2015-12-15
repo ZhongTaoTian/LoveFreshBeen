@@ -27,29 +27,39 @@ public class DictModelManager {
     ///
     ///  - returns: 模型对象
     public func objectWithDictionary(dict: NSDictionary, cls: AnyClass) -> AnyObject? {
-
+        
         // 动态获取命名空间
         let ns = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"] as! String
         
         // 模型信息
         let infoDict = fullModelInfo(cls)
-
+        
         let obj: AnyObject = (cls as! NSObject.Type).init()
-
+        
         autoreleasepool {
             // 3. 遍历模型字典
             for (k, v) in infoDict {
-                
+                if k == "desc" {
+                    let newValue = dict["description"] as? String
+                    obj.setValue(newValue, forKey: "desc")
+                }
                 if let value: AnyObject = dict[k] {
                     
                     if v.isEmpty {
                         if !(value === NSNull()) {
-                            obj.setValue(value, forKey: k)
+                            if k == "number" && ScreenWidth < 375 {
+                                if let vav: String = value as? String {
+                                    print(Int(vav)!)
+                                    obj.setValue(Int(vav)!, forKey: k)
+                                }
+                            } else {
+                                obj.setValue(value, forKey: k)
+                            }
                         }
                         
                     } else {
                         let type = "\(value.classForCoder)"
-
+                        
                         if type == "NSDictionary" {
                             
                             if let subObj: AnyObject = objectWithDictionary(value as! NSDictionary, cls: NSClassFromString(ns + "." + v)!) {
@@ -57,7 +67,7 @@ public class DictModelManager {
                             }
                             
                         } else if type == "NSArray" {
-
+                            
                             if let subObj: AnyObject = objectsWithArray(value as! NSArray, cls: NSClassFromString(ns + "." + v)!) {
                                 obj.setValue(subObj, forKey: k)
                             }
@@ -198,7 +208,7 @@ public class DictModelManager {
         
         // 写入缓冲池
         modelCache["\(cls)"] = infoDict
-
+        
         return infoDict
     }
     

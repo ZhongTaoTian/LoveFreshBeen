@@ -12,8 +12,29 @@ class UserShopCarTool: NSObject {
 
     private static let instance = UserShopCarTool()
     
+    private var supermarketProducts = [Goods]()
+    
     class var sharedUserShopCar: UserShopCarTool {
         return instance
     }
     
+    func userShopCarProductsNumber() -> Int {
+        return ShopCarRedDotView.sharedRedDotView.buyNumber
+    }
+    
+    func isEmpty() -> Bool {
+        return ShopCarRedDotView.sharedRedDotView.buyNumber == 0
+    }
+    
+    func addSupermarkProductToShopCar(goods: Goods) {
+        supermarketProducts.append(goods)
+    }
+    
+    func getShopCarProducts() -> [Goods] {
+        return supermarketProducts
+    }
+    
+    func removeSupermarketProduct(goods: Goods) {
+
+    }
 }
