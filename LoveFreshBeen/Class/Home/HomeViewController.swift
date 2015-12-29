@@ -16,8 +16,8 @@ class HomeViewController: AnimationViewController {
     private var isAnimation: Bool = false
     private var headData: HeadResources?
     private var freshHot: FreshHot?
-
-// MARK: - Life circle
+    
+    // MARK: - Life circle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,9 +26,9 @@ class HomeViewController: AnimationViewController {
         buildNavigationItem()
         
         buildCollectionView()
-
+        
         buildTableHeadView()
-
+        
         buildProessHud()
     }
     
@@ -36,13 +36,13 @@ class HomeViewController: AnimationViewController {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
-// MARK:- addNotifiation
+    // MARK:- addNotifiation
     func addHomeNotification() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "homeTableHeadViewHeightDidChange:", name: HomeTableHeadViewHeightDidChange, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "goodsInventoryProblem:", name: HomeGoodsInventoryProblem, object: nil)
     }
     
-// MARK:- Creat UI
+    // MARK:- Creat UI
     private func buildNavigationItem() {
         navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
         
@@ -91,7 +91,7 @@ class HomeViewController: AnimationViewController {
         collectionView.registerClass(HomeCollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView")
         collectionView.registerClass(HomeCollectionFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerView")
         view.addSubview(collectionView)
-
+        
         let refreshHeadView = LFBRefreshHeader(refreshingTarget: self, refreshingAction: "headRefresh")
         refreshHeadView.gifView?.frame = CGRectMake(0, 30, 100, 100)
         collectionView.mj_header = refreshHeadView
@@ -102,22 +102,31 @@ class HomeViewController: AnimationViewController {
         headView?.headData = nil
         headData = nil
         freshHot = nil
+        var headDataLoadFinish = false
+        var freshHotLoadFinish = false
         
         weak var tmpSelf = self
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.8 * Double(NSEC_PER_SEC)))
         dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
             HeadResources.loadHomeHeadData { (data, error) -> Void in
                 if error == nil {
+                    headDataLoadFinish = true
                     tmpSelf?.headView?.headData = data
                     tmpSelf?.headData = data
-                    tmpSelf?.collectionView.reloadData()
+                    if headDataLoadFinish && freshHotLoadFinish {
+                        tmpSelf?.collectionView.reloadData()
+                        tmpSelf?.collectionView.mj_header.endRefreshing()
+                    }
                 }
             }
             
             FreshHot.loadFreshHotData { (data, error) -> Void in
+                freshHotLoadFinish = true
                 tmpSelf?.freshHot = data
-                tmpSelf?.collectionView.reloadData()
-                tmpSelf?.collectionView.mj_header.endRefreshing()
+                if headDataLoadFinish && freshHotLoadFinish {
+                    tmpSelf?.collectionView.reloadData()
+                    tmpSelf?.collectionView.mj_header.endRefreshing()
+                }
             }
         }
     }
@@ -166,6 +175,11 @@ extension HomeViewController: HomeTableHeadViewDelegate {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if headData?.data?.activities?.count <= 0 || freshHot?.data?.count <= 0 {
+            return 0
+        }
+        
         if section == 0 {
             return headData?.data?.activities?.count ?? 0
         } else if section == 1 {
@@ -177,6 +191,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! HomeCell
+        if headData?.data?.activities?.count <= 0 {
+            return cell
+        }
         
         if indexPath.section == 0 {
             cell.activities = headData!.data!.activities![indexPath.row]
@@ -192,6 +209,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        if headData?.data?.activities?.count <= 0 || freshHot?.data?.count <= 0 {
+            return 0
+        }
         return 2
     }
     
@@ -295,7 +315,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-
+        
     }
 }
 

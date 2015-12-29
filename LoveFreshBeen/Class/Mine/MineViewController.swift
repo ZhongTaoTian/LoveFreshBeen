@@ -92,6 +92,8 @@ class MineViewController: BaseViewController {
         tableHeadView.mineHeadViewClick = { (type) -> () in
             switch type {
             case .Order:
+                let orderVc = OrderViewController()
+                tmpSelf!.navigationController?.pushViewController(orderVc, animated: true)
                 break
             case .Coupon:
                 let couponVC = CouponViewController()
@@ -154,7 +156,8 @@ extension MineViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if 0 == indexPath.section {
             if 0 == indexPath.row {
-                
+                let adressVC = MyAdressViewController()
+                navigationController?.pushViewController(adressVC, animated: true)
             } else {
                 
             }

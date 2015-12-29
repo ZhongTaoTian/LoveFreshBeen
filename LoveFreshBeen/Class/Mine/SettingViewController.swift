@@ -47,10 +47,9 @@ class SettingViewController: BaseViewController {
         let tap = UITapGestureRecognizer(target: self, action: "aboutMeViewClick")
         aboutMeView.addGestureRecognizer(tap)
         
-        let aboutLabel = UILabel(frame: CGRectMake(10, 0, 200, subViewHeight))
+        let aboutLabel = UILabel(frame: CGRectMake(20, 0, 200, subViewHeight))
         aboutLabel.text = "关于小熊"
-        aboutLabel.font = UIFont.systemFontOfSize(14)
-        aboutLabel.textColor = UIColor.colorWithCustom(60, g: 60, b: 60)
+        aboutLabel.font = UIFont.systemFontOfSize(16)
         aboutMeView.addSubview(aboutLabel)
         
         let arrowImageView = UIImageView(image: UIImage(named: "icon_go"))
@@ -63,10 +62,9 @@ class SettingViewController: BaseViewController {
         cleanCacheView.backgroundColor = UIColor.whiteColor()
         view.addSubview(cleanCacheView!)
         
-        let cleanCacheLabel = UILabel(frame: CGRectMake(10, 0, 200, subViewHeight))
+        let cleanCacheLabel = UILabel(frame: CGRectMake(20, 0, 200, subViewHeight))
         cleanCacheLabel.text = "清理缓存"
-        cleanCacheLabel.font = UIFont.systemFontOfSize(14)
-        cleanCacheLabel.textColor = UIColor.colorWithCustom(60, g: 60, b: 60)
+        cleanCacheLabel.font = UIFont.systemFontOfSize(16)
         cleanCacheView.addSubview(cleanCacheLabel)
         
         let tap = UITapGestureRecognizer(target: self, action: "cleanCacheViewClick")

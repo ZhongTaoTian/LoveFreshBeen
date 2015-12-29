@@ -4,12 +4,12 @@
 //
 //  Created by MacBook on 15/11/21.
 //  Copyright © 2015年 tianzhongtao. All rights reserved.
-//  
+//
 
 import UIKit
 
 class HeadResources: NSObject, DictModelProtocol {
-
+    
     var msg: String?
     var reqid: String?
     var data: HeadData?

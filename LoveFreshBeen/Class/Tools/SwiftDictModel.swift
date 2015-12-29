@@ -49,7 +49,6 @@ public class DictModelManager {
                         if !(value === NSNull()) {
                             if k == "number" && ScreenWidth < 375 {
                                 if let vav: String = value as? String {
-                                    print(Int(vav)!)
                                     obj.setValue(Int(vav)!, forKey: k)
                                 }
                             } else {

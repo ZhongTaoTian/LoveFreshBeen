@@ -22,7 +22,7 @@ class HomeCell: UICollectionViewCell {
     
     private lazy var goodsImageView: UIImageView = {
         let goodsImageView = UIImageView()
-        goodsImageView.contentMode = UIViewContentMode.Center
+        goodsImageView.contentMode = UIViewContentMode.ScaleAspectFit
         return goodsImageView
         }()
     

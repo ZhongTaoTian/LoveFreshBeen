@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: ScreenBounds)
         window!.makeKeyAndVisible()
-        
+
         adViewController = ADViewController()
 
         weak var tmpSelf = self
