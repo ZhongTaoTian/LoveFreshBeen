@@ -4,7 +4,7 @@
 //
 //  Created by sfbest on 15/11/25.
 //  Copyright © 2015年 tianzhongtao. All rights reserved.
-//  添加和减少购买商品View,没有库存是现实补货中
+//  添加和减少购买商品View,没有库存是补货中
 
 import UIKit
 
@@ -122,7 +122,7 @@ class BuyView: UIView {
         buyCountLabel.hidden = false
     }
     
-// MARK: - Action
+    // MARK: - Action
     func addGoodsButtonClick() {
         
         if buyNumber >= goods?.number {
@@ -141,6 +141,8 @@ class BuyView: UIView {
         }
         
         ShopCarRedDotView.sharedRedDotView.addProductToRedDotView(true)
+        UserShopCarTool.sharedUserShopCar.addSupermarkProductToShopCar(goods!)
+        NSNotificationCenter.defaultCenter().postNotificationName(LFBShopCarBuyPriceDidChangeNotification, object: nil, userInfo: nil)
     }
     
     func reduceGoodsButtonClick() {
@@ -154,11 +156,13 @@ class BuyView: UIView {
             reduceGoodsButton.hidden = true
             buyCountLabel.hidden = true
             buyCountLabel.text = ""
+            UserShopCarTool.sharedUserShopCar.removeSupermarketProduct(goods!)
         } else {
-             buyCountLabel.text = "\(buyNumber)"
+            buyCountLabel.text = "\(buyNumber)"
         }
         
         ShopCarRedDotView.sharedRedDotView.reduceProductToRedDotView(true)
+        NSNotificationCenter.defaultCenter().postNotificationName(LFBShopCarBuyPriceDidChangeNotification, object: nil, userInfo: nil)
     }
 }
 

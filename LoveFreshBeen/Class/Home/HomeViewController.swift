@@ -40,6 +40,7 @@ class HomeViewController: AnimationViewController {
     func addHomeNotification() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "homeTableHeadViewHeightDidChange:", name: HomeTableHeadViewHeightDidChange, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "goodsInventoryProblem:", name: HomeGoodsInventoryProblem, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "shopCarBuyProductNumberDidChange", name: LFBShopCarBuyProductNumberDidChangeNotification, object: nil)
     }
     
     // MARK:- Creat UI
@@ -157,6 +158,10 @@ class HomeViewController: AnimationViewController {
         if let goodsName = noti.object as? String {
             ProgressHUDManager.showImage(UIImage(named: "v2_orderSuccess")!, status: goodsName + "  库存不足了\n先买这么多, 过段时间再来看看吧~")
         }
+    }
+    
+    func shopCarBuyProductNumberDidChange() {
+        collectionView.reloadData()
     }
 }
 

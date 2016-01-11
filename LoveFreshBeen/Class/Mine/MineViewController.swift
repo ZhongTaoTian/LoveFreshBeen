@@ -159,7 +159,8 @@ extension MineViewController: UITableViewDelegate, UITableViewDataSource {
                 let adressVC = MyAdressViewController()
                 navigationController?.pushViewController(adressVC, animated: true)
             } else {
-                
+                let myShopVC = MyShopViewController()
+                navigationController?.pushViewController(myShopVC, animated: true)
             }
         } else if 1 == indexPath.section {
             

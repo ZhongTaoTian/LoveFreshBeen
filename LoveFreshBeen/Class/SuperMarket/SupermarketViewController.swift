@@ -16,7 +16,7 @@ class SupermarketViewController: BaseViewController {
     
     // flag
     private var categoryTableViewIsLoadFinish = false
-    private var productTableViewIsLoadFinish = false
+    private var productTableViewIsLoadFinish  = false
   
     // MARK : Life cycle
     override func viewDidLoad() {
@@ -123,6 +123,7 @@ class SupermarketViewController: BaseViewController {
         if !ProgressHUDManager.isVisible() {
             ProgressHUDManager.showWithStatus("正在加载中")
         }
+        
     }
 }
 

@@ -69,7 +69,7 @@ class OrderGoodsListView: UIView {
         addSubview(payMoneyLabel)
         
         payLabel.textAlignment = NSTextAlignment.Right
-        payLabel.textColor = UIColor.colorWithCustom(50, g: 50, b: 50)
+        payLabel.textColor = LFBTextBlackColor
         payLabel.font = UIFont.systemFontOfSize(14)
         addSubview(payLabel)
     }
@@ -187,15 +187,15 @@ class GoodsView: UIView {
         super.init(frame: CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, 20))
         
         titleLabel.font = UIFont.systemFontOfSize(14)
-        titleLabel.textColor = UIColor.colorWithCustom(50, g: 50, b: 50)
+        titleLabel.textColor = LFBTextBlackColor
         addSubview(titleLabel)
         
         numberLabel.font = UIFont.systemFontOfSize(14)
-        numberLabel.textColor = UIColor.colorWithCustom(50, g: 50, b: 50)
+        numberLabel.textColor = LFBTextBlackColor
         addSubview(numberLabel)
         
         priceLabel.font = UIFont.systemFontOfSize(14)
-        priceLabel.textColor = UIColor.colorWithCustom(50, g: 50, b: 50)
+        priceLabel.textColor = LFBTextBlackColor
         priceLabel.textAlignment = NSTextAlignment.Right
         addSubview(priceLabel)
         
@@ -276,11 +276,11 @@ class FeeView: UIView {
         super.init(frame: frame)
         backgroundColor = UIColor.whiteColor()
         
-        titleLabel.textColor = UIColor.colorWithCustom(50, g: 50, b: 50)
+        titleLabel.textColor = LFBTextBlackColor
         titleLabel.font = UIFont.systemFontOfSize(14)
         addSubview(titleLabel)
         
-        prictLabel.textColor = UIColor.colorWithCustom(50, g: 50, b: 50)
+        prictLabel.textColor = LFBTextBlackColor
         prictLabel.textAlignment = NSTextAlignment.Right
         prictLabel.font = UIFont.systemFontOfSize(14)
         addSubview(prictLabel)

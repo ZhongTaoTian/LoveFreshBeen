@@ -58,13 +58,13 @@ class ShopCarRedDotView: UIView {
     }
     
     override func layoutSubviews() {
-        
         redImageView?.frame = bounds
         numberLabel?.frame = CGRectMake(0, 0, width, height)
     }
     
     func addProductToRedDotView(animation: Bool) {
         buyNumber++
+        
         if animation {
             reddotAnimation()
         }

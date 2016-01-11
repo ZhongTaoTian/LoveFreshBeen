@@ -52,7 +52,7 @@ class OrderStatuslViewController: BaseViewController {
     }
     
     private func buildNavigationItem() {
-        let rightItem = UIBarButtonItem.barButton("投诉", titleColor: UIColor.colorWithCustom(50, g: 50, b: 50), target: self, action: "rightItemButtonClick")
+        let rightItem = UIBarButtonItem.barButton("投诉", titleColor: LFBTextBlackColor, target: self, action: "rightItemButtonClick")
         navigationItem.rightBarButtonItem = rightItem
         weak var tmpSelf = self
         segment = LFBSegmentedControl(items: ["订单状态", "订单详情"], didSelectedIndex: { (index) -> () in

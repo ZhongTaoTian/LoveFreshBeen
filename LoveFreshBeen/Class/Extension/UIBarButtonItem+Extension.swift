@@ -47,7 +47,7 @@ extension UIBarButtonItem {
         btn.setTitle(title, forState: .Normal)
         btn.setTitleColor(titleColor, forState: .Normal)
         btn.addTarget(target, action: action, forControlEvents: UIControlEvents.TouchUpInside)
-        btn.titleLabel?.font = UIFont.systemFontOfSize(14)
+        btn.titleLabel?.font = UIFont.systemFontOfSize(15)
         if title.characters.count == 2 {
             btn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -25)
         }

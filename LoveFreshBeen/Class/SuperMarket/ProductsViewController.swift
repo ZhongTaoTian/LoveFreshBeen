@@ -10,9 +10,9 @@ import UIKit
 
 class ProductsViewController: AnimationViewController {
     
-    private let headViewIdentifier = "supermarketHeadView"
+    private let headViewIdentifier   = "supermarketHeadView"
     private var lastOffsetY: CGFloat = 0
-    private var isScrollDown = false
+    private var isScrollDown         = false
     var productsTableView: LFBTableView?
     weak var delegate: ProductsViewControllerDelegate?
     var refreshUpPull:(() -> ())?
@@ -35,9 +35,19 @@ class ProductsViewController: AnimationViewController {
         }
     }
     
+    
+    // MARK: - Lift Cycle
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "shopCarBuyProductNumberDidChange", name: LFBShopCarBuyProductNumberDidChangeNotification, object: nil)
+        
         view = UIView(frame: CGRectMake(ScreenWidth * 0.25, 0, ScreenWidth * 0.75, ScreenHeight - NavigationH))
         buildProductsTableView()
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     // MARK: - Build UI
@@ -68,6 +78,11 @@ class ProductsViewController: AnimationViewController {
         if refreshUpPull != nil {
             refreshUpPull!()
         }
+    }
+    
+    // MARK: - Action 
+    func shopCarBuyProductNumberDidChange() {
+        productsTableView?.reloadData()
     }
 }
 

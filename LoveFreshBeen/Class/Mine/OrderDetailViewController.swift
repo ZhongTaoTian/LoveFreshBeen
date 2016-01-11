@@ -89,7 +89,7 @@ class OrderDetailViewController: BaseViewController {
         
         let myEvaluateLabel = UILabel()
         myEvaluateLabel.text = "我的评价"
-        myEvaluateLabel.textColor = UIColor.colorWithCustom(50, g: 50, b: 50)
+        myEvaluateLabel.textColor = LFBTextBlackColor
         myEvaluateLabel.font = UIFont.systemFontOfSize(14)
         myEvaluateLabel.frame = CGRectMake(10, 5, ScreenWidth, 25)
         evaluateView.addSubview(myEvaluateLabel)
@@ -102,7 +102,7 @@ class OrderDetailViewController: BaseViewController {
         
         evaluateLabel.font = UIFont.systemFontOfSize(14)
         evaluateLabel.frame = CGRectMake(10, CGRectGetMaxY(starImageViews[0].frame) + 10, ScreenWidth - 20, 25)
-        evaluateLabel.textColor = UIColor.colorWithCustom(50, g: 50, b: 50)
+        evaluateLabel.textColor = LFBTextBlackColor
         evaluateView.addSubview(evaluateLabel)
     }
     

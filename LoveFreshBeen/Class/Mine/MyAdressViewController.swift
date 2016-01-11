@@ -10,17 +10,33 @@ import UIKit
 
 class MyAdressViewController: BaseViewController {
     
+    private var addAdressButton: UIButton?
+    private var nullImageView = UIView()
     var adressTableView: LFBTableView?
-    var adresses: [Adress]?
+    var adresses: [Adress]? {
+        didSet {
+            if adresses?.count == 0 {
+                nullImageView.hidden = false
+                adressTableView?.hidden = true
+            } else {
+                nullImageView.hidden = true
+                adressTableView?.hidden = false
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         buildNavigationItem()
-        
+
         buildAdressTableView()
-        
+
+        buildNullImageView()
+
         loadAdressData()
+
+        buildBottomAddAdressButtom()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -35,12 +51,32 @@ class MyAdressViewController: BaseViewController {
     
     private func buildAdressTableView() {
         adressTableView = LFBTableView(frame: view.bounds, style: UITableViewStyle.Plain)
+        adressTableView?.frame.origin.y += 10;
         adressTableView?.backgroundColor = UIColor.clearColor()
         adressTableView?.rowHeight = 80
         adressTableView?.delegate = self
         adressTableView?.dataSource = self
         view.addSubview(adressTableView!)
+    }
+    
+    private func buildNullImageView() {
+        nullImageView.backgroundColor = UIColor.clearColor()
+        nullImageView.frame = CGRectMake(0, 0, 200, 200)
+        nullImageView.center = view.center
+        nullImageView.center.y -= 100
+        view.addSubview(nullImageView)
         
+        let imageView = UIImageView(image: UIImage(named: "v2_address_empty"))
+        imageView.center.x = 100
+        imageView.center.y = 100
+        nullImageView.addSubview(imageView)
+        
+        let label = UILabel(frame: CGRectMake(0, CGRectGetMaxY(imageView.frame) + 10, 200, 20))
+        label.textColor = UIColor.lightGrayColor()
+        label.textAlignment = NSTextAlignment.Center
+        label.font = UIFont.systemFontOfSize(14)
+        label.text = "你还没有地址哦~"
+        nullImageView.addSubview(label)
     }
     
     private func loadAdressData() {
@@ -49,28 +85,63 @@ class MyAdressViewController: BaseViewController {
             if error == nil {
                 if data?.data?.count > 0 {
                     tmpSelf!.adresses = data!.data
+                    tmpSelf!.adressTableView?.hidden = false
                     tmpSelf!.adressTableView?.reloadData()
+                    tmpSelf!.nullImageView.hidden = true
                 } else {
-                    tmpSelf!.showNullAdress()
+                    tmpSelf!.adressTableView?.hidden = true
+                    tmpSelf!.nullImageView.hidden = false
                 }
             }
         }
+    }
         
+    private func buildBottomAddAdressButtom() {
+        let bottomView = UIView(frame: CGRectMake(0, ScreenHeight - 60 - 64, ScreenWidth, 60))
+        bottomView.backgroundColor = UIColor.whiteColor()
+        view.addSubview(bottomView)
+    
+        addAdressButton = UIButton(frame: CGRectMake(ScreenWidth * 0.15, 12, ScreenWidth * 0.7, 60 - 12 * 2))
+        addAdressButton?.backgroundColor = LFBNavigationYellowColor
+        addAdressButton?.setTitle("+ 新增地址", forState: UIControlState.Normal)
+        addAdressButton?.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        addAdressButton?.layer.masksToBounds = true
+        addAdressButton?.layer.cornerRadius = 8
+        addAdressButton?.titleLabel?.font = UIFont.systemFontOfSize(15)
+        addAdressButton?.addTarget(self, action: "addAdressButtonClick", forControlEvents: UIControlEvents.TouchUpInside)
+        bottomView.addSubview(addAdressButton!)
     }
     
-    private func showNullAdress() {
-    
+    // MARK: - Action
+    func addAdressButtonClick() {
+        let editVC = EditAdressViewController()
+        editVC.topVC = self
+        editVC.vcType = EditAdressViewControllerType.Add
+        navigationController?.pushViewController(editVC, animated: true)
     }
 }
+
 
 extension MyAdressViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return adresses?.count ?? 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        weak var tmpSelf = self
+        let cell = AdressCell.adressCell(tableView, indexPath: indexPath) { (cellIndexPathRow) -> Void in
+            let editAdressVC = EditAdressViewController()
+            editAdressVC.topVC = tmpSelf
+            editAdressVC.vcType = EditAdressViewControllerType.Edit
+            editAdressVC.currentAdressRow = indexPath.row
+            tmpSelf!.navigationController?.pushViewController(editAdressVC, animated: true)
+        }
+        cell.adress = adresses![indexPath.row]
+        
+        return cell
     }
 
 }
