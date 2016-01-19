@@ -38,7 +38,7 @@ class ShopCarRedDotView: UIView {
     }
     
     override init(frame: CGRect) {
-        super.init(frame: CGRectMake(frame.origin.x, frame.origin.y, 15, 15))
+        super.init(frame: CGRectMake(frame.origin.x, frame.origin.y, 20, 20))
         backgroundColor = UIColor.clearColor()
         
         redImageView = UIImageView(image: UIImage(named: "reddot"))

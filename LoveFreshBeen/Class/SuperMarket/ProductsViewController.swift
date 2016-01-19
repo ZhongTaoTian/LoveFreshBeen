@@ -143,6 +143,12 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
             delegate!.willDisplayHeaderView!(section)
         }
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let goods = goodsArr![indexPath.section][indexPath.row]
+        let productDetailVC = ProductDetailViewController(goods: goods)
+        navigationController?.pushViewController(productDetailVC, animated: true)
+    }
 }
 
 // MARK: - UIScrollViewDelegate

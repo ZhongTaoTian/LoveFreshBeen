@@ -110,6 +110,25 @@ class AnimationTabBarController: UITabBarController {
     var iconsView: [(icon: UIImageView, textLabel: UILabel)] = []
     var iconsImageName:[String] = ["v2_home", "v2_order", "shopCart", "v2_my"]
     var iconsSelectedImageName:[String] = ["v2_home_r", "v2_order_r", "shopCart_r", "v2_my_r"]
+    var shopCarIcon: UIImageView?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "searchViewControllerDeinit", name: "LFBSearchViewControllerDeinit", object: nil)
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    func searchViewControllerDeinit() {
+        if shopCarIcon != nil {
+            let redDotView = ShopCarRedDotView.sharedRedDotView
+            redDotView.frame = CGRectMake(21 + 1, -3, 15, 15)
+            shopCarIcon?.addSubview(redDotView)
+        }
+    }
     
     func createViewContainers() -> [String: UIView] {
         var containersDict = [String: UIView]()
@@ -144,10 +163,6 @@ class AnimationTabBarController: UITabBarController {
         viewContainer.addGestureRecognizer(tap)
         
         return viewContainer
-    }
-    
-    func tabBarClick(tap: UITapGestureRecognizer) {
-        
     }
     
     
@@ -195,8 +210,9 @@ class AnimationTabBarController: UITabBarController {
                 
                 if 2 == index {
                     let redDotView = ShopCarRedDotView.sharedRedDotView
-                    redDotView.frame = CGRectMake(imageH + 2, 1, 15, 15)
+                    redDotView.frame = CGRectMake(imageH + 1, -3, 15, 15)
                     icon.addSubview(redDotView)
+                    shopCarIcon = icon
                 }
                 
                 let iconsAndLabels = (icon:icon, textLabel:textLabel)

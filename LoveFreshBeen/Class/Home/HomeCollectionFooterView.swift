@@ -33,6 +33,11 @@ class HomeCollectionFooterView: UICollectionReusableView {
     func showLabel() {
         self.titleLabel.hidden = false
     }
+    
+    func setFooterTitle(text: String, textColor: UIColor) {
+        titleLabel.text = text
+        titleLabel.textColor = textColor
+    }
 }
 
 class HomeCollectionHeaderView: UICollectionReusableView {

@@ -14,6 +14,7 @@ public let ScreenWidth: CGFloat = UIScreen.mainScreen().bounds.size.width
 public let ScreenHeight: CGFloat = UIScreen.mainScreen().bounds.size.height
 public let ScreenBounds: CGRect = UIScreen.mainScreen().bounds
 public let ShopCarRedDotAnimationDuration: NSTimeInterval = 0.2
+public let LFBNavigationBarWhiteBackgroundColor = UIColor.colorWithCustom(249, g: 250, b: 253)
 
 // MARK: - Home 属性
 public let HotViewMargin: CGFloat = 10
@@ -61,3 +62,6 @@ public let LFBShopCarBuyProductNumberDidChangeNotification = "LFBShopCarBuyProdu
 public let LFBShopCarBuyPriceDidChangeNotification = "LFBShopCarBuyPriceDidChangeNotification"
 // MARK: - 购物车ViewController
 public let ShopCartRowHeight: CGFloat = 50
+
+// MARK: - 搜索ViewController
+public let LFBSearchViewControllerHistorySearchArray = "LFBSearchViewControllerHistorySearchArray"

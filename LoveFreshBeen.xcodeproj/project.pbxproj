@@ -32,7 +32,11 @@
 		B35C1DB51BFDB423006260D0 /* MineTabeHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DB41BFDB423006260D0 /* MineTabeHeadView.swift */; };
 		B35C1DB71BFDCD8A006260D0 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C1DB61BFDCD8A006260D0 /* MineCell.swift */; };
 		B36168CE1C191D2500F61D6A /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36168CD1C191D2500F61D6A /* PlaceholderTextView.swift */; settings = {ASSET_TAGS = (); }; };
+		B369AE851C464B9E003836BF /* NotSearchProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369AE841C464B9E003836BF /* NotSearchProductsView.swift */; settings = {ASSET_TAGS = (); }; };
+		B369AE871C46689D003836BF /* YellowShopCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369AE861C46689D003836BF /* YellowShopCarView.swift */; settings = {ASSET_TAGS = (); }; };
 		B36A8C9E1C23A96D0044850F /* SystemMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36A8C9D1C23A96D0044850F /* SystemMessageCell.swift */; settings = {ASSET_TAGS = (); }; };
+		B370E25C1C463CA40076679F /* Search in Resources */ = {isa = PBXBuildFile; fileRef = B370E25B1C463CA40076679F /* Search */; settings = {ASSET_TAGS = (); }; };
+		B370E25E1C463D980076679F /* SearchProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370E25D1C463D980076679F /* SearchProducts.swift */; settings = {ASSET_TAGS = (); }; };
 		B3715BE91C10163D0028080B /* MyCoupon in Resources */ = {isa = PBXBuildFile; fileRef = B3715BE61C10163D0028080B /* MyCoupon */; settings = {ASSET_TAGS = (); }; };
 		B3715BEA1C10163D0028080B /* Mine in Resources */ = {isa = PBXBuildFile; fileRef = B3715BE71C10163D0028080B /* Mine */; settings = {ASSET_TAGS = (); }; };
 		B3715BEB1C10163D0028080B /* 系统消息 in Resources */ = {isa = PBXBuildFile; fileRef = B3715BE81C10163D0028080B /* 系统消息 */; settings = {ASSET_TAGS = (); }; };
@@ -113,6 +117,7 @@
 		B3B134C41BFEF282004C60AE /* PageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B134C31BFEF282004C60AE /* PageScrollView.swift */; };
 		B3B279201C1E9A6900C35E76 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B2791F1C1E9A6900C35E76 /* HelpViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B3B8F57E1C33A56D00543ADB /* LeftImageRightTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8F57D1C33A56D00543ADB /* LeftImageRightTextButton.swift */; settings = {ASSET_TAGS = (); }; };
+		B3BA40381C4DE98C0060D6A0 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA40371C4DE98C0060D6A0 /* ProductDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B3C4E31F1C02B4D60025074D /* IconImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4E31E1C02B4D60025074D /* IconImageTextView.swift */; };
 		B3C4E39A1C0312340025074D /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4E3991C0312340025074D /* HomeCell.swift */; };
 		B3C4E39C1C0315BA0025074D /* FreshHot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4E39B1C0315BA0025074D /* FreshHot.swift */; };
@@ -123,6 +128,9 @@
 		B3CA50411C0C25EE0009960F /* UserShopCarTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA50401C0C25EE0009960F /* UserShopCarTool.swift */; settings = {ASSET_TAGS = (); }; };
 		B3CAA3A41C05852900CA1FE0 /* ProgressHUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CAA3A31C05852900CA1FE0 /* ProgressHUDManager.swift */; };
 		B3CAA3A61C0595F300CA1FE0 /* HomeCollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CAA3A51C0595F300CA1FE0 /* HomeCollectionFooterView.swift */; };
+		B3CAC6B91C439DA200BF4D35 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CAC6B81C439DA200BF4D35 /* QRCodeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B3CAC6BB1C439FAB00BF4D35 /* SearchProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CAC6BA1C439FAB00BF4D35 /* SearchProductViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B3CAC6BD1C43A26000BF4D35 /* SearchProduct in Resources */ = {isa = PBXBuildFile; fileRef = B3CAC6BC1C43A26000BF4D35 /* SearchProduct */; settings = {ASSET_TAGS = (); }; };
 		B3CFC1DC1C2B9452004A4344 /* OrderStatuslViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFC1DB1C2B9452004A4344 /* OrderStatuslViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B3CFC1DE1C2BA3DB004A4344 /* OrderStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFC1DD1C2BA3DB004A4344 /* OrderStatusCell.swift */; settings = {ASSET_TAGS = (); }; };
 		B3D7A3551C1FA8EE0003520C /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7A3541C1FA8EE0003520C /* Help.swift */; settings = {ASSET_TAGS = (); }; };
@@ -135,6 +143,7 @@
 		B3D7A3651C2018F30003520C /* UserMessage in Resources */ = {isa = PBXBuildFile; fileRef = B3D7A3611C2018F30003520C /* UserMessage */; settings = {ASSET_TAGS = (); }; };
 		B3D7A3691C201A8C0003520C /* LFBSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7A3681C201A8C0003520C /* LFBSegmentedControl.swift */; settings = {ASSET_TAGS = (); }; };
 		B3DC21961C22A26300831333 /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC21951C22A26300831333 /* UserMessage.swift */; settings = {ASSET_TAGS = (); }; };
+		B3DE24711C449C9A000A18C2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DE24701C449C9A000A18C2 /* SearchView.swift */; settings = {ASSET_TAGS = (); }; };
 		B3EF038A1C07F63400595884 /* LFBTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EF03891C07F63400595884 /* LFBTableView.swift */; };
 		B3EF038C1C07FE8C00595884 /* LFBCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EF038B1C07FE8C00595884 /* LFBCollectionView.swift */; };
 		B3EF038E1C0807EC00595884 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EF038D1C0807EC00595884 /* ProductsViewController.swift */; };
@@ -199,7 +208,11 @@
 		B35C1DB41BFDB423006260D0 /* MineTabeHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineTabeHeadView.swift; sourceTree = "<group>"; };
 		B35C1DB61BFDCD8A006260D0 /* MineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
 		B36168CD1C191D2500F61D6A /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceholderTextView.swift; path = ../Mine/PlaceholderTextView.swift; sourceTree = "<group>"; };
+		B369AE841C464B9E003836BF /* NotSearchProductsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotSearchProductsView.swift; sourceTree = "<group>"; };
+		B369AE861C46689D003836BF /* YellowShopCarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowShopCarView.swift; sourceTree = "<group>"; };
 		B36A8C9D1C23A96D0044850F /* SystemMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemMessageCell.swift; sourceTree = "<group>"; };
+		B370E25B1C463CA40076679F /* Search */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Search; sourceTree = "<group>"; };
+		B370E25D1C463D980076679F /* SearchProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProducts.swift; sourceTree = "<group>"; };
 		B3715BE61C10163D0028080B /* MyCoupon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyCoupon; sourceTree = "<group>"; };
 		B3715BE71C10163D0028080B /* Mine */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mine; sourceTree = "<group>"; };
 		B3715BE81C10163D0028080B /* 系统消息 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "系统消息"; sourceTree = "<group>"; };
@@ -317,6 +330,7 @@
 		B3B134C31BFEF282004C60AE /* PageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageScrollView.swift; sourceTree = "<group>"; };
 		B3B2791F1C1E9A6900C35E76 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		B3B8F57D1C33A56D00543ADB /* LeftImageRightTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftImageRightTextButton.swift; sourceTree = "<group>"; };
+		B3BA40371C4DE98C0060D6A0 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		B3C4E31E1C02B4D60025074D /* IconImageTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconImageTextView.swift; sourceTree = "<group>"; };
 		B3C4E3991C0312340025074D /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		B3C4E39B1C0315BA0025074D /* FreshHot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreshHot.swift; sourceTree = "<group>"; };
@@ -327,6 +341,9 @@
 		B3CA50401C0C25EE0009960F /* UserShopCarTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserShopCarTool.swift; sourceTree = "<group>"; };
 		B3CAA3A31C05852900CA1FE0 /* ProgressHUDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUDManager.swift; sourceTree = "<group>"; };
 		B3CAA3A51C0595F300CA1FE0 /* HomeCollectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionFooterView.swift; sourceTree = "<group>"; };
+		B3CAC6B81C439DA200BF4D35 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		B3CAC6BA1C439FAB00BF4D35 /* SearchProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProductViewController.swift; sourceTree = "<group>"; };
+		B3CAC6BC1C43A26000BF4D35 /* SearchProduct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SearchProduct; sourceTree = "<group>"; };
 		B3CFC1DB1C2B9452004A4344 /* OrderStatuslViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderStatuslViewController.swift; sourceTree = "<group>"; };
 		B3CFC1DD1C2BA3DB004A4344 /* OrderStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderStatusCell.swift; sourceTree = "<group>"; };
 		B3D7A3541C1FA8EE0003520C /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
@@ -339,6 +356,7 @@
 		B3D7A3611C2018F30003520C /* UserMessage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UserMessage; sourceTree = "<group>"; };
 		B3D7A3681C201A8C0003520C /* LFBSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFBSegmentedControl.swift; sourceTree = "<group>"; };
 		B3DC21951C22A26300831333 /* UserMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessage.swift; sourceTree = "<group>"; };
+		B3DE24701C449C9A000A18C2 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		B3EF03891C07F63400595884 /* LFBTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFBTableView.swift; sourceTree = "<group>"; };
 		B3EF038B1C07FE8C00595884 /* LFBCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFBCollectionView.swift; sourceTree = "<group>"; };
 		B3EF038D1C0807EC00595884 /* ProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -477,6 +495,7 @@
 				FAF9AECD1C008BE000EDFC75 /* HotView.swift */,
 				B3C4E31E1C02B4D60025074D /* IconImageTextView.swift */,
 				B3C4E3991C0312340025074D /* HomeCell.swift */,
+				B3BA40371C4DE98C0060D6A0 /* ProductDetailViewController.swift */,
 				FAF9AECF1C0092A500EDFC75 /* Model */,
 			);
 			path = Home;
@@ -616,6 +635,8 @@
 				B3AC60D61C118977008448C4 /* AnimationTabBarController.swift */,
 				B37DEBA51C0D73B80059AC66 /* AnimationViewController.swift */,
 				B3ACB7F91C05520D00C1678E /* BuyView.swift */,
+				B3CAC6B81C439DA200BF4D35 /* QRCodeViewController.swift */,
+				B3DE246F1C449C5B000A18C2 /* SearchViewController */,
 				B31252B81BFC7B790098B995 /* MainViewController.swift */,
 				B36168CD1C191D2500F61D6A /* PlaceholderTextView.swift */,
 				B31252D21BFC7F940098B995 /* BaseNavigationController.swift */,
@@ -796,8 +817,10 @@
 				B391E62F1C1ECC9600A321BE /* HelpPlist.plist */,
 				FAF9AED71C0098D400EDFC75 /* 首页焦点按钮 */,
 				B3A20CDE1C06D99600E1EAF4 /* supermarket */,
+				B3CAC6BC1C43A26000BF4D35 /* SearchProduct */,
 				FAF9AED91C02A66A00EDFC75 /* AD */,
 				FAF9AEDB1C02A66F00EDFC75 /* 促销 */,
+				B370E25B1C463CA40076679F /* Search */,
 				FAF9AEDD1C02A6A900EDFC75 /* 首页新鲜热卖 */,
 				B3715BE61C10163D0028080B /* MyCoupon */,
 				B3715BE71C10163D0028080B /* Mine */,
@@ -808,6 +831,18 @@
 				B3D7A3611C2018F30003520C /* UserMessage */,
 			);
 			path = Resouce;
+			sourceTree = "<group>";
+		};
+		B3DE246F1C449C5B000A18C2 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B3CAC6BA1C439FAB00BF4D35 /* SearchProductViewController.swift */,
+				B369AE841C464B9E003836BF /* NotSearchProductsView.swift */,
+				B3DE24701C449C9A000A18C2 /* SearchView.swift */,
+				B370E25D1C463D980076679F /* SearchProducts.swift */,
+				B369AE861C46689D003836BF /* YellowShopCarView.swift */,
+			);
+			name = SearchViewController;
 			sourceTree = "<group>";
 		};
 		D11302B9A6C2D160ABAF32E9 /* Pods */ = {
@@ -959,8 +994,10 @@
 				B312527E1BFC79EB0098B995 /* Assets.xcassets in Resources */,
 				FAF9AEDE1C02A6A900EDFC75 /* 首页新鲜热卖 in Resources */,
 				B389F8DC1C0E90AF007B2C9A /* MJRefresh.bundle in Resources */,
+				B3CAC6BD1C43A26000BF4D35 /* SearchProduct in Resources */,
 				FAF9AEDA1C02A66A00EDFC75 /* AD in Resources */,
 				B391E6301C1ECC9600A321BE /* HelpPlist.plist in Resources */,
+				B370E25C1C463CA40076679F /* Search in Resources */,
 				B3715BEA1C10163D0028080B /* Mine in Resources */,
 				B3D7A3621C2018F30003520C /* MyOrders in Resources */,
 				B3D7A3651C2018F30003520C /* UserMessage in Resources */,
@@ -1050,6 +1087,7 @@
 				B3B134C21BFEF195004C60AE /* HomeViewController.swift in Sources */,
 				B3ACB7FD1C056AF600C1678E /* String + Extension.swift in Sources */,
 				B389F8D41C0E90AF007B2C9A /* MJRefreshAutoNormalFooter.m in Sources */,
+				B3CAC6BB1C439FAB00BF4D35 /* SearchProductViewController.swift in Sources */,
 				B357030F1C156792002562E5 /* CoupinRuleViewController.swift in Sources */,
 				B3D7A35B1C1FF1120003520C /* AnswerCell.swift in Sources */,
 				B3CAA3A61C0595F300CA1FE0 /* HomeCollectionFooterView.swift in Sources */,
@@ -1074,6 +1112,7 @@
 				B37A7AA71C3F5717000C0A52 /* MyShopViewController.swift in Sources */,
 				B3A20CD51C06C5E500E1EAF4 /* SDWebImageManager.m in Sources */,
 				B37DCD8F1C0EDE1F005D3C7A /* MainAD.swift in Sources */,
+				B3DE24711C449C9A000A18C2 /* SearchView.swift in Sources */,
 				B3A20CDC1C06C5E500E1EAF4 /* UIImageView+WebCache.m in Sources */,
 				B31252771BFC79EB0098B995 /* AppDelegate.swift in Sources */,
 				B389F8D31C0E90AF007B2C9A /* MJRefreshAutoGifFooter.m in Sources */,
@@ -1091,10 +1130,12 @@
 				B3C4E39C1C0315BA0025074D /* FreshHot.swift in Sources */,
 				B3EF03921C0838C900595884 /* SupermarketHeadView.swift in Sources */,
 				B3A7BBC71C329DBA00700207 /* EditAdressViewController.swift in Sources */,
+				B369AE871C46689D003836BF /* YellowShopCarView.swift in Sources */,
 				B35C1DAB1BFD9BF0006260D0 /* MineHeadView.swift in Sources */,
 				B31252B21BFC7B490098B995 /* ScheduleViewController.swift in Sources */,
 				B31252B91BFC7B790098B995 /* BaseViewController.swift in Sources */,
 				B3CA503F1C0C19DE0009960F /* ShopCarRedDotView.swift in Sources */,
+				B370E25E1C463D980076679F /* SearchProducts.swift in Sources */,
 				B3A20CD41C06C5E500E1EAF4 /* SDWebImageDownloaderOperation.m in Sources */,
 				B3C4E39A1C0312340025074D /* HomeCell.swift in Sources */,
 				B3AC60D71C118977008448C4 /* AnimationTabBarController.swift in Sources */,
@@ -1120,6 +1161,7 @@
 				B3EF038A1C07F63400595884 /* LFBTableView.swift in Sources */,
 				B357034F1C157B6E002562E5 /* BindingCouponView.swift in Sources */,
 				B3CA50411C0C25EE0009960F /* UserShopCarTool.swift in Sources */,
+				B369AE851C464B9E003836BF /* NotSearchProductsView.swift in Sources */,
 				B3AE62671C311C3200A321FC /* OrderUserDetailView.swift in Sources */,
 				B389F8D11C0E90AF007B2C9A /* MJRefreshFooter.m in Sources */,
 				B3EF038E1C0807EC00595884 /* ProductsViewController.swift in Sources */,
@@ -1147,9 +1189,11 @@
 				B389F8DB1C0E90AF007B2C9A /* MJRefreshStateHeader.m in Sources */,
 				B3B8F57E1C33A56D00543ADB /* LeftImageRightTextButton.swift in Sources */,
 				FAF9AED61C0096B500EDFC75 /* SwiftDictModel.swift in Sources */,
+				B3BA40381C4DE98C0060D6A0 /* ProductDetailViewController.swift in Sources */,
 				B31252BA1BFC7B790098B995 /* MainViewController.swift in Sources */,
 				B3A7BBC51C32825900700207 /* AdressCell.swift in Sources */,
 				B35C1DB51BFDB423006260D0 /* MineTabeHeadView.swift in Sources */,
+				B3CAC6B91C439DA200BF4D35 /* QRCodeViewController.swift in Sources */,
 				B37DEBA81C0D7CE30059AC66 /* LFBRefreshHeader.swift in Sources */,
 				B3A20CD11C06C5E500E1EAF4 /* SDWebImageCompat.m in Sources */,
 				B3DC21961C22A26300831333 /* UserMessage.swift in Sources */,

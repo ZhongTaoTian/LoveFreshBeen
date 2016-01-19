@@ -32,6 +32,16 @@ class HomeViewController: AnimationViewController {
         buildProessHud()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
+        
+        if collectionView != nil {
+            collectionView.reloadData()
+        }
+    }
+    
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
@@ -45,8 +55,6 @@ class HomeViewController: AnimationViewController {
     
     // MARK:- Creat UI
     private func buildNavigationItem() {
-        navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
-        
         navigationItem.leftBarButtonItem = UIBarButtonItem.barButton("扫一扫", titleColor: UIColor.blackColor(),
             image: UIImage(named: "icon_black_scancode")!, hightLightImage: nil,
             target: self, action: "leftItemClick", type: ItemButtonType.Left)
@@ -140,11 +148,13 @@ class HomeViewController: AnimationViewController {
     // MARK:- Action
     // MARK: 扫一扫和搜索Action
     func leftItemClick() {
-        print("左")
+        let qrCode = QRCodeViewController()
+        navigationController?.pushViewController(qrCode, animated: true)
     }
     
     func rightItemClick() {
-        print("右")
+        let searchVC = SearchProductViewController()
+        navigationController!.pushViewController(searchVC, animated: false)
     }
     
     // MARK: Notifiation Action
@@ -217,6 +227,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if headData?.data?.activities?.count <= 0 || freshHot?.data?.count <= 0 {
             return 0
         }
+        
         return 2
     }
     
@@ -320,7 +331,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
+        if indexPath.section == 0 {
+            print("点击了长条的第 \(indexPath.row) 的cell")
+        } else {
+            let productVC = ProductDetailViewController(goods: freshHot!.data![indexPath.row])
+            navigationController?.pushViewController(productVC, animated: true)
+        }
     }
 }
 

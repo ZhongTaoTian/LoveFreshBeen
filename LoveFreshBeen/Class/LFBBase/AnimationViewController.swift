@@ -12,65 +12,109 @@ class AnimationViewController: BaseViewController {
     
     var animationLayers: [CALayer]?
     
+    var animationBigLayers: [CALayer]?
+    
     // MARK: 商品添加到购物车动画
     func addProductsAnimation(imageView: UIImageView) {
-        if animationLayers == nil {
-            animationLayers = [CALayer]()
+        
+        if (self.animationLayers == nil)
+        {
+            self.animationLayers = [CALayer]();
         }
         
         let frame = imageView.convertRect(imageView.bounds, toView: view)
         let transitionLayer = CALayer()
         transitionLayer.frame = frame
         transitionLayer.contents = imageView.layer.contents
-        transitionLayer.fillMode = kCAFillModeRemoved
+        self.view.layer.addSublayer(transitionLayer)
+        self.animationLayers?.append(transitionLayer)
         
-        let p1 = transitionLayer.position
-        let p3X = view.width - view.width / 5 - 10
-        let p3 = CGPointMake(p3X, ScreenHeight - 20)
-                
+        let p1 = transitionLayer.position;
+        let p3 = CGPointMake(view.width - view.width / 4 - view.width / 8 - 6, self.view.layer.bounds.size.height - 40);
+        
         let positionAnimation = CAKeyframeAnimation(keyPath: "position")
-        let path = CGPathCreateMutable()
-        CGPathMoveToPoint(path, nil, p1.x, p1.y)
-        CGPathAddLineToPoint(path, nil, p3.x, p3.y)
-        positionAnimation.removedOnCompletion = true
-        positionAnimation.path = path
-        positionAnimation.fillMode = kCAFillModeForwards
-        
-        let transformAnimation =  CABasicAnimation(keyPath: "transform")
-        transformAnimation.fromValue = NSValue(CATransform3D: CATransform3DIdentity)
-        transformAnimation.toValue = NSValue(CATransform3D: CATransform3DScale(CATransform3DIdentity, 0.1, 0.1, 1))
-        transformAnimation.fillMode = kCAFillModeForwards
-        transformAnimation.removedOnCompletion = true
+        let path = CGPathCreateMutable();
+        CGPathMoveToPoint(path, nil, p1.x, p1.y);
+        CGPathAddCurveToPoint(path, nil, p1.x, p1.y - 30, p3.x, p1.y - 30, p3.x, p3.y);
+        positionAnimation.path = path;
         
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-        opacityAnimation.fromValue = 0.8
-        opacityAnimation.toValue = 0.1
+        opacityAnimation.fromValue = 1
+        opacityAnimation.toValue = 0.9
         opacityAnimation.fillMode = kCAFillModeForwards
         opacityAnimation.removedOnCompletion = true
         
+        let transformAnimation = CABasicAnimation(keyPath: "transform")
+        transformAnimation.fromValue = NSValue(CATransform3D: CATransform3DIdentity)
+        transformAnimation.toValue = NSValue(CATransform3D: CATransform3DScale(CATransform3DIdentity, 0.2, 0.2, 1))
+        
         let groupAnimation = CAAnimationGroup()
         groupAnimation.animations = [positionAnimation, transformAnimation, opacityAnimation];
-        groupAnimation.duration = 0.5
-        groupAnimation.delegate = self
+        groupAnimation.duration = 0.8
+        groupAnimation.delegate = self;
         
         transitionLayer.addAnimation(groupAnimation, forKey: "cartParabola")
-        
-        view.layer.addSublayer(transitionLayer)
-        animationLayers!.append(transitionLayer)
-        
-        let time = dispatch_time(DISPATCH_TIME_NOW,Int64(0.4 * Double(NSEC_PER_SEC)))
-        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
-            transitionLayer.hidden = true
-        }
     }
     
+
+    // MARK: - 添加商品到右下角购物车动画
+    func addProductsToBigShopCarAnimation(imageView: UIImageView) {
+        if animationBigLayers == nil {
+            animationBigLayers = [CALayer]()
+        }
+        
+        let frame = imageView.convertRect(imageView.bounds, toView: view)
+        let transitionLayer = CALayer()
+        transitionLayer.frame = frame
+        transitionLayer.contents = imageView.layer.contents
+        self.view.layer.addSublayer(transitionLayer)
+        self.animationBigLayers?.append(transitionLayer)
+        
+        let p1 = transitionLayer.position;
+        let p3 = CGPointMake(view.width - 40, self.view.layer.bounds.size.height - 40);
+        
+        let positionAnimation = CAKeyframeAnimation(keyPath: "position")
+        let path = CGPathCreateMutable();
+        CGPathMoveToPoint(path, nil, p1.x, p1.y);
+        CGPathAddCurveToPoint(path, nil, p1.x, p1.y - 30, p3.x, p1.y - 30, p3.x, p3.y);
+        positionAnimation.path = path;
+        
+        let opacityAnimation = CABasicAnimation(keyPath: "opacity")
+        opacityAnimation.fromValue = 1
+        opacityAnimation.toValue = 0.9
+        opacityAnimation.fillMode = kCAFillModeForwards
+        opacityAnimation.removedOnCompletion = true
+        
+        let transformAnimation = CABasicAnimation(keyPath: "transform")
+        transformAnimation.fromValue = NSValue(CATransform3D: CATransform3DIdentity)
+        transformAnimation.toValue = NSValue(CATransform3D: CATransform3DScale(CATransform3DIdentity, 0.2, 0.2, 1))
+        
+        let groupAnimation = CAAnimationGroup()
+        groupAnimation.animations = [positionAnimation, transformAnimation, opacityAnimation];
+        groupAnimation.duration = 0.8
+        groupAnimation.delegate = self;
+        
+        transitionLayer.addAnimation(groupAnimation, forKey: "BigShopCarAnimation")
+
+    }
+    
+    
     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        if animationLayers!.count > 0 {
+        
+        if self.animationLayers?.count > 0 {
             let transitionLayer = animationLayers![0]
             transitionLayer.hidden = true
             transitionLayer.removeFromSuperlayer()
             animationLayers?.removeFirst()
             view.layer.removeAnimationForKey("cartParabola")
+        }
+        
+        if self.animationBigLayers?.count > 0 {
+            let transitionLayer = animationBigLayers![0]
+            transitionLayer.hidden = true
+            transitionLayer.removeFromSuperlayer()
+            animationBigLayers?.removeFirst()
+            view.layer.removeAnimationForKey("BigShopCarAnimation")
         }
     }
 }

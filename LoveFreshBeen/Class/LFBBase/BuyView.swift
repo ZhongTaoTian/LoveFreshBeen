@@ -11,6 +11,7 @@ import UIKit
 class BuyView: UIView {
     
     var clickAddShopCar: (() -> ())?
+    var zearIsShow = false
     
     /// 添加按钮
     private lazy var addGoodsButton: UIButton = {
@@ -25,14 +26,15 @@ class BuyView: UIView {
         let reduceGoodsButton = UIButton(type: .Custom)
         reduceGoodsButton.setImage(UIImage(named: "v2_reduce")!, forState: .Normal)
         reduceGoodsButton.addTarget(self, action: "reduceGoodsButtonClick", forControlEvents: .TouchUpInside)
-        reduceGoodsButton.hidden = true
+        reduceGoodsButton.hidden = false
         return reduceGoodsButton
         }()
     
     /// 购买数量
     private lazy var buyCountLabel: UILabel = {
         let buyCountLabel = UILabel()
-        buyCountLabel.hidden = true
+        buyCountLabel.hidden = false
+        buyCountLabel.text = "0"
         buyCountLabel.textColor = UIColor.blackColor()
         buyCountLabel.textAlignment = NSTextAlignment.Center
         buyCountLabel.font = HomeCollectionTextFont
@@ -97,8 +99,8 @@ class BuyView: UIView {
                 hideSupplementLabel()
             }
             if 0 == buyNumber {
-                reduceGoodsButton.hidden = true
-                buyCountLabel.hidden = true
+                reduceGoodsButton.hidden = true && !zearIsShow
+                buyCountLabel.hidden = true && !zearIsShow
             } else {
                 reduceGoodsButton.hidden = false
                 buyCountLabel.hidden = false
@@ -153,9 +155,9 @@ class BuyView: UIView {
         buyNumber--
         goods?.userBuyNumber = buyNumber
         if buyNumber == 0 {
-            reduceGoodsButton.hidden = true
-            buyCountLabel.hidden = true
-            buyCountLabel.text = ""
+            reduceGoodsButton.hidden = true && !zearIsShow
+            buyCountLabel.hidden = true && !zearIsShow
+            buyCountLabel.text = zearIsShow ? "0" : ""
             UserShopCarTool.sharedUserShopCar.removeSupermarketProduct(goods!)
         } else {
             buyCountLabel.text = "\(buyNumber)"
