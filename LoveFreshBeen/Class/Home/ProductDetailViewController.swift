@@ -27,6 +27,7 @@ class ProductDetailViewController: BaseViewController {
     private var yellowShopCar: YellowShopCarView?
     private var goods: Goods?
     private var buyView: BuyView?
+    private let shareActionSheet: LFBActionSheet = LFBActionSheet()
     
     init () {
         super.init(nibName: nil, bundle: nil)
@@ -217,6 +218,8 @@ class ProductDetailViewController: BaseViewController {
     
     // MARK: - Action
     func rightItemClick() {
-        
+        shareActionSheet.showActionSheetViewShowInView(view) { (shareType) -> () in
+            ShareManager.shareToShareType(shareType, vc: self)
+        }
     }
 }

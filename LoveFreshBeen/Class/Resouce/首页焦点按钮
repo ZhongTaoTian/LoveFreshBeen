@@ -235,7 +235,8 @@
 },
 "show_reload": "1",
 "hide_cart": "1",
-"trackid": "icon1|20206"
+"trackid": "icon1|20206",
+"customURL" : "http://m.beequick.cn/show/active?id=20206&locationHash=7ca258Avt44fDvvj2cZdEGf4nzjyAg95fITJXcnfccCKbDJW6SdFHgelg&zchtid=10309&location_time=1453779210&show_reload=1&hide_cart=1&activitygroup=zhuanpan&name=%E6%8A%BD%E5%A5%96&bigids=2%2C0&cityid=2&addrid=4825569&zchtauth=0660c8G2eHuPa14mhxZ%252FCS4sObBfhTVY9vm1%252BSnWminqivhA&__v=ios4.10&__d=d14ryS0MFUAhfrQ6rPJ9Gziisg%2F9Cf8CxgkzZw5AkPMbPcbv%2BpM4HpDJlnwAZPd5UyoGA15VrRjnhCT8VdSGZRr1hqySmO%2FA2k1rqKaujWCJ69O%2BOlzJ%2FM3c%2BEAqx14eK17f"
 },
 {
 "id": "20333",
@@ -251,7 +252,8 @@
 },
 "show_reload": "1",
 "hide_cart": "0",
-"trackid": "icon1|20333"
+"trackid": "icon1|20333",
+"customURL": "http://m.beequick.cn/show/active?id=20333&locationHash=b146d3x+aiKpFadVCXC8qKnvXJCNZvJTvO7fpxjIyClVRx9WEryjH6bEk&zchtid=10309&location_time=1453779210&show_reload=1&hide_cart=0&activitygroup=miaoshav3&name=%E7%A7%92%E6%9D%80&bigids=2%2C0&cityid=2&addrid=4825569&zchtauth=0660c8G2eHuPa14mhxZ%252FCS4sObBfhTVY9vm1%252BSnWminqivhA&__v=ios4.10&__d=d14ryS0MFUAhfrQ6rPJ9Gziisg%2F9Cf8CxgkzZw5AkPMbPcbv%2BpM4HpDJlnwAZPd5UyoGA15VrRjghCP%2BV9aEPxujif%2BZz%2BiQj0VnrKSqi2WPtoDqawuVqcnYqE98x14eK17f"
 },
 {
 "id": "20596",
@@ -267,7 +269,8 @@
 },
 "show_reload": "1",
 "hide_cart": "1",
-"trackid": "icon1|20596"
+"trackid": "icon1|20596",
+"customURL": "http://m.beequick.cn/show/active?id=20596&locationHash=44b55boMrSr4YSPl5TCiWVSVR4nh/I/JCT/7/1Q0QYVuEkpEdYZadOs0M&zchtid=10309&location_time=1453779210&show_reload=1&hide_cart=1&activitygroup=nianhuodajiyaoyiyao&name=%E6%8A%A2%E7%BA%A2%E5%8C%85&bigids=2%2C0&cityid=2&addrid=4825569&zchtauth=0660c8G2eHuPa14mhxZ%252FCS4sObBfhTVY9vm1%252BSnWminqivhA&__v=ios4.10&__d=d14ryS0MFUAhfrQ6rPJ9Gziisg%2F9Cf8CxgkzZw5AkPMbPcbv%2BpM4HpDJlnwAZPd5UyoGA15VrRjghCP%2BV9aEPxujif%2BZz%2BiQj0VnrKSqi2WPtoDqawuVqcnYqE98x14eK17f"
 },
 {
 "id": "20382",
@@ -283,7 +286,8 @@
 },
 "show_reload": "0",
 "hide_cart": "1",
-"trackid": "icon1|20382"
+"trackid": "icon1|20382",
+"customURL": "http://m.beequick.cn/show/active?id=20382&locationHash=b146d3x+aiKpFadVCXC8qKnvXJCNZvJTvO7fpxjIyClVRx9WEryjH6bEk&zchtid=10309&location_time=1453779210&show_reload=0&hide_cart=1&activitygroup=fengbaotuan&name=%E8%9C%82%E6%8A%B1%E5%9B%A2&bigids=2%2C0&cityid=2&addrid=4825569&zchtauth=0660c8G2eHuPa14mhxZ%252FCS4sObBfhTVY9vm1%252BSnWminqivhA&__v=ios4.10&__d=d14ryS0MFUAhfrQ6rPJ9Gziisg%2F9Cf8CxgkzZw5AkPMbPcbv%2BpM4HpDJlnwAZPd5UyoGA15VrRjghCP%2BV9aEPxujif%2BZz%2BiQj0VnrKSqi2WPtoDqawuVqcnYqE98x14eK17f"
 }
 ],
 "activities": [
@@ -302,7 +306,8 @@
 "show_reload": "1",
 "hide_cart": "0",
 "trackid": "focus1|20575",
-"mimg": "http://img01.bqstatic.com/upload/activity/activity_v4_20575_1452217080_mblock.jpg@90Q"
+"mimg": "http://img01.bqstatic.com/upload/activity/activity_v4_20575_1452217080_mblock.jpg@90Q",
+"customURL": "https://github.com/ZhongTaoTian"
 },
 {
 "id": "20626",
@@ -319,7 +324,8 @@
 },
 "show_reload": "1",
 "hide_cart": "0",
-"trackid": "act1|20626"
+"trackid": "act1|20626",
+"customURL": "http://weibo.com/tianzhongtao"
 },
 {
 "id": "20580",
@@ -336,7 +342,8 @@
 },
 "show_reload": "1",
 "hide_cart": "0",
-"trackid": "act1|20580"
+"trackid": "act1|20580",
+"customURL": "http://www.jianshu.com/users/5fe7513c7a57/latest_articles"
 },
 {
 "id": "20581",
@@ -353,7 +360,8 @@
 },
 "show_reload": "1",
 "hide_cart": "0",
-"trackid": "act1|20581"
+"trackid": "act1|20581",
+"customURL": "http://www.jianshu.com/users/5fe7513c7a57/latest_articles"
 }
 ],
 "cart_ids": [],

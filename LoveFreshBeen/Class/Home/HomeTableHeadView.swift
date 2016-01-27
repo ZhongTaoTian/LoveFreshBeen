@@ -55,7 +55,7 @@ class HomeTableHeadView: UIView {
         weak var tmpSelf = self
         hotView = HotView(frame: CGRectZero, iconClick: { (index) -> Void in
             if tmpSelf!.delegate != nil && ((tmpSelf!.delegate?.respondsToSelector("tableHeadView:iconClick:")) != nil) {
-                tmpSelf!.delegate!.tableHeadView!(tmpSelf!, focusImageViewClick: index)
+                tmpSelf!.delegate!.tableHeadView!(tmpSelf!, iconClick: index)
             }
         })
         hotView?.backgroundColor = UIColor.whiteColor()

@@ -9,7 +9,7 @@
 import UIKit
 
 class ShopCartSupermarketTableFooterView: UIView {
-
+    
     private let titleLabel      = UILabel()
     let priceLabel              = UILabel()
     private let determineButton = UIButton()
@@ -35,7 +35,7 @@ class ShopCartSupermarketTableFooterView: UIView {
         priceLabel.frame = CGRectMake(CGRectGetMaxX(titleLabel.frame), 0, ScreenWidth * 0.5, ShopCartRowHeight)
         priceLabel.text = UserShopCarTool.sharedUserShopCar.getAllProductsPrice()
         addSubview(priceLabel)
-    
+        
         determineButton.frame = CGRectMake(ScreenWidth - 90, 0, 90, ShopCartRowHeight)
         determineButton.backgroundColor = LFBNavigationYellowColor
         determineButton.setTitle("选好了", forState: UIControlState.Normal)
@@ -46,11 +46,11 @@ class ShopCartSupermarketTableFooterView: UIView {
         
         addSubview(lineView(CGRectMake(0, ShopCartRowHeight - 0.5, ScreenWidth, 0.5)))
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     func setPriceLabel(price: Double) {
         priceLabel.text = "\(price)".cleanDecimalPointZear()
     }
@@ -63,13 +63,12 @@ class ShopCartSupermarketTableFooterView: UIView {
     }
     
     func determineButtonClick() {
-        if delegate != nil {
-            delegate?.supermarketTableFooterDetermineButtonClick()
-        }
+        print("确定")
+        delegate?.supermarketTableFooterDetermineButtonClick()
     }
 }
 
 protocol ShopCartSupermarketTableFooterViewDelegate: NSObjectProtocol {
-
+    
     func supermarketTableFooterDetermineButtonClick();
 }

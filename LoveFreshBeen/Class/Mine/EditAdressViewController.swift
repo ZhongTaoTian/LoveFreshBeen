@@ -52,6 +52,8 @@ class EditAdressViewController: BaseViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        navigationController?.navigationBar.barTintColor = LFBNavigationBarWhiteBackgroundColor
+        
         if currentAdressRow != -1 && vcType == .Edit {
             let adress = topVC!.adresses![currentAdressRow]
             contactsTextField?.text = adress.accept_name

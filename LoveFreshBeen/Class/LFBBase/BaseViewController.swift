@@ -17,8 +17,7 @@ class BaseViewController: UIViewController {
 
     }
     
-    
-    deinit {
-        print(NSStringFromClass(self.classForCoder) + "--------delloc---------")
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
     }
 }

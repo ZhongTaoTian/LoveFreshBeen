@@ -28,6 +28,8 @@ public let HomeTableHeadViewHeightDidChange = "HomeTableHeadViewHeightDidChange"
  /// 首页商品库存不足
 public let HomeGoodsInventoryProblem = "HomeGoodsInventoryProblem"
 
+public let GuideViewControllerDidFinish = "GuideViewControllerDidFinish"
+
 // MARK: - 广告页通知
 public let ADImageLoadSecussed = "ADImageLoadSecussed"
 public let ADImageLoadFail = "ADImageLoadFail"

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: AnimationViewController {
+class HomeViewController: SelectedAdressViewController {
     private var flag: Int = -1
     private var headView: HomeTableHeadView?
     private var collectionView: LFBCollectionView!
@@ -22,8 +22,6 @@ class HomeViewController: AnimationViewController {
         super.viewDidLoad()
         
         addHomeNotification()
-        
-        buildNavigationItem()
         
         buildCollectionView()
         
@@ -40,6 +38,8 @@ class HomeViewController: AnimationViewController {
         if collectionView != nil {
             collectionView.reloadData()
         }
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("LFBSearchViewControllerDeinit", object: nil)
     }
     
     deinit {
@@ -54,15 +54,6 @@ class HomeViewController: AnimationViewController {
     }
     
     // MARK:- Creat UI
-    private func buildNavigationItem() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem.barButton("扫一扫", titleColor: UIColor.blackColor(),
-            image: UIImage(named: "icon_black_scancode")!, hightLightImage: nil,
-            target: self, action: "leftItemClick", type: ItemButtonType.Left)
-        navigationItem.rightBarButtonItem = UIBarButtonItem.barButton("搜 索", titleColor: UIColor.blackColor(),
-            image: UIImage(named: "icon_search")!,hightLightImage: nil,
-            target: self, action: "rightItemClick", type: ItemButtonType.Right)
-    }
-    
     private func buildTableHeadView() {
         headView = HomeTableHeadView()
         
@@ -145,18 +136,6 @@ class HomeViewController: AnimationViewController {
         ProgressHUDManager.setFont(UIFont.systemFontOfSize(16))
     }
     
-    // MARK:- Action
-    // MARK: 扫一扫和搜索Action
-    func leftItemClick() {
-        let qrCode = QRCodeViewController()
-        navigationController?.pushViewController(qrCode, animated: true)
-    }
-    
-    func rightItemClick() {
-        let searchVC = SearchProductViewController()
-        navigationController!.pushViewController(searchVC, animated: false)
-    }
-    
     // MARK: Notifiation Action
     func homeTableHeadViewHeightDidChange(noti: NSNotification) {
         collectionView!.contentInset = UIEdgeInsetsMake(noti.object as! CGFloat, 0, NavigationH, 0)
@@ -178,11 +157,19 @@ class HomeViewController: AnimationViewController {
 // MARK:- HomeHeadViewDelegate TableHeadViewAction
 extension HomeViewController: HomeTableHeadViewDelegate {
     func tableHeadView(headView: HomeTableHeadView, focusImageViewClick index: Int) {
-        print(index)
+        if headData?.data?.focus?.count > 0 {
+            let path = NSBundle.mainBundle().pathForResource("FocusURL", ofType: "plist")
+            let array = NSArray(contentsOfFile: path!)
+            let webVC = WebViewController(navigationTitle: headData!.data!.focus![index].name!, urlStr: array![index] as! String)
+            navigationController?.pushViewController(webVC, animated: true)
+        }
     }
     
     func tableHeadView(headView: HomeTableHeadView, iconClick index: Int) {
-        print(index)
+        if headData?.data?.icons?.count > 0 {
+            let webVC = WebViewController(navigationTitle: headData!.data!.icons![index].name!, urlStr: headData!.data!.icons![index].customURL!)
+            navigationController?.pushViewController(webVC, animated: true)
+        }
     }
 }
 
@@ -332,7 +319,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 {
-            print("点击了长条的第 \(indexPath.row) 的cell")
+            let webVC = WebViewController(navigationTitle: headData!.data!.activities![indexPath.row].name!, urlStr: headData!.data!.activities![indexPath.row].customURL!)
+            navigationController?.pushViewController(webVC, animated: true)
         } else {
             let productVC = ProductDetailViewController(goods: freshHot!.data![indexPath.row])
             navigationController?.pushViewController(productVC, animated: true)

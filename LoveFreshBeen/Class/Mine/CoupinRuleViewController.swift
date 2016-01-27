@@ -9,12 +9,12 @@
 import UIKit
 
 class CoupinRuleViewController: BaseViewController {
-
+    
     private let webView = UIWebView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight - NavigationH))
     private let loadProgressAnimationView: LoadProgressAnimationView = LoadProgressAnimationView(frame: CGRectMake(0, 0, ScreenWidth, 3))
     var loadURLStr: String? {
         didSet {
-             webView.loadRequest(NSURLRequest(URL: NSURL(string: loadURLStr!)!))
+            webView.loadRequest(NSURLRequest(URL: NSURL(string: loadURLStr!)!))
         }
     }
     
@@ -41,7 +41,7 @@ class CoupinRuleViewController: BaseViewController {
 }
 
 extension CoupinRuleViewController: UIWebViewDelegate {
-
+    
     func webViewDidStartLoad(webView: UIWebView) {
         loadProgressAnimationView.startLoadProgressAnimation()
     }

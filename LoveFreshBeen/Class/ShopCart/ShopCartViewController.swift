@@ -16,7 +16,7 @@ class ShopCartViewController: BaseViewController {
     private let emptyLabel            = UILabel()
     private let emptyButton           = UIButton(type: .Custom)
     private var receiptAdressView: ReceiptAddressView?
-    private var tableHeadView: UIView = UIView()
+    private var tableHeadView         = UIView()
     private let signTimeLabel         = UILabel()
     private let reserveLabel          = UILabel()
     private let signTimePickerView    = UIPickerView()
@@ -235,11 +235,11 @@ class ShopCartViewController: BaseViewController {
     }
     
     func modifySignTimeViewClick() {
-        
+        print("修改收货时间")
     }
     
     func selectedSignTimeTextFieldDidChange(sender: UIButton) {
-        
+
     }
     
     // MARK: - Override SuperMethod
@@ -252,7 +252,7 @@ class ShopCartViewController: BaseViewController {
 extension ShopCartViewController: ShopCartSupermarketTableFooterViewDelegate {
     
     func supermarketTableFooterDetermineButtonClick() {
-        
+        print("付钱了")
     }
 }
 

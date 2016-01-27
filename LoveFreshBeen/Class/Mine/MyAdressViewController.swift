@@ -12,6 +12,9 @@ class MyAdressViewController: BaseViewController {
     
     private var addAdressButton: UIButton?
     private var nullImageView = UIView()
+    
+    var selectedAdressCallback:((adress: Adress) -> ())?
+    var isSelectVC = false
     var adressTableView: LFBTableView?
     var adresses: [Adress]? {
         didSet {
@@ -23,6 +26,19 @@ class MyAdressViewController: BaseViewController {
                 adressTableView?.hidden = false
             }
         }
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    convenience init(selectedAdress: ((adress:Adress) -> ())) {
+        self.init(nibName: nil, bundle: nil)
+        selectedAdressCallback = selectedAdress
     }
     
     override func viewDidLoad() {
@@ -42,7 +58,8 @@ class MyAdressViewController: BaseViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.barTintColor = LFBNavigationBarWhiteBackgroundColor
     }
     
     private func buildNavigationItem() {
@@ -88,9 +105,11 @@ class MyAdressViewController: BaseViewController {
                     tmpSelf!.adressTableView?.hidden = false
                     tmpSelf!.adressTableView?.reloadData()
                     tmpSelf!.nullImageView.hidden = true
+                    UserInfo.sharedUserInfo.setAllAdress(data!.data!)
                 } else {
                     tmpSelf!.adressTableView?.hidden = true
                     tmpSelf!.nullImageView.hidden = false
+                    UserInfo.sharedUserInfo.cleanAllAdress()
                 }
             }
         }
@@ -144,6 +163,14 @@ extension MyAdressViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if isSelectVC {
+            if selectedAdressCallback != nil {
+                selectedAdressCallback!(adress: adresses![indexPath.row])
+                navigationController?.popViewControllerAnimated(true)
+            }
+        }
+    }
 }
 
 

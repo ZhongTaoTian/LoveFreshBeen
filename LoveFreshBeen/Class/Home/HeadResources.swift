@@ -9,7 +9,7 @@
 import UIKit
 
 class HeadResources: NSObject, DictModelProtocol {
-    
+
     var msg: String?
     var reqid: String?
     var data: HeadData?
@@ -24,7 +24,7 @@ class HeadResources: NSObject, DictModelProtocol {
             completion(data: data, error: nil)
         }
     }
-    
+
     static func customClassMapping() -> [String : String]? {
         return ["data" : "\(HeadData.self)"]
     }
@@ -50,4 +50,5 @@ class Activities: NSObject {
     var jptype: String?
     var trackid: String?
     var mimg: String?
+    var customURL: String?
 }

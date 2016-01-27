@@ -48,13 +48,16 @@ class LoadProgressAnimationView: UIView {
                     })
                 })
         }
+        
     }
     
     func endLoadProgressAnimation() {
         weak var tmpSelf = self
-
-        UIView.animateWithDuration(0.2) { () -> Void in
+        
+        UIView.animateWithDuration(0.2, animations: { () -> Void in
             tmpSelf!.frame.size.width = tmpSelf!.viewWidth
+            }) { (finish) -> Void in
+                tmpSelf!.hidden = true
         }
     }
 }

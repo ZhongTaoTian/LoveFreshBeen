@@ -4,3 +4,8 @@
 #import "SVProgressHUD.h"
 #import "UIImageView+WebCache.h"
 #import "MJRefresh.h"
+#import "UMSocial.h"
+#import <CoreLocation/CoreLocation.h>
+#import "UMSocialSinaSSOHandler.h"
+#import "UMSocialWechatHandler.h"
+#import "UMSocialQQHandler.h"

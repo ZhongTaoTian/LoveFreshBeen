@@ -15,6 +15,7 @@ class MineViewController: BaseViewController {
     private var headViewHeight: CGFloat = 150
     private var tableHeadView: MineTabeHeadView!
     private var couponNum: Int = 0
+    private let shareActionSheet: LFBActionSheet = LFBActionSheet()
     
     // MARK: Flag
     var iderVCSendIderSuccess = false
@@ -163,7 +164,9 @@ extension MineViewController: UITableViewDelegate, UITableViewDataSource {
                 navigationController?.pushViewController(myShopVC, animated: true)
             }
         } else if 1 == indexPath.section {
-            
+            shareActionSheet.showActionSheetViewShowInView(view) { (shareType) -> () in
+                ShareManager.shareToShareType(shareType, vc: self)
+            }
         } else if 2 == indexPath.section {
             if 0 == indexPath.row {
                 let helpVc = HelpViewController()
