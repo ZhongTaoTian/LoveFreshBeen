@@ -185,7 +185,7 @@ class GoodsView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, 20))
-        
+
         titleLabel.font = UIFont.systemFontOfSize(14)
         titleLabel.textColor = LFBTextBlackColor
         addSubview(titleLabel)

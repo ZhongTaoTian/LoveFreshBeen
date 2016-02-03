@@ -49,6 +49,10 @@ class ADViewController: UIViewController {
                         })
                         
                     })
+                } else {
+                    //加载广告失败
+                    print("加载广告失败")
+                    NSNotificationCenter.defaultCenter().postNotificationName(ADImageLoadFail, object: nil)
                 }
             }
         }

@@ -41,23 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         addNotification()
         
-        window = UIWindow(frame: ScreenBounds)
-        window!.makeKeyAndVisible()
-        
-        loadKeyWindowRootViewController()
-        
-        return true
-    }
-    
-    func applicationDidReceiveMemoryWarning(application: UIApplication) {}
-    
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        
-        let result = UMSocialSnsService.handleOpenURL(url)
-        print(url)
-        if !result {
-            
-        }
+        buildKeyWindow()
         
         return true
     }
@@ -67,19 +51,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     // MARK: - Public Method
-    private func loadKeyWindowRootViewController() {
+    private func buildKeyWindow() {
+        
+        window = UIWindow(frame: ScreenBounds)
+        window!.makeKeyAndVisible()
         
         let isFristOpen = NSUserDefaults.standardUserDefaults().objectForKey("isFristOpenApp")
         
         if isFristOpen == nil {
-            
             window?.rootViewController = GuideViewController()
             NSUserDefaults.standardUserDefaults().setObject("isFristOpenApp", forKey: "isFristOpenApp")
-            
         } else {
-            
             loadADRootViewController()
-            
         }
     }
     

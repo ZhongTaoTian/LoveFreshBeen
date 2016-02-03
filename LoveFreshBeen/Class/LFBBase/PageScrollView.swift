@@ -72,32 +72,7 @@ class PageScrollView: UIView {
         
         updatePageScrollView()
     }
-    //MARK: 更新内容
-    private func updatePageScrollView() {
-        for var i = 0; i < imageScrollView.subviews.count; i++ {
-            let imageView = imageScrollView.subviews[i] as! UIImageView
-            var index = pageControl.currentPage
-            
-            if i == 0 {
-                index--
-            } else if 2 == i {
-                index++
-            }
-            
-            if index < 0 {
-                index = self.pageControl.numberOfPages - 1
-            } else if index >= pageControl.numberOfPages {
-                index = 0
-            }
-            
-            imageView.tag = index
-            if headData?.data?.focus?.count > 0 {
-                imageView.sd_setImageWithURL(NSURL(string: headData!.data!.focus![index].img!), placeholderImage: placeholderImage)
-            }
-        }
-        
-        imageScrollView.contentOffset = CGPointMake(imageScrollView.width, 0)
-    }
+    
     // MARK: BuildUI
     private func buildImageScrollView() {
         imageScrollView = UIScrollView()
@@ -123,6 +98,35 @@ class PageScrollView: UIView {
         pageControl.currentPageIndicatorTintColor = UIColor(patternImage: UIImage(named: "v2_home_cycle_dot_selected")!)
         addSubview(pageControl)
     }
+    
+    //MARK: 更新内容
+    private func updatePageScrollView() {
+        for var i = 0; i < imageScrollView.subviews.count; i++ {    
+            let imageView = imageScrollView.subviews[i] as! UIImageView
+            var index = pageControl.currentPage
+            
+            if i == 0 {
+                index--
+            } else if 2 == i {
+                index++
+            }
+            
+            if index < 0 {
+                index = self.pageControl.numberOfPages - 1
+            } else if index >= pageControl.numberOfPages {
+                index = 0
+            }
+            
+            imageView.tag = index
+            if headData?.data?.focus?.count > 0 {
+                imageView.sd_setImageWithURL(NSURL(string: headData!.data!.focus![index].img!), placeholderImage: placeholderImage)
+            }
+        }
+        
+        imageScrollView.contentOffset = CGPointMake(imageScrollView.width, 0)
+    }
+    
+
     // MARK: Timer
     private func startTimer() {
         timer = NSTimer(timeInterval: 3.0, target: self, selector: "next", userInfo: nil, repeats: true)

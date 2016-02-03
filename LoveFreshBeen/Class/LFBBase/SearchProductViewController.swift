@@ -94,7 +94,7 @@ class SearchProductViewController: AnimationViewController {
         
         yellowShopCar = YellowShopCarView(frame: CGRectMake(ScreenWidth - 70, ScreenHeight - 70 - NavigationH, 61, 61), shopViewClick: { () -> () in
             let shopCarVC = ShopCartViewController()
-            let nav = UINavigationController(rootViewController: shopCarVC)
+            let nav = BaseNavigationController(rootViewController: shopCarVC)
             tmpSelf!.presentViewController(nav, animated: true, completion: nil)
         })
         yellowShopCar?.hidden = true

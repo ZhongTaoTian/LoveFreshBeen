@@ -182,11 +182,16 @@ class ProductDetailViewController: BaseViewController {
         weak var tmpSelf = self
         yellowShopCar = YellowShopCarView(frame: CGRectMake(ScreenWidth - 70, 50 - 61 - 10, 61, 61), shopViewClick: { () -> () in
             let shopCarVC = ShopCartViewController()
-            let nav = UINavigationController(rootViewController: shopCarVC)
+            let nav = BaseNavigationController(rootViewController: shopCarVC)
             tmpSelf!.presentViewController(nav, animated: true, completion: nil)
         })
-
+        
         bottomView!.addSubview(yellowShopCar!)
+    }
+    
+    // MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     deinit {
@@ -200,6 +205,8 @@ class ProductDetailViewController: BaseViewController {
         if goods != nil {
             buyView?.goods = goods
         }
+        
+        (navigationController as! BaseNavigationController).isAnimation = true
     }
     
     // MARK: - Build UI

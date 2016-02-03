@@ -95,7 +95,6 @@ class AnimationViewController: BaseViewController {
         groupAnimation.delegate = self;
         
         transitionLayer.addAnimation(groupAnimation, forKey: "BigShopCarAnimation")
-
     }
     
     

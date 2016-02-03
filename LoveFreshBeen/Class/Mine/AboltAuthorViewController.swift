@@ -123,9 +123,9 @@ class AboltAuthorViewController: BaseViewController {
         switch sender.tag {
         case 0: UIApplication.sharedApplication().openURL(NSURL(string: GitHubURLString)!)
             break
-        case 1: UIApplication.sharedApplication().openURL(NSURL(string: BlogURLString)!)
+        case 1: UIApplication.sharedApplication().openURL(NSURL(string: SinaWeiBoURLString)!)
             break
-        case 2: UIApplication.sharedApplication().openURL(NSURL(string: SinaWeiBoURLString)!)
+        case 2: UIApplication.sharedApplication().openURL(NSURL(string: BlogURLString)!)
             break
         default: 
             break

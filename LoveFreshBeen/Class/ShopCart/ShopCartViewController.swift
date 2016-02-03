@@ -21,8 +21,9 @@ class ShopCartViewController: BaseViewController {
     private let reserveLabel          = UILabel()
     private let signTimePickerView    = UIPickerView()
     private let commentsView          = ShopCartCommentsView()
-    private let supermarketTableView  = LFBTableView(frame: ScreenBounds, style: .Plain)
+    private let supermarketTableView  = LFBTableView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight - 64 - 50), style: .Plain)
     private let tableFooterView       = ShopCartSupermarketTableFooterView()
+    private var isFristLoadData       = false
     
     // MARK: - life cycle
     override func viewDidLoad() {
@@ -37,7 +38,7 @@ class ShopCartViewController: BaseViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         weak var tmpSelf = self
         
         if userShopCar.isEmpty() {
@@ -114,9 +115,15 @@ class ShopCartViewController: BaseViewController {
     }
     
     private func showProductView() {
-        buildTableHeadView()
         
-        buildSupermarketTableView()
+        if !isFristLoadData {
+            
+            buildTableHeadView()
+            
+            buildSupermarketTableView()
+            
+            isFristLoadData = true
+        }
     }
     
     private func buildTableHeadView() {
@@ -134,11 +141,12 @@ class ShopCartViewController: BaseViewController {
     
     private func buildSupermarketTableView() {
         supermarketTableView.tableHeaderView = tableHeadView
-        supermarketTableView.tableFooterView = tableFooterView
+        tableFooterView.frame = CGRectMake(0, ScreenHeight - 64 - 50, ScreenWidth, 50)
+        view.addSubview(tableFooterView)
         tableFooterView.delegate = self
         supermarketTableView.delegate = self
         supermarketTableView.dataSource = self
-        supermarketTableView.contentInset = UIEdgeInsetsMake(0, 0, NavigationH + 60, 0)
+        supermarketTableView.contentInset = UIEdgeInsetsMake(0, 0, 15, 0)
         supermarketTableView.rowHeight = ShopCartRowHeight
         supermarketTableView.backgroundColor = view.backgroundColor
         view.addSubview(supermarketTableView)
@@ -239,7 +247,7 @@ class ShopCartViewController: BaseViewController {
     }
     
     func selectedSignTimeTextFieldDidChange(sender: UIButton) {
-
+        
     }
     
     // MARK: - Override SuperMethod
@@ -252,7 +260,8 @@ class ShopCartViewController: BaseViewController {
 extension ShopCartViewController: ShopCartSupermarketTableFooterViewDelegate {
     
     func supermarketTableFooterDetermineButtonClick() {
-        print("付钱了")
+        let orderPayVC = OrderPayWayViewController()
+        navigationController?.pushViewController(orderPayVC, animated: true)
     }
 }
 

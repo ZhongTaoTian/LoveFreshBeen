@@ -251,6 +251,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+        
         if indexPath.section == 0 && (indexPath.row == 0 || indexPath.row == 1) {
             return
         }
@@ -260,18 +261,19 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
     }
     
+    private func startAnimation(view: UIView, offsetY: CGFloat, duration: NSTimeInterval) {
+        
+        view.transform = CGAffineTransformMakeTranslation(0, offsetY)
+        
+        UIView.animateWithDuration(duration, animations: { () -> Void in
+            view.transform = CGAffineTransformIdentity
+        })
+    }
+    
     func collectionView(collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, atIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 1 && headData != nil && freshHot != nil && isAnimation {
             startAnimation(view, offsetY: 60, duration: 0.8)
         }
-    }
-    
-    private func startAnimation(view: UIView, offsetY: CGFloat, duration: NSTimeInterval) {
-        
-        view.transform = CGAffineTransformMakeTranslation(0, offsetY)
-        UIView.animateWithDuration(duration, animations: { () -> Void in
-            view.transform = CGAffineTransformIdentity
-        })
     }
     
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
