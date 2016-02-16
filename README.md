@@ -29,5 +29,8 @@
 #### 小熊的技术博客
 [点击链接我的博客](http://www.jianshu.com/users/5fe7513c7a57/latest_articles)
 
-### 小熊的新浪微博
+#### 小熊的新浪微博
 [我的新浪微博](http://weibo.com/5622363113/profile?topnav=1&wvr=6)
+
+#### 小熊的GitHub
+[我的GitHub](https://github.com/ZhongTaoTian)
