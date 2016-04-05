@@ -65,6 +65,9 @@ class AnimationViewController: BaseViewController {
             animationBigLayers = [CALayer]()
         }
         
+
+
+        
         let frame = imageView.convertRect(imageView.bounds, toView: view)
         let transitionLayer = CALayer()
         transitionLayer.frame = frame
@@ -101,7 +104,7 @@ class AnimationViewController: BaseViewController {
     
     
     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        
+
         if self.animationLayers?.count > 0 {
             let transitionLayer = animationLayers![0]
             transitionLayer.hidden = true

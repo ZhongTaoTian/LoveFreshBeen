@@ -306,6 +306,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let tabBarController = UIApplication.sharedApplication().keyWindow?.rootViewController as! MainTabBarController
             tabBarController.setSelectIndex(from: 0, to: 1)
         }
+
     }
     
     // MARK: - ScrollViewDelegate

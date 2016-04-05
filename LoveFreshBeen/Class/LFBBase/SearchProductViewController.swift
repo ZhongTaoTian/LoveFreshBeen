@@ -318,7 +318,6 @@ extension SearchProductViewController: UICollectionViewDelegate, UICollectionVie
 
             footerView.setFooterTitle("无更多商品", textColor: UIColor.colorWithCustom(50, g: 50, b: 50))
 
-            
             return footerView
 
         } else {
